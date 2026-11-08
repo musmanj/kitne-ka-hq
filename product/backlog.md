@@ -1,8 +1,8 @@
 # Backlog
 
-**The live board is GitHub Issues and a GitHub Project (Kanban)** in the application repo (or this repo before that exists). This file only defines the conventions and the seed tasks. Don't track status here.
+**Live status is on GitHub Issues with labels (no Projects board).** This file only defines the conventions and the seed tasks. Don't track status here.
 
-Board columns: `Proposed` · `Ready` · `In Progress` · `In Review` · `Blocked` · `Done` (plus `Later` for post-MVP).
+Statuses (issue labels): `Proposed` · `Ready` · `In Progress` · `In Review` · `Blocked` · `Done` (plus `Later` for post-MVP).
 
 ## Labels
 | Group | Labels |
@@ -15,14 +15,14 @@ Board columns: `Proposed` · `Ready` · `In Progress` · `In Review` · `Blocked
 
 Each issue uses the [task template](../docs/00-operating-model.md#task-template).
 
-## Seed tasks: Days 1–4 (product-agnostic)
+## Seed tasks: Kitne Ka
 | # | Task | Owner | Day | Acceptance criteria |
 |---|---|---|---|---|
 | S1 | Run Founder intake and fill the discovery brief §1–5 | PM | 1 | Brief v0.1 committed. Every TBD either answered or listed as an open question. |
 | S2 | Competitor and alternatives scan | PM | 1–2 | At least 5 entries with sources in the brief §4 |
 | S3 | Draft and approve the essential user journey | PM + DD + CTO | 1–2 | PRD §1 complete. Founder approved at G1. |
 | S4 | MVP MoSCoW scope and initial backlog | PM | 2 | PRD §3 filled. At least 10 stories created, at least 5 meet the DoR. |
-| S5 | Create labels and the Project board | CoS | 1 | All labels above exist. Board columns match the statuses. |
+| S5 | Create labels | CoS | 1 | All labels above exist. Status is tracked on issues (no Projects board). |
 | S6 | Stack options ADR (at least 2 options) | CTO | 2–3 | ADR-0002 written with trade-offs. Vendor/spend items flagged for the Founder. |
 | S7 | App repo decision and scaffold | CTO + ENG | 3 | Repo created after approval. README, lint, format, test runner and a hello route working. |
 | S8 | DB schema v1 and migrations | CTO + ENG | 3–4 | ERD in `architecture/`, migrations run in CI, indexes for the core queries |
@@ -34,3 +34,5 @@ Each issue uses the [task template](../docs/00-operating-model.md#task-template)
 | S14 | Test strategy and core-journey E2E skeleton | QA | 3–4 | Test plan committed. E2E framework runs in CI with 1 smoke test. |
 | S15 | Threat model v1 | SEC + CTO | 4 | STRIDE-lite on the core journey. Top threats have mitigations or issues. |
 | S16 | Daily report and decision log running | CoS | 1–14 | A report every day. Every gate decision logged. |
+| S17 | P0 — Data-source access & licensing validation | CTO + PM | 1–2 | Each candidate source, including OLX and Daraz, is marked permitted, prohibited or unknown, with the evidence. No build starts on a prohibited source. |
+| S18 | P0 — Pricing methodology v0 + evidence thresholds | CTO + PM | 1–3 | Methodology v0 states how the range, the midpoint difference and the Fair / High / Unusually Low verdict are produced, and the threshold that returns "Insufficient market data". Official retail, current new-market and estimated used values stay distinct. |

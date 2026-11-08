@@ -1,6 +1,6 @@
 # 14-Day Plan
 
-Day 1 is the day the Founder confirms the product purpose. Calendar dates are filled in then: **Day 1 = TBD**.
+**Calendar:** Day 1 = 2026-11-09 · G1 = 2026-11-10 · G2 = 2026-11-12 · G3 = 2026-11-18 · G4 = 2026-11-21 · launch = 2026-11-22.
 Principle: **progressive elaboration.** Building starts as soon as the essential user journey is approved. We don't wait for every document.
 
 ## Parallel tracks
@@ -16,7 +16,7 @@ Principle: **progressive elaboration.** Building starts as soon as the essential
 ## Day by day
 | Day | Focus | Owners | Exit evidence |
 |---|---|---|---|
-| 1 | Founder intake, discovery brief, competitor scan, draft essential journey | PM (lead), CTO, DD; CoS on board setup | Brief v0.1, journey draft, board live |
+| 1 | Founder intake, discovery brief, competitor scan, draft essential journey | PM (lead), CTO, DD; CoS on labels | Brief v0.1, journey draft, labels live |
 | 2 | MVP scope, PRD v1 (core journey), initial backlog; arch options; low-fi flows. **G1** | PM, CTO, DD, UX | G1 decision logged |
 | 3 | Wireframes for core journey; ADRs, stack, DB schema v1, API contract v1; repo, CI skeleton, preview env; first stories Ready; build starts on scaffold and auth (if needed) | UX, CTO, SEC, ENG, QA (test plan) | App repo, green CI, preview URL |
 | 4 | Hi-fi key screens and design tokens; threat model v1; story slicing. **G2** | DD, UX, CTO, SEC, PM | G2 decision logged |
@@ -31,14 +31,14 @@ Principle: **progressive elaboration.** Building starts as soon as the essential
 ## Quality gates
 | Gate | Day | Approver | Must be true |
 |---|---|---|---|
-| **G1 Scope approved** | ~2 | Founder | Product purpose and audience confirmed. Essential user journey written. MVP must/should/won't list. Top risks known. First 5+ stories Ready. |
-| **G2 Architecture and design approved** | ~4 | CTO + DD (Founder for vendor/spend) | Stack ADRs accepted. DB schema and API contract v1. Core-journey wireframes signed off. CI green on the scaffold. Preview env live. Threat model v1. |
-| **G3 Feature freeze** | ~10 | PM + CTO | All Must stories merged or explicitly cut. E2E covers the core journey. No open P0s. After this, only fixes go in. |
-| **G4 Release go/no-go** | 13 | Founder | DoD met for every shipped story. QA sign-off. Security findings resolved or accepted by the Founder. Rollback tested. Monitoring live. Release checklist complete. |
+| **G1 Scope approved** | 2 · 2026-11-10 | Founder | Product purpose and audience confirmed. Essential user journey written. MVP must/should/won't list. Top risks known. First 5+ stories Ready. |
+| **G2 Architecture and design approved** | 4 · 2026-11-12 | CTO + DD (Founder for vendor/spend) | Stack ADRs accepted. DB schema and API contract v1. Core-journey wireframes signed off. CI green on the scaffold. Preview env live. Threat model v1. |
+| **G3 Feature freeze** | 10 · 2026-11-18 | PM + CTO | All Must stories merged or explicitly cut. E2E covers the core journey. No open P0s. After this, only fixes go in. |
+| **G4 Release go/no-go** | 13 · 2026-11-21 | Founder | DoD met for every shipped story. QA sign-off. Security findings resolved or accepted by the Founder. Rollback tested. Monitoring live. Release checklist complete. |
 
 ## Critical path
 Founder purpose input → G1 scope → API contract, DB schema and core wireframes → core journey build (Days 5–7) → E2E and security review → staging RC → G4 → deploy.
-**The biggest single dependency is the Founder's product input on Day 1.** Every day of delay there moves Day 14 too, unless scope is cut.
+Founder product input was received on Day 1 (2026-11-09). Further delay on the critical path still moves launch (2026-11-22) unless scope is cut.
 
 ## Contingency and cut rules
 Applied by the CoS and PM, logged in the decision log:
