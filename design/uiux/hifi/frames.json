@@ -1,0 +1,38 @@
+[
+  {
+    "name": "home",
+    "share": false
+  },
+  {
+    "name": "confirm",
+    "share": false
+  },
+  {
+    "name": "confirm-option-b",
+    "share": false
+  },
+  {
+    "name": "results-full",
+    "share": false
+  },
+  {
+    "name": "results-full-low",
+    "share": false
+  },
+  {
+    "name": "results-no-price",
+    "share": false
+  },
+  {
+    "name": "results-no-price-low",
+    "share": false
+  },
+  {
+    "name": "share-normal",
+    "share": true
+  },
+  {
+    "name": "share-indicative",
+    "share": true
+  }
+]

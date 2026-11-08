@@ -1,0 +1,18 @@
+flowchart TD
+ R[Results: Full / Low confidence / No asking price / Insufficient data] --> S0[Build share card + immutable dated snapshot]
+ S0 --> SAFE[Product / variant / condition / checked date / confidence / estimate disclaimer; only available result values; low confidence: Indicative + caution line]
+ SAFE --> REDACT[Exclude screenshot / seller name / phone / listing URL by default]
+ REDACT --> S1{Web Share API available?}
+ S1 -->|Yes| S2[Native share sheet; WhatsApp main target]
+ S2 -->|Completed| S3[Return to result: ASSUMPTION]
+ S2 -->|Cancelled| S3
+ S2 -->|Failed: ASSUMPTION| S4[Fallback: Copy link / Download image]
+ S1 -->|No| S4
+ S4 --> S5[Copy public snapshot link]
+ S4 --> S6[Download image]
+ S5 --> S7[Public read-only snapshot: unguessable ID / frozen at check time / dated]
+ S7 -->|Check your own price| H[Home]
+ S0 -->|Insufficient data| SI[Not enough data card: no invented numbers]
+ SI --> SAFE
+ S0 -->|Generation failed| GF[Share generation failed: Copy link fallback]
+ GF --> S5

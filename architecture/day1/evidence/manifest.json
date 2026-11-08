@@ -1,0 +1,274 @@
+[
+  {
+    "key": "olx-robots",
+    "url": "https://www.olx.com.pk/robots.txt",
+    "final_url": "https://www.olx.com.pk/robots.txt",
+    "status": 200,
+    "bytes": 1615,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "olx-terms",
+    "url": "https://help.olx.com.pk/hc/en-us/articles/35615763019793-What-are-the-terms-of-use",
+    "final_url": "https://help.olx.com.pk/hc/en-us/articles/35615763019793-What-are-the-terms-of-use",
+    "status": 403,
+    "bytes": 5654,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "daraz-robots",
+    "url": "https://www.daraz.pk/robots.txt",
+    "final_url": "https://www.daraz.pk/robots.txt",
+    "status": 200,
+    "bytes": 567,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "daraz-terms",
+    "url": "https://www.daraz.pk/terms-conditions/",
+    "final_url": "https://www.daraz.pk/terms-conditions/",
+    "status": 200,
+    "bytes": 368894,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "daraz-affiliate",
+    "url": "https://www.daraz.pk/daraz-affiliate-program/",
+    "final_url": "https://pages.daraz.pk/?from=icms:offline",
+    "status": 200,
+    "bytes": 426302,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "daraz-open",
+    "url": "https://open.daraz.com/",
+    "final_url": "https://open.daraz.com/",
+    "status": 200,
+    "bytes": 5119,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "priceoye-robots",
+    "url": "https://priceoye.pk/robots.txt",
+    "final_url": "https://priceoye.pk/robots.txt",
+    "status": 200,
+    "bytes": 12689,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "priceoye-terms",
+    "url": "https://priceoye.pk/terms",
+    "final_url": "https://priceoye.pk/terms",
+    "status": 200,
+    "bytes": 256048,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "samsung-robots",
+    "url": "https://www.samsung.com/robots.txt",
+    "final_url": "https://www.samsung.com/robots.txt",
+    "status": 200,
+    "bytes": 10075,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "samsung-terms",
+    "url": "https://www.samsung.com/pk/info/terms-and-conditions/",
+    "final_url": "https://www.samsung.com/pk/info/terms-and-conditions/",
+    "status": 404,
+    "bytes": 318210,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "xiaomi-robots",
+    "url": "https://mistore.pk/robots.txt",
+    "final_url": "https://mistore.pk/robots.txt",
+    "status": 200,
+    "bytes": 2223,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "xiaomi-terms",
+    "url": "https://mistore.pk/pages/terms-and-conditions",
+    "final_url": "https://mistore.pk/pages/terms-and-conditions",
+    "status": 404,
+    "bytes": 523486,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "infinix-robots",
+    "url": "https://pk.infinixmobility.com/robots.txt",
+    "final_url": "https://pk.infinixmobility.com/robots.txt",
+    "status": 200,
+    "bytes": 14,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "infinix-terms",
+    "url": "https://pk.infinixmobility.com/terms",
+    "final_url": "https://pk.infinixmobility.com/terms",
+    "status": 404,
+    "bytes": 805442,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "ishopping-robots",
+    "url": "https://www.ishopping.pk/robots.txt",
+    "final_url": "https://www.ishopping.pk/robots.txt",
+    "status": 200,
+    "bytes": 131,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "ishopping-terms",
+    "url": "https://www.ishopping.pk/terms-and-conditions",
+    "final_url": "https://www.ishopping.pk",
+    "status": 200,
+    "bytes": 579589,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mega-robots",
+    "url": "https://www.mega.pk/robots.txt",
+    "final_url": "https://www.mega.pk/robots.txt",
+    "status": 200,
+    "bytes": 2224,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mega-terms",
+    "url": "https://www.mega.pk/terms.php",
+    "final_url": "https://www.mega.pk/terms.php",
+    "status": 404,
+    "bytes": 163744,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "telemart-robots",
+    "url": "https://www.telemart.pk/robots.txt",
+    "final_url": "https://www.telex.pk/robots.txt",
+    "status": 200,
+    "bytes": 3678,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "telemart-terms",
+    "url": "https://www.telemart.pk/terms-and-conditions",
+    "final_url": "https://www.telex.pk/terms-and-conditions",
+    "status": 404,
+    "bytes": 817362,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "games-robots",
+    "url": "https://www.gamesandgears.pk/robots.txt",
+    "final_url": "http://gamesandgears.pk/robots.txt",
+    "status": 500,
+    "bytes": 0,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "games-terms",
+    "url": "https://www.gamesandgears.pk/pages/terms-and-conditions",
+    "final_url": "http://gamesandgears.pk/pages/terms-and-conditions",
+    "status": 500,
+    "bytes": 0,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "apple-robots",
+    "url": "https://www.apple.com/robots.txt",
+    "final_url": "https://www.apple.com/robots.txt",
+    "status": 200,
+    "bytes": 1018,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "apple-terms",
+    "url": "https://www.apple.com/legal/internet-services/terms/site.html",
+    "final_url": "https://www.apple.com/legal/internet-services/terms/site.html",
+    "status": 200,
+    "bytes": 124450,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "gemini-pricing",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "final_url": "https://aistudio.google.com/docs/pricing",
+    "status": 200,
+    "bytes": 103583,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "openai-pricing",
+    "url": "https://openai.com/api/pricing/",
+    "final_url": "https://openai.com/api/pricing/",
+    "status": 403,
+    "bytes": 9726,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "vision-pricing",
+    "url": "https://cloud.google.com/vision/pricing",
+    "final_url": "https://cloud.google.com/vision/pricing",
+    "status": 200,
+    "bytes": 1730169,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serp-pricing",
+    "url": "https://serpapi.com/pricing",
+    "final_url": "https://serpapi.com/pricing",
+    "status": 200,
+    "bytes": 209750,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serp-terms",
+    "url": "https://serpapi.com/terms",
+    "final_url": "https://serpapi.com/terms",
+    "status": 404,
+    "bytes": 2332,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "vercel-pricing",
+    "url": "https://vercel.com/pricing",
+    "final_url": "https://vercel.com/pricing",
+    "status": 200,
+    "bytes": 1269718,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "vercel-hobby",
+    "url": "https://vercel.com/docs/plans/hobby",
+    "final_url": "https://vercel.com/docs/plans/hobby",
+    "status": 200,
+    "bytes": 847375,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "supabase-pricing",
+    "url": "https://supabase.com/pricing",
+    "final_url": "https://supabase.com/pricing",
+    "status": 200,
+    "bytes": 375500,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "neon-pricing",
+    "url": "https://neon.com/pricing",
+    "final_url": "https://neon.com/pricing",
+    "status": 200,
+    "bytes": 758441,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "cloudflare-pricing",
+    "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+    "final_url": "https://developers.cloudflare.com/workers/platform/pricing/",
+    "status": 200,
+    "bytes": 283948,
+    "date": "2026-11-09 PKT"
+  }
+]

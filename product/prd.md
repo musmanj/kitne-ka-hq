@@ -1,5 +1,7 @@
 # PRD: Kitne Ka MVP
 
+v0.2 draft for G1: see prd-v0.2-draft.md
+
 Owner: PM · Reviewers: CTO, DD, QA · Status: **Draft** · Version: 0.1
 Pending G1 on Day 2, 2026-11-10. Elaborated progressively. Sections below the journey can trail behind the build.
 

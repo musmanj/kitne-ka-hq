@@ -1,0 +1,1 @@
+We do not support landscape mode, please use the website in the portrait mode for best experience.

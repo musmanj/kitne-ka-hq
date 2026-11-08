@@ -1,0 +1,44 @@
+[
+  {
+    "key": "mega-actual",
+    "url": "https://www.mega.pk/terms_of_services.php",
+    "final_url": "https://www.mega.pk/terms_of_services.php",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serper-pricing",
+    "url": "https://serper.dev/",
+    "final_url": "https://serper.dev/",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serper-robots",
+    "url": "https://serper.dev/robots.txt",
+    "final_url": "https://serper.dev/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serper-terms",
+    "url": "https://serper.dev/terms",
+    "final_url": "https://serper.dev/terms",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "gemini-limits",
+    "url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "final_url": "https://aistudio.google.com/docs/rate-limits",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "openai-official-pricing",
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "final_url": "https://developers.openai.com/api/docs/pricing",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  }
+]

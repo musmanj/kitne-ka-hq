@@ -1,0 +1,22 @@
+flowchart TD
+ B0[URL field: paste manually or tap Paste] --> B1{Inline URL validation}
+ B1 -->|Invalid| B2[Invalid URL: inline correction]
+ B2 --> B0
+ B1 -->|Valid| B3{Supported and permitted?}
+ B3 -->|Unsupported| B4[Unsupported source: name reason]
+ B3 -->|Not permitted| B5[Not permitted: name reason; no scraping implication]
+ B3 -->|Yes| B6[Extracting]
+ B6 -->|Success| CF[Confirm details]
+ B6 -->|Fetch failed| B7[Fetch failed: plain reason]
+ B6 -->|Non-product page| B8[Not a product page]
+ B6 -->|Expired or removed| B9[Link expired / removed]
+ B6 -->|Timeout| B10[Timeout: keep link]
+ B10 -->|Retry same link| B6
+ B4 & B5 & B7 & B8 & B9 & B10 --> FB[Same-screen fallbacks]
+ FB -->|Upload listing screenshot| A0[Upload Screenshot]
+ FB -->|Enter details manually| BM[Empty Confirm with category picker]
+ BM --> CF
+ B0 -->|Clipboard denied / unavailable: ASSUMPTION| BP[Keep field editable; manual paste]
+ BP --> B0
+ B6 -->|No connection| OFF[Global Offline: retain inputs / auto retry online / Retry]
+ OFF --> B6

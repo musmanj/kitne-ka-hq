@@ -1,0 +1,107 @@
+[
+  {
+    "name": "home",
+    "height": 858,
+    "width": 360
+  },
+  {
+    "name": "confirm",
+    "height": 1057,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "confirm-option-b",
+    "height": 1043,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "results-full",
+    "height": 1449,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "results-full-low",
+    "height": 1576,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "results-no-price",
+    "height": 1466,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "results-no-price-low",
+    "height": 1593,
+    "width": 360,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    }
+  },
+  {
+    "name": "share-normal",
+    "height": 1350,
+    "width": 1080
+  },
+  {
+    "name": "share-indicative",
+    "height": 1350,
+    "width": 1080
+  }
+]

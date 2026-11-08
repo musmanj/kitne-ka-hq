@@ -1,0 +1,12 @@
+flowchart TD
+ C0[Type brand / model / specs; category chips] --> C1{Catalogue search}
+ C1 -->|Too short| C2[Too-short query hint]
+ C2 --> C0
+ C1 -->|No matches| C3[Spelling tips; try brand + model; category browse]
+ C3 --> C0
+ C1 -->|Unavailable| C4[Catalogue unavailable]
+ C4 -->|Retry query preserved: ASSUMPTION| C1
+ C1 -->|Matches| C5[Typeahead model matches]
+ C5 -->|Pick model| CF[Confirm: model prefilled; asking price optional]
+ C1 -->|No connection| OFF[Global Offline: retain inputs / auto retry online / Retry]
+ OFF --> C1

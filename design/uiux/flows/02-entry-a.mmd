@@ -1,0 +1,24 @@
+flowchart TD
+ A0[Pick image: gallery / camera / desktop paste or drag] --> A1{Supported and within limit?}
+ A1 -->|Unsupported| A2[Unsupported file: explain / pick again]
+ A1 -->|Too large| A3[Too large: state configured limit / pick again]
+ A2 & A3 --> A0
+ A1 -->|Yes| A4[Compress: assumed 1600px / original up to 10 MB pending confirmation]
+ A4 --> A5[Preview + privacy line pending Security policy]
+ A5 -->|Continue| A6[Extracting: Uploading - Reading text - Identifying product]
+ A6 -->|Cancel| A5
+ A6 -->|Unreadable| A7[Unreadable image: retake or Search]
+ A6 -->|No text| A8[No text found: retake or Search]
+ A7 & A8 --> AU[One unreadable UI; variant copy; distinct analytics codes]
+ AU -->|Retake| A0
+ AU -->|Search; retain image in session: ASSUMPTION| C0[Search entry]
+ A6 -->|Outside MVP| A9[Phones / laptops / consoles only; Search]
+ A9 --> C0
+ A6 -->|Multiple products| A10[Pick one product]
+ A10 --> A11{Price visible?}
+ A6 -->|Single product| A11
+ A11 -->|No| A12[Flag no price: optional asking-price prompt]
+ A12 --> CF[Confirm details]
+ A11 -->|Yes| CF
+ A6 -->|Network unavailable| OFF[Global Offline: retain inputs / auto retry online / Retry]
+ OFF --> A6

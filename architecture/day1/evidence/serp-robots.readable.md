@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /samples/
+Disallow: /searches/
+Disallow: /search?
+Disallow: /search.json
+Disallow: /search.html
+
+Sitemap: https://serpapi.com/sitemap.xml
+Sitemap: https://serpapi.com/blog/sitemap.xml

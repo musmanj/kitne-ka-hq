@@ -1,0 +1,135 @@
+[
+  {
+    "key": "samsung-legal",
+    "url": "https://www.samsung.com/pk/info/legal/",
+    "final_url": "https://www.samsung.com/pk/info/legal/",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "xiaomi-actual",
+    "url": "https://mistore.pk/pages/terms-and-condition",
+    "final_url": "https://mistore.pk/pages/terms-and-condition",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "infinix-actual",
+    "url": "https://pk.infinixmobility.com/termsuse",
+    "final_url": "https://pk.infinixmobility.com/termsuse",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "ishopping-actual",
+    "url": "https://www.ishopping.pk/terms-conditions",
+    "final_url": "https://www.ishopping.pk/terms-conditions",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "telemart-actual",
+    "url": "https://www.telex.pk/pages/terms-condition",
+    "final_url": "https://www.telex.pk/pages/terms-condition",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "tecno-robots",
+    "url": "https://www.tecno-mobile.com/robots.txt",
+    "final_url": "https://www.tecno-mobile.com/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "tecno-terms",
+    "url": "https://www.tecno-mobile.com/pak/terms-of-use/",
+    "final_url": "https://www.tecno-mobile.com/pak/terms-of-use/",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mercantile-robots",
+    "url": "https://mercantile.com.pk/robots.txt",
+    "final_url": "https://mercantile.com.pk/robots.txt",
+    "status": 404,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mercantile-terms",
+    "url": "https://mercantile.com.pk/terms-and-conditions/",
+    "final_url": "https://mercantile.com.pk/terms-and-conditions",
+    "status": 404,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "czone-robots",
+    "url": "https://www.czone.com.pk/robots.txt",
+    "final_url": "https://www.czone.com.pk/robots.txt",
+    "status": 403,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "czone-terms",
+    "url": "https://www.czone.com.pk/terms.aspx",
+    "final_url": "https://www.czone.com.pk/terms.aspx",
+    "status": 403,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serp-legal",
+    "url": "https://serpapi.com/legal",
+    "final_url": "https://serpapi.com/legal",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "serp-robots",
+    "url": "https://serpapi.com/robots.txt",
+    "final_url": "https://serpapi.com/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "google-robots",
+    "url": "https://www.google.com/robots.txt",
+    "final_url": "https://www.google.com/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "google-terms",
+    "url": "https://policies.google.com/terms",
+    "final_url": "https://policies.google.com/terms",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "tesseract-license",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tesseract/main/LICENSE",
+    "final_url": "https://raw.githubusercontent.com/tesseract-ocr/tesseract/main/LICENSE",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "gemini-models",
+    "url": "https://ai.google.dev/gemini-api/docs/models",
+    "final_url": "https://aistudio.google.com/docs/models",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "gemini-terms",
+    "url": "https://ai.google.dev/gemini-api/terms",
+    "final_url": "https://aistudio.google.com/docs/terms",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "daraz-blog",
+    "url": "https://blog.daraz.pk/daraz-affiliate-program/",
+    "final_url": "https://blog.daraz.pk/daraz-affiliate-program/",
+    "status": 500,
+    "date": "2026-11-09 PKT"
+  }
+]

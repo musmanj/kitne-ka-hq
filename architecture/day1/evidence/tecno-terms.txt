@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pakistan">
+<head>
+
+<meta charset="utf-8">
+
+
+
+<link rel="shortcut icon" href="https://d13pvy8xd75yde.cloudfront.net/global/x_new/tecno_icon.svg">
+    <title>Terms of Use |  TECNO Smartphones: Terms Of Use</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="generator" content="TYPO3 CMS" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta property="og:site_name" content="Tecno" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Terms of Use" />
+<meta property="og:url" content="https://www.tecno-mobile.com/pak/terms-of-use/" />
+<meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" type="text/css" href="https://d13pvy8xd75yde.cloudfront.net/static/new-css/main-min.css" media="all">
+    <link rel="stylesheet" href="https://d13pvy8xd75yde.cloudfront.net/newfileadmin/templates/css/current.css">
+    <link rel="stylesheet" href="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/css/detail.min.css">
+    <link rel="stylesheet" href="https://d13pvy8xd75yde.cloudfront.net/global/pak/returnPolicy1.css">
+    <script src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/js/jquery.min.js"></script>
+<link rel="canonical" href="https://www.tecno-mobile.com/pak/terms-of-use/" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9PX7P7N');</script>
+<!-- End Google Tag Manager -->
+</head>
+<style>
+    h2{
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+    .hover-click {
+        cursor: pointer;
+    }
+    .hover-click:hover {
+        color: #0164F9 !important;
+    }
+    .hover-click:active {
+        color: #0048b4 !important;
+    }
+    .page-main.static-page {
+        padding-top: 5vh;
+        padding-left: 3%;
+        padding-right: 3%;
+        max-width: 1200px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .page-main.static-page .page-title {
+        font-size: 48px;
+        font-weight: 600;
+    }
+    .page-main.static-page .page-banner {
+        margin-top: 24px;
+    }
+    .page-main.static-page .page-banner img {
+        width: 100%;
+    }
+    .page-main.static-page .section {
+        margin-top: 32px;
+        line-height: 32px;
+        font-size: 16px;
+    }
+    .page-main.static-page table td {
+        padding: 5px 10px;
+    }
+    @media screen and (max-width: 1200px) {
+        .page-main.static-page {
+            padding-left: 14px;
+            padding-right: 14px;
+            margin: 0 auto;
+        }
+        .page-main.static-page .page-title {
+            font-size: 32px;
+        }
+    }
+    .page-main.privacy-policy h2,
+    .page-main.terms-of-use h2,
+    .page-main.privacy-policy h3,
+    .page-main.terms-of-use h3,
+    .page-main.privacy-policy b,
+    .page-main.terms-of-use b {
+        font-family: "Semibold";
+    }
+    .page-main.privacy-policy .bolder,
+    .page-main.terms-of-use .bolder {
+        font-family: "Semibold";
+        font-weight: 600;
+    }
+    .page-main.privacy-policy p.p,
+    .page-main.terms-of-use p.p {
+        margin: 16px 0;
+    }
+    .page-main.privacy-policy .indent,
+    .page-main.terms-of-use .indent {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+    }
+    .page-main.privacy-policy .indent .part,
+    .page-main.terms-of-use .indent .part {
+        display: inline-block;
+    }
+    .page-main.privacy-policy .indent .part:first-child,
+    .page-main.terms-of-use .indent .part:first-child {
+        width: 48px;
+    }
+    .page-main.privacy-policy .indent .part:last-child,
+    .page-main.terms-of-use .indent .part:last-child {
+        width: calc(100% - 3*16px);
+    }
+    .page-main.privacy-policy .indent .part a,
+    .page-main.terms-of-use .indent .part a {
+        color: #000;
+    }
+    .page-main.privacy-policy .indent .part a:hover,
+    .page-main.terms-of-use .indent .part a:hover {
+        color: #666;
+        border-bottom: 1px solid #666;
+    }
+    /*# sourceMappingURL=privacyPolicy.css.map */
+</style>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9PX7P7N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<!--pc header  start-->
+<header class="HomePage newheaderpc">
+    <div class="width-1440 flex-1440 width_1280">
+        <div class="front">
+            <div class="logo m-r-70">
+                <a href="/pak/home/">
+                    <img data-src="https://d13pvy8xd75yde.cloudfront.net/global/x_new/logo.svg" width="101" height="20"
+                        alt="TECNO logo" />
+                </a>
+            </div>
+            <div class="item m-r-48">
+                <a href="/pak/phones/product-list/">Shop</a>
+                <div class="item-menu active">
+                    <ul class="item-menu-list-Box">
+                        <!-- <li class="item-menu-list">
+                            <a href="/pak/phones/product-list/#new-phantom">
+                                <span class="ItImg-bg">
+                                    <img width="800" height="800"
+                                        data-src="https://d13pvy8xd75yde.cloudfront.net/global/phones/phantom/ae/10/800/AE10%E6%B5%B7%E6%B3%A2%E8%93%9D.png">
+                                </span>
+                                <span class="item-title">PHANTOM</span>
+                            </a>
+                        </li> -->
+                        <li class="item-menu-list">
+                            <a href="/pak/phones/product-list/#new-camon">
+                                <span class="ItImg-bg">
+                                    <img width="800" height="800"
+                                        data-src="https://d13pvy8xd75yde.cloudfront.net/camon/CN7C-%E6%9C%88%E5%BD%B1%E9%BB%91.png">
+                                </span>
+                                <span class="item-title">CAMON</span>
+                            </a>
+                        </li>
+                        <li class="item-menu-list">
+                            <a href="/pak/phones/product-list/#new-pova">
+                                <span class="ItImg-bg">
+                                    <img width="800" height="800"
+                                        data-src="https://d13pvy8xd75yde.cloudfront.net/ph/3.png">
+                                </span>
+                                <span class="item-title">POVA</span>
+                            </a>
+                        </li>
+                        <li class="item-menu-list">
+                            <a href="/pak/phones/product-list/#new-spark">
+                                <span class="ItImg-bg">
+                                    <img width="800" height="800"
+                                        data-src="https://d13pvy8xd75yde.cloudfront.net/global/spark50pro_ko5/800%2A800/Ink%20Black.png">
+                                </span>
+                                <span class="item-title">SPARK</span>
+                            </a>
+                        </li>
+                        <!--                        <li class="item-menu-list">-->
+                        <!--                            <a href="/pak/phones/product-list/#new-pop">-->
+                        <!--                                <span class="ItImg-bg">-->
+                        <!--                                    <img class="b-lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 1280 720'%3E%3C/svg%3E"-->
+                        <!--                                         data-src="https://d13pvy8xd75yde.cloudfront.net/global/phones/4bde4ab163ed16d309ade63112047319.webp">-->
+                        <!--                                </span>-->
+                        <!--                                <span class="item-title">POP</span>-->
+                        <!--                            </a>-->
+                        <!--                        </li>-->
+                    </ul>
+                    <ul class="item-menu-list-Box-foot">
+                        <li class="AllModes">
+                            <a href="/pak/phones/product-list/">
+                                <img alt="all models" width="28" height="27"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/Allnew.svg">
+                                <img alt="all models" width="28" height="27"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/Allnew-hover.svg">
+                                <span>All Models</span>
+                            </a>
+                        </li>
+                        <span class="after"></span>
+                        <li class="ModelComparison">
+                            <a href="/pak/phones/product-compare-list/">
+                                <img alt="Compare Models" width="28" height="27"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/Comparisonnew.svg">
+                                <img alt="Compare Models" width="28" height="27"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/Comparisonnew-hover.svg">
+                                <span>Compare Models</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="after">
+            <!-- <div class="item m-r-48"> <a href="https://pk-store.tecno.com/?utm_source=official_site" target="_blank"
+                    title="Online Store">T.Store</a></div> -->
+            <!-- <div class="item m-r-48"><a href="https://pk-store.tecno.com/">Store locator</a></div> -->
+            <div class="item m-r-48"><a href="/pak/support/">Support</a></div>
+            <div class="item m-r-64"><a href="https://www.facebook.com/groups/tecnotribepakistan/">Community</a></div>
+            <div class="m-r-64 login-box">
+                <div class="denglu head-login">
+                    <img style="cursor: pointer;" class="w-100 dengluIcon"
+                        data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/denglu.svg"
+                        alt="" />
+                    <img style="cursor: pointer;" class="w-100 headerIconhover dengluIcon"
+                        data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/denglu-hover.svg"
+                        alt="" />
+                    <img style="cursor: pointer;" class="w-100 headerImg" data-src="" alt="" />
+                </div>
+                <div class="user-login-status">
+
+                    <div class="user-down-img"></div>
+                    <div class="user-login-box">
+                        <a href="/pak/mall/">Personal center</a>
+                        <a onclick="loginOut()">Logout</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="sousuo">
+                <img style="cursor: pointer;" class="w-100" width="40" height="40"
+                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/sousuo.svg"
+                    alt="Search" />
+                <img style="cursor: pointer;" class="w-100 headerIconhover" width="40" height="40"
+                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/sousuo-hover.svg"
+                    alt="Search" />
+            </div>
+        </div>
+    </div>
+</header>
+<!--pc header  end-->
+<!--mobile header  start-->
+<header class="HomePage newheaderm">
+    <div class="pageHeaderMenu"></div>
+    <div class="logo">
+        <a href="/pak/home/">
+            <img data-src="https://d13pvy8xd75yde.cloudfront.net/global/x_new/logo.svg" width="101" height="20"
+                alt="TECNO logo" />
+        </a>
+    </div>
+    <div class="phone-logo-statue head-login login-box">
+        <div class="denglu">
+            <img class="w-100"
+                data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/denglu.svg"
+                alt="" />
+            <img class="w-100 headerIconhover"
+                data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/denglu-hover.svg"
+                alt="" />
+        </div>
+
+        <div class="user-login-status">
+            <div class="user-down-img"></div>
+            <div class="user-login-box">
+                <a href="/pak/mall/">Personal center</a>
+                <a onclick="loginOut()">Logout</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="openMenu">
+        <div class="sousuo position-relative">
+            <input type="text" value="" aria-label="Search">
+            <img class="w-100" width="40" height="40"
+                data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/sousuo.svg"
+                alt="Search" />
+        </div>
+        <div class="icon-flex OpenColumn position-relative">
+            <div class="menuName">
+                <span>Shop</span>
+                <i class="MenuIcon"></i>
+            </div>
+            <ul class="openList">
+                <ul class="phoneList">
+                    <!-- <a href="https://www.mobile-phantom.com/ng/homepage" target="_blank">
+                        <li>
+                            <span>
+                                <img width="800" height="800"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/phantom/Frame%20374.png">
+                            </span>
+                            <span class="item-title">PHANTOM</span>
+                        </li>
+                    </a> -->
+                    <a href="/pak/phones/product-list/#new-camon" target="_blank">
+                        <li>
+                            <span>
+                                <img width="800" height="800"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/camon/CN7C-%E6%9C%88%E5%BD%B1%E9%BB%91.png">
+                            </span>
+                            <span class="item-title">CAMON</span>
+                        </li>
+                    </a>
+                    <a href="/pak/phones/product-list/#new-pova" target="_blank">
+                        <li>
+                            <span>
+                                <img width="800" height="800" data-src="https://d13pvy8xd75yde.cloudfront.net/ph/3.png">
+                            </span>
+                            <span class="item-title">POVA</span>
+                        </li>
+                    </a>
+                    <a href="/pak/phones/product-list/#new-spark" target="_blank">
+                        <li>
+                            <span>
+                                <img width="800" height="800"
+                                    data-src="https://d13pvy8xd75yde.cloudfront.net/global/spark50pro_ko5/800%2A800/Ink%20Black.png">
+                            </span>
+                            <span class="item-title">SPARK</span>
+                        </li>
+                    </a>
+                    <!--                    <a href="/pak/phones/product-list/#new-pop" target="_blank">-->
+                    <!--                        <li>-->
+                    <!--                        <span>-->
+                    <!--                            <img class="b-lazy"-->
+                    <!--                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 1280 720'%3E%3C/svg%3E"-->
+                    <!--                                 data-src-mobile="https://d13pvy8xd75yde.cloudfront.net/global/phones/4bde4ab163ed16d309ade63112047319.webp">-->
+                    <!--                            </span>-->
+                    <!--                            <span class="item-title">POP</span>-->
+                    <!--                        </li>-->
+                    <!--                    </a>-->
+                </ul>
+                <div class="menuFoot">
+                    <span class="modes">
+                        <a href="/pak/phones/product-list/" target="_blank">
+                            <img class="w-100" alt="All Models" width="28" height="27"
+                                data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/All.svg">
+                            All Models
+                        </a>
+                    </span>
+                    <span class="model">
+                        <a href="/pak/phones/product-compare-list/" target="_blank">
+                            <img class="w-100" alt="Compare Models" width="39" height="37"
+                                data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/Comparison.svg">
+                            Compare Models
+                        </a>
+                    </span>
+                </div>
+            </ul>
+        </div>
+        <!-- <div class="icon-flex position-relative">
+            <div class="menuName">
+                <a href="https://pk-store.tecno.com/?utm_source=official_site" target="_blank" title="Online Store">
+                    <span>T.Store</span>
+                    <i class="rightIcon">
+                        <img width="22" height="39" data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/downUp.svg">
+                    </i>
+                </a>
+            </div>
+        </div> -->
+        <div class="icon-flex position-relative">
+            <div class="menuName">
+                <a href="https://www.facebook.com/groups/tecnotribepakistan/">
+                    <span>Community</span>
+                    <i class="rightIcon">
+                        <img width="22" height="39"
+                            data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/downUp.svg">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    #search-modal h3 {
+        color: #999;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    #newNav .nav_left .name {
+        margin-bottom: 0;
+    }
+</style>
+<section style="opacity: 0;" class="search modal modal-canvas modal-vm fade" id="search-modal" tabindex="-1"
+    role="dialog">
+    <div class="modal-dialog container" role="search">
+        <div class="modal-content">
+            <header class="modal-header">
+                <div class="modal-title hidden-xs-down">
+                    <h6 class="text-uppercase text-muted small">TYPE IN YOUR SEARCH
+                        AND PRESS ENTER</h6>
+                </div>
+                <button type="button" class="close circle" data-dismiss="modal" aria-label="Close"><span
+                        class="iconfont icon-close"></span></button>
+            </header>
+            <section class="modal-body cs-form-popup-layer">
+                <h3>Search TECNO</h3>
+                <form action="/search/" method="get"><input name="id" type="hidden" value="52"> <input name="L"
+                        type="hidden" value="0"> <input name="q" autocomplete="off" type="search"
+                        class="form-control global-search-input" aria-label="Search">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </section>
+            <footer class="modal-footer search-modal-footer flex-column">
+                <h4>Quick Links</h4>
+                <p class="text-muted mw-100">Learn about TECNO products, view online manuals, get the latest downloads,
+                    and more.</p>
+                <a href="/pak/hios/">
+                    <h6>HiOS</h6>
+                </a><a href="/pak/stores/">
+                    <h6>Find TECNO Store</h6>
+                </a>
+            </footer>
+        </div>
+    </div>
+</section>
+<style>
+    body {
+        font-weight: 400;
+    }
+
+    #topNav {
+        max-width: 100%;
+    }
+
+    #newNav {
+        z-index: 99;
+    }
+
+    @media screen and (min-width: 1441px) {
+        .pagebtn {
+            font-size: 15.7px;
+        }
+    }
+
+    @font-face {
+        font-family: 'Semibold';
+        src: url('https://d13pvy8xd75yde.cloudfront.net/global/tablets/fonts/HurmeGeometricSans_No3_6_Bold.otf') format('opentype')
+    }
+
+    .newheaderpc .user-down-img,
+    .newheaderm .user-down-img {
+        width: 20px;
+        height: 20px;
+        background: url(https://d13pvy8xd75yde.cloudfront.net/global/new-mall/image/down.png);
+        background-size: cover;
+    }
+
+    .login-box {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .user-login-status {
+        position: relative;
+        display: none;
+
+    }
+
+    .user-login-status .user-down-img {
+        width: 20px;
+        filter: none
+    }
+
+    .user-login-status .user-login-box {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: -7.0833vw;
+        background-color: #fff;
+        padding: 0 2.0833vw;
+        box-shadow: 0 0 3px #999;
+
+    }
+
+    .user-login-status .user-login-box a {
+        display: block;
+        line-height: 2.7778vw;
+        font-size: 1.04vw;
+        width: 8.6389vw;
+        text-align: center;
+        color: #555;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .ser-login-status .user-login-box a:last-child {
+        border-bottom: 0;
+    }
+
+    .phone-logo-statue {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .phone-logo-statue .user-down-img {
+        width: 4.4444vw;
+        height: 4.4444vw;
+        margin-left: .9259vw;
+    }
+
+    .phone-logo-statue .user-login-box {
+        display: none;
+        position: absolute;
+
+        top: 30px;
+        left: -28.2593vw;
+        background-color: #fff;
+        padding: 0 3.7037vw;
+        box-shadow: 0 0 3px #999;
+        z-index: 100;
+
+    }
+
+    .phone-logo-statue .user-login-box a {
+        display: block;
+        line-height: 7.4074vw;
+        width: 30.6389vw;
+        font-size: 3.8889vw;
+        color: #555;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .ser-login-status .user-login-box a:last-child {
+        border-bottom: 0;
+    }
+
+
+    header.newheaderpc {
+        /* å headerHomePage çç¶æ */
+        background: #fff !important;
+        border-bottom: 1px solid #eee !important;
+
+        z-index: 9998 !important;
+    }
+
+    /* æ»å¨åçæå­é¢è² */
+    header.newheaderpc a {
+        color: #000 !important;
+    }
+
+    /* æ»å¨åç TECNO èè² Logo */
+    header.newheaderpc .logo img {
+        filter: unset !important;
+    }
+
+    /* æ»å¨åçç»å½ / æç´¢å¾æ  */
+    header.newheaderpc .denglu img,
+    header.newheaderpc .sousuo img {
+        filter: brightness(1) invert(1);
+    }
+
+</style>
+
+
+
+  <main class="main" role="main" style="overflow-x: unset;">
+    <nav class="sticky on-top sticky-nav">
+      <div class="container sticky-container justify-content-center">
+        <div class="sticky-nav-action justify-content-end">
+          <label for="sticky-nav-state" class="sticky-nav-toggle"></label>
+        </div>
+        <div class="sticky-nav-list">
+          <input type="checkbox" id="sticky-nav-state" class="sticky-nav-state">
+          <ul class="list-unstyled sticky-nav-menu" role="listbox">
+            <li><a href="/pak/privacy-policy/" class="sticky-nav-link">Privacy Policy</a></li>
+            <li><a href="/pak/terms-of-use/" class="sticky-nav-link active">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="c100" class="frame frame-default frame-type-dce_dceuid7 frame-layout-0">
+      <figure class="masthead with-responsive-image ">
+        <picture class="as-background">
+          <source srcset="https://d13pvy8xd75yde.cloudfront.net/global/phones/List/product-chapter_banner_0502.jpg"
+            media="(min-width: 1200px)">
+          <source srcset="https://d13pvy8xd75yde.cloudfront.net/global/phones/List/LISTPAGE_02_0502.jpg"
+            media="(min-width: 576px)"><img class="obj-cover obj-center"
+            src="https://d13pvy8xd75yde.cloudfront.net/global/phones/List/LISTPAGE_03_0502.jpg" alt="">
+        </picture>
+        <div class="masthead-head  black">
+          <h1 class="text-uppercase masthead-head-title">Terms of Use</h1>
+        </div>
+      </figure>
+    </div>
+
+
+    <div id="c101" class="frame frame-default frame-type-dce_dceuid22 frame-layout-0">
+      <section class="container">
+        <article class="article">
+          <section class="article-head">
+            <h1 class="article-title">TECNO Terms of Use</h1>
+            <h2 class="article-subtitle"></h2>
+            <div class="article-info"><time class="article-pubdate"></time></div>
+          </section>
+          <section class="article-body">
+            <p class="text-right">Last updated: July , 2021</p>
+            <p><br> Preamble<br> Welcome to TECNO!<br> TECNO MOBILE LIMITED and its global affiliates (hereinafter
+              referred to as "TECNO" , "we", "us", "our") hereby remind you to read and understand these Terms of Use
+              (hereinafter referred to as "this Agreement"). This is a legal agreement between you and TECNO which
+              governs your use of TECNO Software, Services and all the features and functions therein and any other
+              related website or online offering whether accessed via a computer or a mobile device or through any other
+              technology, manner or means. For proper use of TECNO system and software (hereinafter collectively
+              referred to as the "Software") and TECNO services (hereinafter collectively referred to as the "Service"),
+              please read carefully and fully understand the terms and conditions herein before you use your TECNO
+              device or download a Software mentioned in this Agreement, especially the Disclaimers, Limitation of
+              Liabilities, Privacy Policy, Usage Rules, Applicable Law, Dispute Resolution and other sections which may
+              have been highlighted in bold or in capital letters for your attention.&nbsp;</p>
+            <p>1.&nbsp;&nbsp; &nbsp;Acceptance of this Agreement<br> 1.1&nbsp;&nbsp; &nbsp;By downloading, installing,
+              clicking on the "register" or "agree" button and/or accessing or using the TECNO Device, Software or
+              Service, you agree to comply with and be bound by this Agreement. If you do not agree to this Agreement,
+              you may not access or use TECNO Software or Service.<br> 1.2&nbsp;&nbsp; &nbsp;The TECNO Software and
+              Service are not intended for or directed to children under the age of 14 (or the age considered as a
+              "child" in the jurisdiction where you use TECNO Software or Services). If you are under the age of 14, you
+              may not use the TECNO Software or Service or provide TECNO with any personally identifiable information.
+              If you are 14 or older but under the age of 18 (or under the age of majority in the jurisdiction where you
+              use TECNO Software and Service) which be considered as a "Minor", you represent that you have reviewed
+              this Agreement with your parent or legal guardian and that you and your parent or guardian understand and
+              consent to this Agreement. If you are a parent or guardian permitting a Minor to use the TECNO Services,
+              you agree to: (i) supervise the Minorâs use of the TECNO Software and Service; (ii) assume all risks
+              associated with the Minorâs use of TECNO Software and Service, including the transmission of content to
+              and from third parties via the Internet; (iii) assume any liability resulting from the Minorâs use of
+              TECNO Software and Service; (iv) ensure the accuracy and truthfulness of all information submitted by the
+              Minor; and (v) assume responsibility and are bound by this Agreement for the Minorâs access and use of the
+              TECNO Software and Service.&nbsp;<br> 1.3&nbsp;&nbsp; &nbsp;In order to improve your user experience or
+              enhance product safety performance, we will continue to work hard to develop new software and services,
+              and provide you in a timely manner with software updates (including but not limited to software version
+              upgrades, modifications, and functional perfection) or repairs. TECNO may reserve the right to modify this
+              Agreement as necessary in accordance with applicable laws and regulations. The updated Agreement will
+              shall supersede the original Agreement and shall come into effect after the expiration of the period
+              stipulated by applicable law. If there is no special provision in applicable laws, the Agreement shall
+              become effective on the date of renewal. The updated Agreement will be announced on the corresponding
+              official website of TECNO Service for your reference at any time. If you continue to access or use the
+              TECNO Software or Service, you will be deemed as you having read and agreed to be bound by the updated
+              Agreement. If you do not accept the updated Agreement, please stop using TECNO Software or Service.</p>
+            <p>2.&nbsp;&nbsp; &nbsp;Permitted License Uses<br> Subject to the terms and conditions of this Agreement,
+              TECNO grants you a non-exclusive, non-sublicensable, personal, revocable, limited license to access and
+              use this Software and Service. You may install, use, display, and run the Software and Service on a TECNO
+              device for non-commercial purposes.<br> 2.1&nbsp;&nbsp; &nbsp;TECNO system: refers to the custom operating
+              system independently developed and owned by TECNO based on Google Android or an operating system of
+              another brand. TECNOâs ownership over the system includes: (i) information including but not limited to
+              codes stored on the device and other embedded software, documents, interfaces, contents and fonts provided
+              to you via TECNO device and any material protected by the copyright of TECNO or its licensor; (ii) updates
+              or upgrades to the software described in (i).<br> 2.2&nbsp;&nbsp; &nbsp;This Software: refers to the
+              system application program independently developed by TECNO that comes with TECNO system.<br>
+              2.3&nbsp;&nbsp; &nbsp;This Service: refers to the related various services provided by TECNO to users
+              through this Software.<br> 2.3.1&nbsp;&nbsp; &nbsp;You may enjoy browser, recording, calculator, weather,
+              file management, download, notepad, phone, SMS, camera, photo, address book, Bluetooth and other
+              functions. The specific services provided are subject to the TECNO device you purchased;<br>
+              2.3.2&nbsp;&nbsp; &nbsp;You may use this Service through mobile phones, tablets and other terminals
+              launched by TECNO. At the same time, TECNO will continue to enrich the form of terminals for users of this
+              Service.<br> 2.3.3&nbsp;&nbsp; &nbsp;When you use TECNO devices, some software and services have separate
+              user agreements or other rules. Please read them carefully before using the abovementioned software or
+              services.</p>
+            <p>3.&nbsp;&nbsp; &nbsp;Intellectual Property; Ownership<br> TECNO reserves the intellectual property rights
+              to this Software and Service and all related information content (including but not limited to UI
+              interface design, pictures, fonts, audio, etc.) and all rights not expressly granted to you. The above
+              intellectual property rights, including but not limited to copyright, trademark and patent rights, are
+              protected by applicable intellectual property rights, anti-unfair competition and other respective laws,
+              regulations and relevant international treaties. For matters not expressly authorized in this Agreement,
+              such as commercial sales, reproduction, and permission for any third party to use this Software, you
+              should separately obtain formal written permission from TECNO.</p>
+            <p>4.&nbsp;&nbsp; &nbsp;Restrictions on the use of This Software and Service<br> 4.1&nbsp;&nbsp; &nbsp;You
+              shall not take any of the following actions when using this Software and Service, including but not
+              limited to:<br> 4.1.1&nbsp;&nbsp; &nbsp;Releasing, transmitting, spreading or storing contents which
+              violate laws and regulations, policies, public order and good custom, and social ethics, such as insults,
+              defamation, violence, or violation of religion, etc; releasing, transmitting, spreading or storing
+              fabricated information or advertising information for the purpose of misleading or deceiving others;</p>
+            <p>4.1.2&nbsp;&nbsp; &nbsp;Renting, lending, copying, modifying, linking, reprinting, compiling, issuing or
+              publishing this Software and similar acts;<br> 4.1.3&nbsp;&nbsp; &nbsp;Jailbreaking, reverse engineering,
+              disassembling, decompiling, or otherwise attempting to destroy this Software; or, accessing or disturbing
+              this Software by the use of plug-ins, Tag-ons, or third-party tools/services that are not authorized by
+              TECNO;<br> 4.1.4&nbsp;&nbsp; &nbsp;Copying, modifying, adding, deleting, operating in the form of
+              mounting, or creating any derivative works of data of the Software, data released into any terminal memory
+              in the course of the operation of the Software, interactive data of the client and server side in the
+              course of the operation of the Software, and system data necessary for the operation of the Software; or
+              adding, deleting or changing the functions or operative effect of software by modifying or fabricating the
+              instructions and data that occur in the course of the operation of the software; or operating or publicly
+              diffusing the software and method used for the above purposes, whether commercially or otherwise;<br>
+              4.1.5&nbsp;&nbsp; &nbsp;Carrying out other acts which violate laws and regulations, policies, public order
+              and good custom, and social ethics or acts which are not authorized by TECNO in writing.<br>
+              4.2&nbsp;&nbsp; &nbsp;You may not, and you agree not to or enable others to, copy (except as expressly
+              permitted by this Agreement), decompile, reverse engineer, disassemble, attempt to derive the source code
+              of, decrypt, modify, or create derivative works of the TECNO Software or any services provided by the
+              TECNO Software or any part thereof (except as and only to the extent any foregoing restriction is
+              prohibited by applicable law or by licensing terms governing the use of open-source components that may be
+              included with the TECNO Software). You agree not to remove, obscure, or alter any proprietary notices
+              (including trademark and copyright notices) that may be affixed to or contained within the TECNO Software.
+            </p>
+            <p>5.&nbsp;&nbsp; &nbsp;Usage Rules of This Software and Service<br> 5.1&nbsp;&nbsp; &nbsp;You understand
+              and agree that you should abide by the rights and obligations stipulated in this Agreement when you choose
+              to use a TECNO device.<br> 5.2&nbsp;&nbsp; &nbsp;As TECNO may develop multiple versions of software for
+              different devices, you should choose the appropriate software for download and follow the tips to install
+              correctly.<br> 5.3&nbsp;&nbsp; &nbsp;In order to provide services of better quality and safety, TECNO may
+              recommend you install other software during your installation of this Software. You can choose to install
+              them or not.<br> 5.4&nbsp;&nbsp; &nbsp;You understand and agree that the Software and Service may be
+              suspended or stopped by TECNO based on our business development plans or as required by judicial,
+              regulatory and supervisory authorities.&nbsp;<br> 5.5&nbsp;&nbsp; &nbsp;Unless permitted by applicable law
+              and with the written authorization of TECNO, you may not use or otherwise export or re-export TECNO
+              Software and Service.</p>
+            <p>6.&nbsp;&nbsp; &nbsp;Considerations on Your Use of This Software and Service<br> 6.1&nbsp;&nbsp; &nbsp;
+              You fully understand and agree: when you use a specific service of this Software, relevant permissions and
+              interfaces of your device may be required in order to achieve the corresponding features, while a separate
+              user agreement may also be required for certain services. Please read the aforementioned relevant
+              agreements and rules carefully before using this service;<br> 6.2&nbsp;&nbsp; &nbsp;TECNO has the right to
+              display all kinds of information to you in the process of providing this Service, including but not
+              limited to prompts for authorization, advertising information and promotional information, etc. The
+              information may appear in the form of system messages or pop-up windows. If you do not agree to receive
+              certain information, you can cancel the relevant service, which may eventually lead to unavailability of
+              the relevant service function;<br> 6.3&nbsp;&nbsp; &nbsp;You understand and agree: TECNO will make
+              commercially reasonable efforts to protect your data storage security during your use of this Service, but
+              TECNO cannot provide a complete guarantee, including but not limited to the following situations:<br>
+              6.3.1 To the maximum extent permitted by law, TECNO is not responsible for your deletion or storage
+              &nbsp;&nbsp; &nbsp;failure of relevant data in this Software and Service;<br> 6.3.2 TECNO will retain the
+              data according to the minimum retention period required for business &nbsp;&nbsp; &nbsp;development,
+              unless you agree to extend the retention period or otherwise permitted by law. TECNO also has the right to
+              decide at its discretion the maximum storage space of data in TECNO Device or this Software. You may back
+              up relevant data in this Software and Service by yourself according to your own needs;<br> 6.4&nbsp;&nbsp;
+              &nbsp;When you use this Service, the specific content displayed may differ depending on the version of the
+              Software you use. You understand and agree: when you are using a certain version of this Software or
+              entering the relevant pages of an application developed by TECNO, in order to provide you with a better
+              service experience, the necessary information such as the installation location, size, and UI interface of
+              the installed application on your terminal device may be adjusted, depending on the actual version
+              provided by TECNO.<br> 6.5&nbsp;&nbsp; &nbsp;You fully understand and agree that, if you need to register
+              an account when using this Software, you will be responsible for keeping the security of the registered
+              account information and account password properly, and you will be responsible for all acts that occur
+              under the account you registered with the TECNO device, including any contents that you publish and any
+              consequences arising therefrom.<br> 6.6&nbsp;&nbsp; &nbsp;You shall judge by yourself contents that you
+              have access to in using this Service and bear the risks arising from the use of such contents, including
+              risks arising from the dependence upon the correctness, completeness or practicability of the contents.
+              TECNO is unable to and will not bear any responsibility for any loss or damage suffered by you due to the
+              above risks.<br> 6.7&nbsp;&nbsp; &nbsp;If TECNO finds or receives a report from others that you violated
+              the terms of this Agreement, TECNO shall have the right at any time without notice to: delete and shield
+              relevant contents; suspend or terminate your use of the corresponding TECNO account or all of the Service;
+              investigate legal responsibility and take other measures. If you violate any terms of this Agreement, thus
+              causing damage to any third party, you shall solely bear all responsibilities arising therefrom and
+              compensate TECNO for any losses suffered by TECNO arising therefrom (including but not limited to possible
+              administrative penalties, lawyer fees, and investigation and evidence collection fees).</p>
+            <p>7.&nbsp;&nbsp; &nbsp;Updates of this Agreement&nbsp;<br> In order to better provide you with relevant
+              Service and to guarantee the security of this Software, we may update this Software and relevant Services
+              from time to time (including but not limited to software modification, software upgrades, partial function
+              disabling, &nbsp;function strengthen, new service development, software replacement and function
+              improvement). You may choose whether to upgrade to the corresponding version based on your needs. In order
+              to facilitate your experience of a better service by the TECNO device, and in compliance with applicable
+              laws, this Software may enable automatic upgrade and update function for you by default. You can choose
+              whether to enable this function in software settings. In case of such updates, we will notify you in an
+              appropriate manner (including but not limited to system notifications, site messages, announcements,
+              application store update notifications, etc.), and you have the right to choose whether to accept the
+              updated version. Updating to the latest version may improve your user experience. If you decide not to
+              accept the updated version provided by TECNO, you understand that you may place the Software under serious
+              security risk or cause the Software to be unusable or unstable. Failure to update the software may cause
+              some of the functions of the Software to be limited or rendered unusable.</p>
+            <p>8.&nbsp;&nbsp; &nbsp;Software and Services Provided by Third Parties<br> 8.1&nbsp;&nbsp; &nbsp;In order
+              to facilitate your use of the TECNO device, this Software or this Service may use third-party software or
+              services, and the results of such use and access are provided by the third party (including but not
+              limited to the services and contents provided by the third party that you jump to through this Software,
+              this Service, or accessed by said third party through TECNO's open platform). In addition to the terms of
+              this Agreement, you shall comply with the user agreements of third parties in using software or services
+              provided by third parties on the TECNO device. TECNO cannot guarantee the security, accuracy and validity
+              of the services and contents provided by third parties and other uncertain risks, and you shall solely
+              bear relevant risks and responsibilities arising therefrom.<br> 8.2&nbsp;&nbsp; &nbsp;Whether the
+              third-party software or services are pre-installed in the TECNO device or activated or subscribed by
+              yourself, you understand and agree that TECNO disclaims all express or implied warranties with respect to
+              the security, accuracy and validity of the services and contents provided by third parties and other
+              uncertain risks.<br> 8.3&nbsp;&nbsp; &nbsp;Any dispute between you and the above third-party software and
+              services providers shall be settled by you and such third party with you taking relevant responsibilities,
+              if any.</p>
+            <p>9.&nbsp;&nbsp; &nbsp;Fees and Advertisement<br> You understand and agree that although this Software and
+              Service are currently offered to you free of charge, however, along with the continuous renewal of our
+              Service, you may need to pay for some part of the Software or Service provided by TECNO. TECNO reserves
+              the right to add fee-charging features and functionalities in future Service. TECNO also reserves the
+              right to display advertisements in connection with the TECNO Software and Service to you. We will clearly
+              notify you in case of any paid software and service in this Software before your use and you may choose
+              whether to accept or use such paid software or service. At that time, please use such paid software or
+              service according to our instructions (including but not limited to service fee standards, payment terms
+              and service rules). You can use such paid software and services once you have explicitly agreed to the
+              relevant rules and are willing to pay the fees.<br> Your use of this Software and Service will consume
+              your device, bandwidth, traffic and other resources. Fees for the above resources such as purchasing a
+              TECNO device, Internet access fees, SMS fees, and payment for the Software's value-added services shall be
+              borne by yourself.</p>
+            <p>10.&nbsp;&nbsp; &nbsp;Privacy Policy<br> When you are using TECNO Device, Software and Services, TECNO
+              may need to collect personal data to provide you the Services. TECNO pays great attention to the
+              protection of your personal data and has made the TECNO Privacy Policy , which states the detailed
+              information of the way TECNO collects, uses, stores, transfers, and discloses your personal data.By
+              downloading, installing or using the Services, you agree to be bound by the terms of this Agreement and
+              its Privacy Policy, and TECNO will protect your privacy in accordance with this Privacy Policy.</p>
+            <p>11.&nbsp;&nbsp; &nbsp;Termination and Breach of Contract<br> TECNO has the right to judge whether your
+              behavior complies with the terms of this Agreement. If you are deemed to have violated relevant laws and
+              regulations or fail to comply with any terms and conditions of this Agreement or related rules, based on
+              the severity of your violation, TECNO and its licensors shall have the right to delete the content in
+              violation, to limit, to suspend or to terminate your use of TECNO Software and Service without notice, and
+              to take other measures that TECNO considers appropriate. And you will be held liable for your incompliance
+              behavior. Once it is terminated, you must stop using this Software and Service, and delete all the
+              Software and associated material s already copied and/or installed on your TECNO device immediately.&nbsp;
+            </p>
+            <p>12.&nbsp;&nbsp; &nbsp;Indemnification<br> You will indemnify, release and hold harmless TECNO, its
+              parent, subsidiaries and affiliates, and all officers, directors, agents and employees thereof, and any
+              party acting on TECNOâs behalf, from and against any and all third party claims, actions, liabilities,
+              losses, damages, judgments, costs and expenses, including reasonable attorneysâ fees (collectively,
+              "Claims") arising out of (i) any use of the TECNO Services or products appearing on the TECNO Services by
+              you or by any person that is not in accordance with the terms of this Agreement; (ii) any breach of this
+              Agreement by you or by any person that you allow to use the TECNO Services; or (iii) any violation of any
+              laws, regulations or the rights of any third party by you or by any person that you allow to use the TECNO
+              Services or products appearing on the TECNO Services.</p>
+            <p>13.&nbsp;&nbsp; &nbsp;DISCLAIMERS<br> 13.1&nbsp;&nbsp; &nbsp;DISCLAIMER OF WARRANTIES. TO THE MAXIMUM
+              EXTENT PERMITTED BY LAW, THE TECNO SOFTWARE AND SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
+              ANY WARRANTIES OR GUARANTEES OF ANY KIND OR NATURE, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+              NOT LIMITED TO, ANY (IF ANY) IMPLIED WARRANTIES, DUTIES OR CONDITIONS OF MERCHANTABILITY, OF FITNESS FOR A
+              PARTICULAR PURPOSE, OF ACCURACY OR COMPLETENESS OF RESPONSES, OF RESULTS, OF WORKMANLIKE EFFORT, OF LACK
+              OF VIRUSES, AND OF LACK OF NEGLIGENCE, ALL WITH REGARD TO THIS SOFTWARE AND SERVICE.<br> 13.2&nbsp;&nbsp;
+              &nbsp;THIS SOFTWARE DOES NOT CONTAIN ANY MALICIOUS CODE DESIGNED TO DESTROY YOUR DEVICE DATA OR TO OBTAIN
+              YOUR PRIVACY INFORMATION. TECNO WILL ALSO DO ITS UTMOST TO ENSURE THE SAFE, PROMPT, EFFECTIVE, ACCURATE,
+              RELIABLE AND CONTINUOUS OPERATION OF THIS SOFTWARE AND SERVICE, BUT WITH THE LIMITATION OF THE EXISTING
+              TECHNOLOGY, THIS SOFTWARE AND RELATED SERVICE MAY BE AFFECTED BY VARIOUS UNSTABLE FACTORS, TECNO MAKES NO
+              WARRANTIES OR REPRESENTATIONS THAT THE SOFTWARE IS COMPATIBLE WITH ALL SOFTWARE AND HARDWARE SYSTEMS, OR
+              IS ERROR-FREE, CAN OPERATE WITHOUT INTERRUPTION OR THAT ANY ERRORS IN THE SOFTWARE OR RELATED SERVICE CAN
+              BE CORRECTED. IN CASE OF CIRCUMSTANCES SUCH AS INCOMPATIBILITY OR SOFTWARE MALFUNCTION, PLEASE CONTACT US
+              FOR TECHNICAL SUPPORT. IF THE COMPATIBILITY PROBLEM CANNOT BE SOLVED, YOU CAN DELETE THIS SOFTWARE. WITHIN
+              THE MAXIMUM SCOPE PERMITTED BY APPLICABLE LAWS, TECNO IS EXEMPT FROM ANY OF YOUR LOSSES CAUSED HEREIN.</p>
+            <p>14.&nbsp;&nbsp; &nbsp;LIMITATION OF LIABILITIES<br> TO THE EXTENT NOT PROHIBITED BY APPLICABLE LAW, IN NO
+              EVENT SHALL TECNO, ITS AFFILIATES, SENIOR MANAGEMENT, DIRECTORS, EMPLOYEES OR AGENTS BE LIABLE FOR ANY
+              DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO
+              DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, BUSINESS INTERRUPTION OR ANY OTHER INTANGIBLE DAMAGES OR
+              LOSSES, ARISING OUT OF THE FOLLOWING REASONS, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY
+              (CONTRACT, TORT OR OTHERWISE) AND EVEN IF TECNO HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES: (i)
+              YOUR USE OR INABILITY TO USE THE SERVICE;(ii) THE UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR
+              TRANSMISSIONS OR DATA; (iii) THE DELETION OF, CORRUPTION OF, OR FAILURE TO USE YOUR TRANSMISSIONS OR DATA
+              ON OR THROUGH THE SERVICE; (iv) STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SERVICE; AND (v) ANY OTHER
+              MATTER RELATING TO THE SERVICE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY
+              FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO
+              YOU.<br> AT THE SAME TIME, TECNOâS MAXIMUM COMPENSATION FOR ALL YOUR LOSSES SHALL NOT EXCEED THE AMOUNT
+              YOU PAID FOR USING/PURCHASING THE CORRESPONDING TECNO DEVICE, SOFTWARE OR SERVICES (IF PAID SERVICE IS
+              INVOLVED) WITHIN 12 MONTHS BEFORE THE DATE OF INITIATING THE CLAIM. IF THE LAW OF YOUR REGION DOES NOT
+              ALLOW THE LIMITATION OF LIABILITY THROUGH AN AGREEMENT. IN THIS CASE, THE APPLICABLE LAWS AND REGULATIONS
+              SHALL APPLY.</p>
+            <p>15.&nbsp;&nbsp; &nbsp;Governing Laws and Dispute Resolution<br> 15.1&nbsp;&nbsp; &nbsp;Governing Laws.
+              The execution, performance, interpretation, modification and disputes settlement of this Agreement shall
+              be governed by the laws of Hong Kong Special Administrative Region of the People's Republic of China,
+              excluding its conflict-of-law provisions. You agree that this Agreement is signed in Hong Kong.&nbsp;<br>
+              15.2&nbsp;&nbsp; &nbsp;Arbitration. Any dispute or controversy between you and TECNO based on this
+              Agreement shall be first settled through friendly negotiation. If no settlement can be reached through
+              friendly negotiation, you unconditionally consent and agree that any claim, dispute or controversy
+              (whether in contract, tort or otherwise) you may have against any TECNO entity, the directors, agents, and
+              employees of any TECNO entity arising out of, relating to, or connected in any way with TECNO Services,
+              shall be submitted to Hong Kong International Arbitration Center (HKIAC) for settlement before one (1)
+              arbitrator in accordance with the rules of HKIAC. The arbitration shall take place in Hong Kong, China,
+              and the arbitration proceedings and all pleadings and written evidence shall be in the English language,
+              and judgment upon the award rendered by the arbitrators may be entered in any court having jurisdiction
+              thereof. You will only be permitted to pursue claims against TECNO on an individual basis, not as a
+              plaintiff or class member in any class or representative action or proceeding.&nbsp;</p>
+            <p>16.&nbsp;&nbsp; &nbsp;General Terms<br> 16.1&nbsp;&nbsp; &nbsp;Heading. The headings of all terms of this
+              Agreement are for reference purpose only, have no actual meanings themselves, and shall not be used as a
+              basis for interpreting the meanings of this Agreement.<br> 16.2&nbsp;&nbsp; &nbsp;Severability. If any
+              term or provision of this Agreement is held to be invalid or unenforceable by any judicial or
+              administrative authority for any reasons, such determination shall not affect the validity of
+              enforceability of the remaining terms and provisions of the Agreement hereof, and the remaining provisions
+              of this Agreement shall remain in full effect and shall be construed in accordance with its terms.<br>
+              16.3&nbsp;&nbsp; &nbsp;Languages. If this Agreement is made in English, Arabic and other languages. In
+              case of any discrepancy, the English version hereof shall prevail.<br> 16.4&nbsp;&nbsp; &nbsp;No Waiver.
+              The failure of TECNO to enforce at any time any of the provisions of the TECNO Services, or the failure by
+              TECNO to require at any time performance by you of any of the provisions of the TECNO Services, shall in
+              no way be construed to be a present or future waiver of such provisions, nor in any way affect the right
+              of TECNO to enforce such provision thereafter. The express waiver by TECNO of any provision, condition or
+              requirement of the TECNO Services shall not constitute a waiver of any future obligation to comply with
+              such provision, condition or requirement.<br> 16.5&nbsp;&nbsp; &nbsp;Entire Agreement. This Agreement
+              constitutes the entire agreement between you and TECNO governing your use of the Software and supersedes
+              any prior agreements between you and TECNO relating to the use of the Software. You may also be subject to
+              additional terms and conditions that may apply when you use or purchase open-source software, third-party
+              content, or other TECNO services.</p>
+            <p>&nbsp;</p>
+          </section>
+        </article>
+      </section>
+    </div>
+
+
+  </main>
+
+<!--whatsapp-->
+<a target="_blank" href="https://wa.me/923712167709" class="whatsapp-message-link"></a>
+<!--pc footer  start-->
+<footer class="fot-pc" id="footer" style="background-color: #ececec;">
+	<div class="footer-top width-1440 width_1280">
+		<ul class="wrap" style="margin-right: 0;">
+			<p class="wrap-title">About TECNO</p>
+			<div>
+				<a href="/pak/about-us/">About Us</a>
+				<a href="/pak/news/">News</a>
+				<a href="/pak/contact-us/">Contact Us</a>
+			</div>
+		</ul>
+		<ul class="wrap" style="margin-right: 0;">
+			<p class="wrap-title">Products</p>
+			<div>
+				<!-- <a href="/pak/phones/product-list/#new-phantom" target="_blank">PHANTOM</a> -->
+				<a href="/pak/phones/product-list/#new-camon" target="_blank">CAMON</a>
+				<a href="/pak/phones/product-list/#new-pova" target="_blank">POVA</a>
+				<a href="/pak/phones/product-list/#new-spark" target="_blank">SPARK</a>
+				<!--				<a href="/pak/phones/product-list/#new-pop" target="_blank">POP</a>-->
+			</div>
+		</ul>
+		<ul class="wrap" style="margin-right: 0;">
+			<p class="wrap-title">Support</p>
+			<div>
+				<a href="/pak/faq/">FAQ</a>
+				<a href="/pak/download/">Downloads</a>
+				<a onclick="return false;" href="/pk/">Carlcare</a>
+				<a href="/pak/warranty/">Warranty Check</a>
+				<a href="https://security.tecno.com/dashboard">Security Response Center</a>
+			</div>
+		</ul>
+		<ul class="wrap" style="margin-right: 0;">
+			<p class="wrap-title">Shopping Help</p>
+			<div>
+				<a
+					href="https://shop.tecno-mobile.com/pak/customer/account/login/referer/aHR0cHM6Ly9zaG9wLnRlY25vLW1vYmlsZS5jb20vcGFrL3NhbGVzL29yZGVyL2hpc3Rvcnkv/">My
+					Order</a>
+				<a href="/pak/return-policy">Return Policy</a>
+				<a href="/pak/shopping-help">Shopping Help</a>
+				<a href="/pak/customer-service">Customer Service</a>
+				<a href="/pak/genuine-guaranteed">Genuine Guaranteed</a>
+			</div>
+		</ul>
+		<ul class="wrap">
+			<p class="wrap-title">Apps & Services</p>
+			<div>
+				<a href="/pak/hios/">HiOS</a>
+				<a href="https://www.boomplay.com/">Boomplay Music</a>
+			</div>
+		</ul>
+
+		<ul class="wrap">
+			<a class="logo" href="/pak/home/">
+				<img data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/logo.svg">
+			</a>
+			<p class="footer-icon-list">
+				<a href="https://www.facebook.com/TecnoMobilePakistan/" class="faceBook"></a>
+				<a href="https://x.com/TecnoMobilePK" class="twitter"></a>
+				<a href="https://www.instagram.com/tecnomobilepakistan/" class="instagram"></a>
+			</p>
+		</ul>
+	</div>
+	<div class="footer-bottom width-1440 width_1280">
+		<div class="footer-bot-left">
+			<ul class="footer-bot-left-item">
+				<a href="/pak/privacy-policy/">Privacy Policy</a>
+				<a href="/pak/terms-of-use/">Terms of Use</a>
+				<a href="/pak/site-map/">Site Map</a>
+			</ul>
+			<a class="Global-link clickGlobal" href="/pak/home/" onclick="event.preventDefault()" style="cursor: pointer;">
+				<span class="nationIcon flag-icon-pk"></span>
+				<span>Pakistan</span>
+			</a>
+			<div class="legal-copyright">Â©2021-2025 TECNO Mobile</div>
+		</div>
+	</div>
+</footer>
+<!--pc footer  end-->
+<!--mobile footer  start-->
+<footer class="fot-m" id="footer-m" style="background: #ececec">
+	<div class="fot-m-wrap">
+		<p class="fot-m-wrap-title">
+			About TECNO
+		</p>
+		<div class="fot-m-wrap-list">
+			<a href="/pak/about-us/">About Us</a>
+			<a href="/pak/news/">News</a>
+			<a href="/pak/contact-us/">Contact Us</a>
+		</div>
+	</div>
+	<div class="fot-m-wrap">
+		<p class="fot-m-wrap-title">
+			Products
+		</p>
+		<div class="fot-m-wrap-list">
+			<!-- <a href="/pak/phones/product-list/#new-phantom" target="_blank">PHANTOM</a> -->
+			<a href="/pak/phones/product-list/#new-camon" target="_blank">CAMON</a>
+			<a href="/pak/phones/product-list/#new-pova" target="_blank">POVA</a>
+			<a href="/pak/phones/product-list/#new-spark" target="_blank">SPARK</a>
+			<!--			<a href="/pak/phones/product-list/#new-pop" target="_blank">POP</a>-->
+		</div>
+	</div>
+	<div class="fot-m-wrap">
+		<p class="fot-m-wrap-title">
+			Support
+		</p>
+		<div class="fot-m-wrap-list">
+			<a href="/pak/faq/">FAQ</a>
+			<a href="/pak/download/">Downloads</a>
+			<a onclick="return false;" href="/pk/">Carlcare</a>
+			<a href="/pak/warranty/">Warranty Check</a>
+			<a href="https://security.tecno.com/dashboard">Security Response Center</a>
+		</div>
+	</div>
+	<div class="fot-m-wrap">
+		<p class="fot-m-wrap-title">
+			Apps & Services
+		</p>
+		<div class="fot-m-wrap-list">
+			<a href="/pak/hios/">HiOS</a>
+			<a href="https://www.boomplay.com/">Boomplay Music</a>
+		</div>
+	</div>
+	<div class="fot-m-wrap">
+		<p class="fot-m-wrap-title">
+			Shopping Help
+		</p>
+		<div class="fot-m-wrap-list">
+			<a
+				href="https://shop.tecno-mobile.com/pak/customer/account/login/referer/aHR0cHM6Ly9zaG9wLnRlY25vLW1vYmlsZS5jb20vbmdhL3NhbGVzL29yZGVyL2hpc3Rvcnkv/">My
+				Order</a>
+			<a href="/pak/return-policy">Return Policy</a>
+			<a href="/pak/shopping-help">Shopping Help</a>
+			<a href="/pak/customer-service">Customer Service</a>
+			<a href="/pak/genuine-guaranteed">Genuine Guaranteed</a>
+		</div>
+	</div>
+	<a class="m-a-wrap" href="/pak/privacy-policy/">Privacy Policy</a>
+	<a class="m-a-wrap" href="/pak/terms-of-use/">Terms of Use</a>
+	<a class="m-a-wrap" href="/pak/site-map/">Site Map</a>
+	<a class="m-a-wrap-global clickGlobal" href="/pak/home/" onclick="event.preventDefault()">Pakistan <span class="nationIcon flag-icon-pk"></span></a>
+	<div class="fot-m-logo">
+		<a class="logo" href="/pak/home/">
+			<img data-src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/headerLogo/logo.svg">
+		</a>
+		<p class="footer-icon-list">
+			<a href="https://www.facebook.com/TecnoMobilePakistan/" class="faceBook"></a>
+			<a href="https://x.com/TecnoMobilePK" class="twitter"></a>
+			<a href="https://www.instagram.com/tecnomobilepakistan/" class="instagram"></a>
+		</p>
+	</div>
+	<div class="legal-copyright">Â©2021-2025 TECNO Mobile</div>
+</footer>
+<!--mobile footer  end-->
+
+<style>
+	#footer .footer-icon-list {
+		margin: unset;
+	}
+</style>
+<script src="/utils/common.js?v=20260901-auth-ready" type="text/javascript" defer></script>
+<script>
+	window.rootApiUrl = 'https://shop.tecno-mobile.com/'; window.rootSite = 'pak';
+	window.rootLang = 'English';
+	// window.rootImgPath='/fileadmin/sitedesign/Resources/Public/Image/';
+	window.tabletWidth = 1200; window.mobileWidth = 650;
+	window.siteId = 286; window.langId = 30;
+	window.hasShop = 'yes';
+	window.phones_categoryId = 171;
+	window.tablets_categoryId = 172;
+	window.accessories_categoryId = 173;
+	window.bestSell_categoryId = 179;
+	window.camon_categoryId = 155;
+	window.phantom_categoryId = 305;
+	window.spark_categoryId = 156;
+	window.pova_categoryId = 157;
+	window.pop_categoryId = 158;
+	window.twId = 'o5eac';
+	window.tw_categoryId = 'o7tu9';
+	window.tw_searchId = 'o7tub';
+	window.tw_storeId = 'o7tuc';
+	window.tw_buyId = 'o7tuf'; window.ggId = 'UA-99336968-16';
+	window.gaId = 'AW-610765814';
+</script>
+<script>
+	!function (e, t, n, s, u, a) {
+		e.twq || (s = e.twq = function () {
+			s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+		}, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+			a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+	}(window, document, 'script');
+	// Insert Twitter Pixel ID and Standard Event data below
+	twq('init', 'o5eac');
+	twq('track', 'PageView');
+</script>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=AW-610765814"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'AW-610765814');
+</script>
+<script>
+	gtag('event', 'conversion', { 'send_to': 'AW-610765814/j3gyCIznm4oCEPaXnqMC' })
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57Y9RGLYKB"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-57Y9RGLYKB');
+	gtag('config', 'G-Y6ZECL4XL8');
+</script>
+<script>
+	window.buriedPoint = {
+		category: function () {
+			< !--Twitter ->
+			if (window.twId) {
+				twttr.conversion.trackPid(window.tw_categoryId, { tw_sale_amount: 0, tw_order_quantity: 0 });
+			}
+
+			< !--Google GA-- >
+			if (window.gaId) {
+				gtag('event', 'ViewCategory');
+			}
+		},
+		search: function (value) {
+			< !--Twitter ->
+			if (window.twId) {
+				twttr.conversion.trackPid(window.tw_searchId, { tw_sale_amount: 0, tw_order_quantity: 0 });
+			}
+
+			< !--Google GG-- >
+			if (window.ggId) {
+				gtag('event', 'conversion', { 'send_to': window.ggId + '/53NgCIPskKQDEPaXnqMC' });
+			}
+
+			< !--Google GA-- >
+			if (window.gaId) {
+				gtag('event', 'Search', {
+					value: value
+				});
+			}
+		},
+		store: function (value) {
+			< !--Twitter -->
+			if (window.twId) {
+				twttr.conversion.trackPid(window.tw_storeId, { tw_sale_amount: 0, tw_order_quantity: 0 });
+			}
+
+			< !--Google GG-- >
+			if (window.ggId) {
+				gtag('event', 'conversion', { 'send_to': window.ggId + '/3qAnCPHlmKQDEPaXnqMC' });
+			}
+
+			< !--Google GA-- >
+			if (window.gaId) {
+				gtag('event', 'FindStore', {
+					value: value
+				});
+			}
+		},
+		buy: function (url, product) {
+			< !--Twitter -->
+			if (window.twId) {
+				twttr.conversion.trackPid(window.tw_buyId, { tw_sale_amount: 0, tw_order_quantity: 0 });
+			}
+
+			< !--Google GG-- >
+			if (window.ggId) {
+				function gtag_report_conversion(url) {
+					var callback = function () {
+						if (typeof (url) != 'undefined') {
+							window.location = url;
+						}
+					};
+					gtag('event', 'conversion', {
+						'send_to': window.ggId + '/0lc3CPe74aMDEPaXnqMC',
+						'event_callback': callback
+					});
+					return false;
+				}
+				gtag_report_conversion(url);
+			}
+
+			< !--Google GA-- >
+			if (window.gaId) {
+				gtag('event', 'StartOrder', {
+					value: value
+				});
+			}
+		}
+	}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TECNO Mobile Pakistan",
+  "url": "https://www.tecno-mobile.com/pak/",
+  "logo": "https://d13pvy8xd75yde.cloudfront.net/global/x_new/logo.svg",
+  "description": "TECNO Mobile is a global smartphone brand featuring advanced technology and stylish designs in Pakistan, offering the latest PHANTOM, CAMON, SPARK, and POVA series for techâsavvy users.",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "042111999666",
+      "contactType": "Customer Service",
+      "areaServed": "PK",
+      "availableLanguage": ["English", "Urdu"],
+      "email": "customerservice@tecno-mobile.com"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PK",
+    "addressLocality": "Lahore",
+    "postalCode": "54000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/TecnoMobilePakistan/",
+    "https://www.instagram.com/tecnomobilepakistan",
+    "https://x.com/TecnoMobilePK",
+    "https://www.youtube.com/c/TecnoMobilePakistan"
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Tecno Mobile",
+    "url": "https://www.tecno-mobile.com/home/"
+  }
+}
+</script>
+
+
+<style>
+	/* Whatsapp */
+	.whatsapp-message-link {
+		position: fixed;
+		z-index: 999;
+		right: 30px;
+		bottom: 100px;
+		width: 50px;
+		height: 50px;
+		background: #64ff00;
+		text-align: center;
+		overflow: hidden;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
+		background: url(https://d13pvy8xd75yde.cloudfront.net/global/ug/whatsapp.651aa29.png);
+		background-size: 100% auto;
+	}
+
+	/* åæ°é¡µè´­ä¹°æé®æ ·å¼ */
+	.tech-buy .nav-btn {
+		color: white;
+		background: #287DFF;
+		padding: 0 17.75px;
+		border-radius: 4.05px;
+		margin-right: 24px;
+		cursor: pointer;
+		display: flex;
+		height: 100%;
+		width: fit-content;
+	}
+
+	@media screen and (max-width: 1440px) and (min-width: 1081px) {
+		.tech-buy .nav-btn {
+			padding: 0 1.2326vw;
+			border-radius: 0.2813vw;
+			margin-right: 1.6667vw;
+		}
+	}
+
+	@media screen and (max-width: 1080px) {
+		.tech-buy .nav-btn {
+			padding: 0 3.3333vw;
+			border-radius: 0.8426vw;
+			margin-right: 0vw;
+		}
+	}
+</style>
+
+<!-- TikTok Pixel Code Start -->
+<script>
+	!function (w, d, t) {
+		w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var r = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e) };
+		ttq.load('CLJGQGJC77U2CCALKGB0');
+		ttq.page();
+	}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '138728908195052');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=138728908195052&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<div aria-hidden="true" class="country-box" style="display: none;">
+    <section id="country-change-modal" role="dialog"
+             class="country-change modal modal-canvas modal-vm fade show" style="display: block; padding-right: 17px;">
+        <div role="dialog" class="modal-dialog container">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="modal-title hidden-xs-down">
+                        <h6 class="text-uppercase text-muted small">CHOOSE YOUR COUNTRY OR REGION</h6>
+                    </div>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close circle country-close">
+                        <span class="iconfont icon-close"></span></button>
+                </header>
+                <div class="v-spinner text-center my-30" style="display: none;">
+                    <div class="v-pulse v-pulse1"
+                         style="background-color: rgb(0, 116, 200); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation-name: v-pulseStretchDelay; animation-duration: 0.75s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both; animation-delay: 0.12s;">
+                    </div>
+                    <div class="v-pulse v-pulse2"
+                         style="background-color: rgb(0, 116, 200); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation-name: v-pulseStretchDelay; animation-duration: 0.75s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both; animation-delay: 0.24s;">
+                    </div>
+                    <div class="v-pulse v-pulse3"
+                         style="background-color: rgb(0, 116, 200); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation-name: v-pulseStretchDelay; animation-duration: 0.75s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both; animation-delay: 0.36s;">
+                    </div>
+                </div>
+                <section class="modal-body country-change-tabs">
+                    <input type="radio" name="continent" id="continent-africa" class="continent-state" value="0" checked/>
+                    <label for="continent-africa" class="continent-nav active-continent" tabindex="0" role="button" aria-label="Africa">
+                        <figure class="continent africa "></figure>
+                        <h5>Africa</h5>
+                    </label>
+                    <ul class="list-unstyled row continent-countries show-countries">
+                        <li class="col-12 col-lg-3 country-link"><a href="/ne"> <span
+                                class="flag-icon flag-icon-ne"></span> <span>Niger</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/tg"> <span
+                                class="flag-icon flag-icon-tg"></span> <span>Togo</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/bj"> <span
+                                class="flag-icon flag-icon-bj"></span> <span>B&eacute;nin</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/gn"> <span
+                                class="flag-icon flag-icon-gn"></span> <span>Guinea</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/zm"> <span
+                                class="flag-icon flag-icon-zm"></span> <span>Zambia</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ug"> <span
+                                class="flag-icon flag-icon-ug"></span> <span>Uganda</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ao"> <span class="flag-icon flag-icon-ao">
+                                </span> <span>Angola</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"> <span
+                                class="flag-icon flag-icon-mg"></span> <span>Madagascar</span> </a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/et-en/"> <span
+                                class="flag-icon flag-icon-et"></span> <span>Ethiopia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-gm"></span> <span>Gambia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/mz"><span
+                                class="flag-icon flag-icon-mz"></span> <span>Mo&ccedil;ambique</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-tn"></span> <span>ØªÙÙØ³</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/dz"><span
+                                class="flag-icon flag-icon-dz"></span> <span>Alg&eacute;rie</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ma/"><span
+                                class="flag-icon flag-icon-ma"></span> <span>Maroc</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-mr"></span> <span>Mauritania</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/cm/"><span
+                                class="flag-icon flag-icon-cm"></span> <span>Cameroun</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-td"></span> <span>Tchad</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ci"><span
+                                class="flag-icon flag-icon-ci"></span> <span>C&ocirc;te d'Ivoire</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/bf"><span
+                                class="flag-icon flag-icon-bf"></span> <span>Burkina Faso</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/sn"><span
+                                class="flag-icon flag-icon-sn"></span> <span>S&eacute;n&eacute;gal</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ml"><span
+                                class="flag-icon flag-icon-ml"></span> <span>Mali</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/rdc"><span
+                                class="flag-icon flag-icon-cd"></span> <span>DR Congo</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/rw"><span
+                                class="flag-icon flag-icon-rw"></span> <span>Rwanda</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/tz"><span
+                                class="flag-icon flag-icon-tz"></span> <span>Tanzania</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-mw"></span> <span>MalaÅµi</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-mu"></span> <span>Mauritius</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-sl"></span> <span>Sierra Leone</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/za"><span
+                                class="flag-icon flag-icon-za"></span> <span>South Africa</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/home/"><span
+                                class="flag-icon flag-icon-lr"></span> <span>Liberia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/gh"><span
+                                class="flag-icon flag-icon-gh"></span> <span>Ghana</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ke"><span
+                                class="flag-icon flag-icon-ke"></span> <span>Kenya</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/nga"><span
+                                class="flag-icon flag-icon-ng"></span> <span>Nigeria</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/tn"><span
+                                class="flag-icon flag-icon-tn"></span> <span>Tunisia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ly"><span
+                                class="flag-icon flag-icon-ly"></span> <span>Libya</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/eg"><span
+                                class="flag-icon flag-icon-eg"></span> <span>Egypt</span></a></li>
+                    </ul>
+                    <input type="radio" name="continent" class="continent-state" value="1"/>
+                    <label for="continent-asia" class="continent-nav" tabindex="0" role="button" aria-label="Asia">
+                        <figure class="continent asia"></figure>
+                        <h5>Asia</h5>
+                    </label>
+                    <ul class="list-unstyled row continent-countries">
+                        <li class="col-12 col-lg-3 country-link"><a href="/kg"><span
+                                class="flag-icon flag-icon-kg"></span> <span>ÐÑÑÐ³ÑÐ·ÑÑÐ°Ð½</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/my"><span
+                                class="flag-icon flag-icon-my"></span> <span>Malaysia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/uz-py"><span
+                                class="flag-icon flag-icon-uz"></span> <span>Uzbekistan</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/iq"><span
+                                class="flag-icon flag-icon-iq"></span> <span>Iraq</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/vn"><span
+                                class="flag-icon flag-icon-vn"></span> <span>Vietnam</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/lk"><span
+                                class="flag-icon flag-icon-lk"></span> <span>Sri Lanka</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ph"><span
+                                class="flag-icon flag-icon-ph"></span> <span>Philippines</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/kh"><span
+                                class="flag-icon flag-icon-kh"></span> <span>Cambodia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/jo"><span
+                                class="flag-icon flag-icon-jo"></span> <span>Ø§ÙØ£Ø±Ø¯Ù</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/lb"><span
+                                class="flag-icon flag-icon-lb"></span> <span>ÙØ¨ÙØ§Ù</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/kz"><span
+                                class="flag-icon flag-icon-kz"></span> <span>Kazakhstan</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/mm"><span
+                                class="flag-icon flag-icon-mm"></span> <span>Myanmar</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/sa-en"><span
+                                class="flag-icon flag-icon-sa"></span> <span>Ø§ÙØ³Ø¹ÙØ¯ÙØ©</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ae"><span
+                                class="flag-icon flag-icon-ae"></span> <span>UAE</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/th"><span
+                                class="flag-icon flag-icon-th"></span> <span>à¸à¸£à¸°à¹à¸à¸¨à¹à¸à¸¢</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/bd/"><span
+                                class="flag-icon flag-icon-bd"></span> <span>Bangladesh</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/id"><span
+                                class="flag-icon flag-icon-id"></span> <span>Indonesia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/pak"><span
+                                class="flag-icon flag-icon-pk"></span> <span>Pakistan</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="https://www.tecno-mobile.in"><span
+                                class="flag-icon flag-icon-in"></span> <span>à¤­à¤¾à¤°à¤¤</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/np"><span
+                                class="flag-icon flag-icon-np"></span> <span>Nepal</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/tj"><span
+                                class="flag-icon flag-icon-tj"></span> <span>Tajikistan</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/om"><span
+                                class="flag-icon flag-icon-om"></span> <span>Oman</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/kw"><span
+                                class="flag-icon flag-icon-kw"></span> <span>Kuwait</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/bh"><span
+                                class="flag-icon flag-icon-bh"></span> <span>Bahrain</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/qa"><span
+                                class="flag-icon flag-icon-qa"></span> <span>Qatar</span></a></li>
+                                <li class="col-12 col-lg-3 country-link"><a href="/ye"><span
+                                class="flag-icon flag-icon-ye"></span> <span>Ø§ÙØ¬ÙÙÙØ±ÙØ© Ø§ÙÙÙÙÙØ©</span></a></li>
+                                 <li class="col-12 col-lg-3 country-link"><a href="/ps"><span
+                                class="flag-icon flag-icon-ps"></span> <span>ÙÙØ³Ø·ÙÙ</span></a></li>
+
+                    </ul>
+                    <input type="radio" name="continent" class="continent-state" value="2"/>
+                    <label for="continent-southamerica" class="continent-nav" tabindex="0" role="button" aria-label="South America">
+                        <figure class="continent southamerica"></figure>
+                        <h5>South America</h5>
+                    </label>
+                    <ul class="list-unstyled row continent-countries">
+                        <li class="col-12 col-lg-3 country-link"><a href="/ar"><span
+                                class="flag-icon flag-icon-ar"></span> <span>Argentina</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ec"><span
+                                class="flag-icon flag-icon-ec"></span> <span>Ecuador</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/br"><span
+                                class="flag-icon flag-icon-br"></span> <span>Brazil</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/bo"><span
+                                class="flag-icon flag-icon-bo"></span> <span>Bolivia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/pe"><span
+                                class="flag-icon flag-icon-pe"></span> <span>Per&uacute;</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/co/"><span
+                                class="flag-icon flag-icon-co"></span> <span>Colombia</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/latam/"><span
+                                class="iconfont icon-global"></span> <span>Latam</span></a></li>
+
+                    </ul>
+                    <input type="radio" name="continent" class="continent-state" value="3"/>
+                    <label for="continent-northamerica" class="continent-nav" tabindex="0" role="button" aria-label="North America">
+                        <figure class="continent northamerica"></figure>
+                        <h5>North America</h5>
+                    </label>
+                    <ul class="list-unstyled row continent-countries">
+                        <li class="col-12 col-lg-3 country-link"><a href="/mx"><span
+                                class="flag-icon flag-icon-mx"></span> <span>Mexico</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/gua"><span
+                                class="flag-icon flag-icon-gua"></span> <span>Guatemala</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/hon"><span
+                                class="flag-icon flag-icon-hn"></span> <span>Honduras</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/dr"><span
+                                class="flag-icon flag-icon-do"></span> <span>Dominican</span></a></li>
+                    </ul>
+                    <input type="radio" name="continent" class="continent-state" value="4"/>
+                    <label for="continent-europe" class="continent-nav" tabindex="0" role="button" aria-label="Europe">
+                        <figure class="continent europe"></figure>
+                        <h5>Europe</h5>
+                    </label>
+                    <ul class="list-unstyled row continent-countries">
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/gr/home/">
+                                <span class="flag-icon flag-icon-gr"></span>
+                                <span>Greece</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/hu"><span
+                                class="flag-icon flag-icon-hu"></span> <span>MagyarorszÃ¡g</span></a></li>
+                        <li class="col-12 col-lg-3 country-link"><a href="/ro"><span
+                                class="flag-icon flag-icon-ro"></span> <span>Romania</span></a></li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/pl/">
+                                <span class="flag-icon flag-icon-pl"></span>
+                                <span>Polska</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/bg/">
+                                <span class="flag-icon flag-icon-bg"></span>
+                                <span>ÐÑÐ»Ð³Ð°ÑÐ¸Ñ</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/cz">
+                                <span class="flag-icon flag-icon-cz"></span>
+                                <span>Äesko</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/rs">
+                                <span class="flag-icon flag-icon-rs"></span>
+                                <span>Ð ÐµÐ¿ÑÐ±Ð»Ð¸ÐºÐ° Ð¡ÑÐ±Ð¸ÑÐ°</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="https://turkiye.tecno-mobile.com/home/">
+                                <span class="flag-icon flag-icon-tr"></span>
+                                <span>TÃ¼rkiye</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="http://ua.tecno-mobile.com">
+                                <span class="flag-icon flag-icon-ua"></span>
+                                <span>Ð£ÐºÑÐ°ÑÐ½Ð°</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="http://ru.tecno-mobile.com">
+                                <span class="flag-icon flag-icon-ru"></span>
+                                <span>Ð Ð¾ÑÑÐ¸Ñ</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/si">
+                                <span class="flag-icon flag-icon-si"></span>
+                                <span>Slovenija</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/mk">
+                                <span class="flag-icon flag-icon-mk"></span>
+                                <span>North Macedonia</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/al">
+                                <span class="flag-icon flag-icon-al"></span>
+                                <span>Albania</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/es">
+                                <span class="flag-icon flag-icon-es"></span>
+                                <span>Spain</span>
+                            </a>
+                        </li>
+                        <li class="col-12 col-lg-3 country-link">
+                            <a href="/fr">
+                                <span class="flag-icon flag-icon-fr"></span>
+                                <span>France </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <footer class="modal-footer search-modal-footer justify-content-center">
+                    <a href="/home/" class="d-inline-block global-link"><span class="iconfont icon-global"></span>
+                        <h4 class="d-inline-block">Global Home</h4>
+                    </a>
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<style>
+    #backtotop {
+        display: none !important;
+    }
+
+    #goTop svg {
+        display: flex;
+        height: 100%;
+        margin: auto;
+    }
+
+    @media (min-width: 1280px) {
+        #goTop {
+            width: 2.222vw;
+            height: 2.222vw;
+            border-radius: 2.778vw;
+            position: fixed;
+            bottom: 2.292vw;
+            right: 1.667vw;
+            background: rgba(255, 255, 255, 1);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #goTop:hover > svg path {
+            stroke: #0064fe;
+        }
+
+    }
+
+    @media (max-width: 1280px) {
+        #goTop {
+            position: fixed;
+            bottom: 50px;
+            height: 40px;
+            right: 10px;
+            width: 40px;
+            z-index: 99;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+        }
+
+    }
+
+
+    #newNav {
+        z-index: 99 !important;
+    }
+
+    #newNav,
+    #topNav {
+        /*background: rgba(255, 255, 255, .75);*/
+    }
+
+    #newNav .drop_down {
+        background: #fff;
+    }
+
+    #topNav .container {
+        margin: auto;
+    }
+
+    /*<!--  about-us   -->*/
+    .x_about_banner .x_fidetwobox .x_fidetwo div p {
+        text-align: justify;
+    }
+
+    /*<!--  about-us  end   -->*/
+
+    /* .country-box{
+   display: none;
+} */
+    #country-change-modal {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .country-box-active {
+        transition: -webkit-transform .6s linear;
+        transition: transform .6s linear;
+        transition: transform .6s linear,
+        -webkit-transform .6s linear;
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .beginclass {
+        padding: 1.25em 0;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        min-height: 145px;
+        height: auto !important;
+    }
+
+    .beginclass a {
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
+    }
+
+    .beginafrica .africa {
+        background-position: -133px -91px !important;
+    }
+
+    .beginafrica:after {
+        border-bottom-color: #0074c8 !important;
+    }
+
+    .country-change {
+        overflow-y: auto;
+    }
+
+    .country-change-selector {
+        margin-left: 2.5rem;
+        font-size: .75rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .country-change-selector .flag-icon {
+        margin-right: 8px;
+    }
+
+    .filter-options .filter-options-list a.active {
+        color: #0074c8 !important;
+    }
+
+    .filter-options .filter-options-list a {
+        color: #666 !important;
+    }
+
+    .accordion-toggle-one:after {
+        content: '' !important;
+    }
+
+    .accordion-toggle-one.active,
+    .btn-outline-primary {
+        color: #0074c8 !important;
+    }
+
+    .opacitystyle {
+        opacity: 0 !important;
+    }
+
+    .opacitystyle1 {
+        opacity: 1 !important;
+    }
+
+    .two-line {
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+    }
+
+    .sticky.is-sticky {
+        z-index: 10;
+    }
+
+    .navbar-toggleable-lg {
+        padding: 0 0 1.05rem 0;
+
+    }
+
+    .sticky.on-top {
+        z-index: 10;
+    }
+
+    .search-result-teaser p,
+    .news-overview .news-subtitle {
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
+    }
+
+    .country-change-selector {
+        margin-left: 2.5rem;
+        font-size: .75rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .phoneBtn span.TechSpecs {
+        cursor: pointer;
+    }
+
+    .flag-icon-id {
+        margin-right: 8px;
+    }
+
+    .newdetail h3 {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .container .row .hios-hero,
+    h1 {
+        font-weight: 400;
+    }
+
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
+    }
+
+    .product-tile .tile-title {
+        margin-bottom: 0.8375rem;
+        margin-top: 0.5rem;
+    }
+
+    @media (min-width: 1200px) {
+        [dir=rtl] .navbar-toggleable-lg .navbar-nav {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .loading-txt {
+        width: 100%;
+        text-align: center;
+        display: block;
+        color: #999;
+    }
+
+    /* .modal-content .modal-body, .modal-content .modal-footer, .modal-content .modal-header {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+    .country-change-selector,
+    footer.global-footer .legal-copyright {
+        margin-left: 0;
+    }
+
+    .pc-care-top {
+        padding-top: 68px;
+    }
+
+    @media (max-width: 767px) {
+        footer.global-footer .directory-footer .slogan-col {
+            bottom: -18.125rem;
+        }
+
+        .nav_right .buy-btn-id {
+            margin-right: 0;
+            line-height: 2.3611vw;
+        }
+
+    }
+
+    /* @media (max-width: 700px) {
+        .care-top{
+            padding-top:30pt!important;
+        }
+    }
+    /* @media (min-width: 700px) {
+
+        .card-bottom{
+            margin-top: 20pt!important;
+        }
+        .care-top{
+            padding-top: 50pt!important;
+        }
+    } */
+    .buy-btn-id .nav-btn {
+        display: block;
+        margin-right: 0;
+        line-height: 34px;
+        color: white !important;
+        background: #287DFF;
+        padding: 0 17.75px;
+        border-radius: 4.05px;
+        cursor: pointer
+    }
+
+    /*.sticky-nav .sticky-container{*/
+    /*    align-items: center;*/
+    /*}*/
+    /* .buy-btn-id .nav-btn:hover{
+        color:#fff!important;
+    } */
+    @keyframes dots {
+
+    0
+    {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+
+    }
+
+    @media screen and (max-width: 1440px) and (min-width: 1081px) {
+        .buy-btn-id {
+            /* display: none; */
+            height: 2.3611vw;
+        }
+
+        .nav_right .buy-btn-id {
+            margin-right: 0;
+            line-height: 2.3611vw;
+        }
+
+    }
+
+    .buy-btn-id {
+        /* display: none; */
+        height: 34px;
+    }
+</style>
+
+<style>
+    @media (max-width: 1080px) {
+        .sticky-nav .sticky-nav-action {
+            padding-bottom: 0px !important;
+        }
+
+        .sticky-nav .sticky-nav-action h1 {
+            margin-bottom: 0 !important;
+        }
+
+        .navbar-toggleable-lg {
+            padding: 1.05rem 0 !important;
+        }
+    }
+
+    /*/warranty/activated ææºç«¯æ ·å¼*/
+    @media screen and (max-width: 701px) {
+        .paragraph-card {
+            background-size: 100% 100%;
+        }
+
+        .card-bottom {
+            margin-top: 0;
+        }
+    }
+</style>
+<!--è¯¦æé¡µnavæ ç­¾-->
+<script>
+    $('.point-item').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    $('.nav_name').click(function () {
+        $(this).toggleClass('icon_rotate')
+        $('.drop_down').toggleClass('drop_down_active')
+    })
+    //è¯¦æé¡µä¸æ»æ¾ç¤ºnavæ ç­¾ä¸æ¾ç¤ºheader
+    if ($("#newNav").length > 0) {
+        console.log('æ°äºçº§å¯¼èª')
+        $('.HomePage').css('position', 'relative')
+    }
+    <!--è©³æé è³¼è²·æéjs-->
+ if ($(window).width() >= 768) {
+    // åå»ºä¸ä¸ªç½ååï¼åè®¸ç¹å®åç´ çæ»å¨äºä»¶
+    const allowedElements = new Set(['#app','#hios16']);
+
+    ['touchstart', 'touchmove', 'wheel', 'mousewheel'].forEach(event => {
+        window.addEventListener(
+            event,
+            e => {
+                // æ£æ¥äºä»¶æºæ¯å¦å¨ç½åååç´ å
+                const target = e.target;
+                const isAllowed = Array.from(allowedElements).some(selector => {
+                    return target.closest(selector);
+                });
+
+                // åªæå½äºä»¶ä¸å¨ç½åååç´ åæ¶æé»æ­¢é»è®¤è¡ä¸º
+                if (!isAllowed) {
+                    e.stopImmediatePropagation();
+                }
+            },
+            {capture: true}
+        );
+    });
+}
+    $('.showBuyMask').click(() => {
+        $('.buy_mask').css({
+            'display': 'flex'
+        })
+        $('body').css({
+            'overflow-y': 'hidden'
+        })
+    })
+    $('.buy_mask .close').click(() => {
+        $('.buy_mask').css({
+            'display': 'none'
+        })
+        $('body').css({
+            'overflow': 'auto'
+        })
+    })
+    if ($('.drop_down > p a').length > 1) {
+        $('.navIcon').show()
+    } else {
+        $('.navIcon').hide()
+    }
+
+</script>
+
+<script>
+    setTimeout(() => {
+        let timestamp = $.now()
+        let date = new Date(timestamp)
+        let year = date.getFullYear() //å½åå¹´ä»½
+        var footerTime = [];//å®ä¹æ°ç»
+        $('.legal-copyright').each(function () {
+            footerTime.push($(this).html())
+        });
+        footerTime.map(i => {
+            var start
+            var end
+            if (i.split(' TECNO Mobile')[0].indexOf('-') != '-1') {
+                start = i.split('-')[0]
+                end = i.split('-')[1].replace(i.split('-')[1].slice(0, 4), year)
+                $('.legal-copyright').text(start + '-' + end)
+            } else {
+                start = i.split('-')[0].replace(i.split('-')[0].slice(0, 5), "Â©" + year)
+                $('.legal-copyright').text(start)
+            }
+        })
+    }, 1000)
+    $('video').each(function () {
+        $(this).attr('x5-video-player-fullscreen', true);
+        $(this).attr('x5-playsinline', '');
+        $(this).attr('preload', '');
+        $(this).attr('playsinline', '');
+        $(this).attr('webkit-playsinline', '');
+    });
+</script>
+
+
+<style>
+    .accordion-section .accordion-toggle-title > :after {
+        display: none;
+    }
+
+    @media(max-width: 991px){
+        #country-change-modal .country-change-tabs label.continent-nav:after{
+            transform: rotate(0deg) !important;
+        }
+        #country-change-modal .country-change-tabs label.active-continent:after{
+            transform: rotate(45deg) !important;
+        }
+        #country-change-modal .country-change-tabs ul.continent-countries{
+            height: 0 !important;
+        }
+        #country-change-modal .country-change-tabs ul.show-countries{
+            height: auto !important;
+        }
+        #country-change-modal .country-change-tabs .continent-countries li a{
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+<div id="goTop">
+    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 10.9998L7 6.5L13 10.9998M2.5 1H11.5" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
+<style>
+    @font-face {
+    font-display: swap;
+    font-family: HurmeGeometricSans_No3_4_Regular;
+    src: url(https://d13pvy8xd75yde.cloudfront.net/global/fonts/HurmeGeometricSans_No3_4_Regular_new.otf)
+}
+
+/*body {*/
+/*    font-family: 'HurmeGeometricSans_No3_4_Regular'!important*/
+/*}*/
+    .flag-icon-gua{
+        background-image: url("https://d13pvy8xd75yde.cloudfront.net/global/gua.png");
+    }
+    #newNav{
+        z-index: 9;
+    }
+</style>
+<script>
+    setTimeout(function() {
+        $("#goTop").length && $("#goTop").click(function() {
+            return $("body,html").animate({
+                scrollTop: 0
+            }, 500)
+        }),
+            $(window).scroll(function() {
+                $(window).scrollTop() > window.innerHeight ? $("#goTop").fadeIn(500) : $("#goTop").fadeOut(500)
+            })
+    }, 500);
+
+</script>
+<script>
+    window.addEventListener("load", function () {
+        if (window.jQuery) {
+            $(".newGlobalPage").css({ opacity: "1" });
+        }
+        // æ è®°åªäº img ä¸å¨ picture éï¼ä¾¿äºåé¢å¤æ­ï¼
+        document.querySelectorAll("img").forEach(img => {
+            if (img.parentElement && img.parentElement.tagName.toLowerCase() !== "picture") {
+                img.setAttribute("data-no-picture", "true");
+            }
+        });
+
+        lazy();
+    });
+    function lazy() {
+        const isDesktop = window.innerWidth > 1080;
+
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                const el = entry.target;
+
+                // å·²å è½½
+                if (el.dataset.loaded === "true") {
+                    observer.unobserve(el);
+                    return;
+                }
+
+                // =========================
+                // Video
+                // =========================
+                if (el.tagName === "VIDEO") {
+                    const src = el.dataset.loadSrc || el.dataset.src;
+                    if (src) {
+                        el.src = src;
+                        el.load();
+                    }
+
+                    el.dataset.loaded = "true";
+                    observer.unobserve(el);
+                    return;
+                }
+
+                // =========================
+                // Image
+                // =========================
+
+                //  å¦æ src ä¸ºç©ºæå ä½å¾ï¼ååè¡¥ä¸çå®å°å
+                const currentSrc = (el.getAttribute("src") || "").trim();
+
+                if (
+                    !currentSrc ||
+                    currentSrc.startsWith("data:image/svg+xml")
+                ) {
+                    const lazySrc = el.dataset.loadSrc || el.dataset.src;
+                    if (lazySrc) {
+                        el.src = lazySrc;
+                    }
+                }
+
+                if (isDesktop) {
+
+                    // æ®é img
+                    if (el.dataset.noPicture === "true") {
+
+                        if (el.dataset.loadSrc) {
+                            el.src = el.dataset.loadSrc;
+                        } else if (el.dataset.src) {
+                            el.src = el.dataset.src;
+                        }
+
+                    } else {
+
+                        // picture
+                        const picture = el.closest("picture");
+
+                        if (picture) {
+                            picture.querySelectorAll("source[data-src]").forEach(source => {
+                                source.srcset = source.dataset.src;
+                            });
+                        }
+
+                        if (el.dataset.loadSrc) {
+                            el.src = el.dataset.loadSrc;
+                        } else if (el.dataset.src) {
+                            el.src = el.dataset.src;
+                        }
+                    }
+
+                } else {
+
+                    // mobile
+                    if (el.dataset.loadSrc) {
+                        el.src = el.dataset.loadSrc;
+                    } else if (el.dataset.mSrc) {
+                        el.src = el.dataset.mSrc;
+                    } else if (el.dataset.src) {
+                        el.src = el.dataset.src;
+                    }
+
+                }
+
+                el.dataset.loaded = "true";
+                observer.unobserve(el);
+            });
+        }, {
+            rootMargin: "200px 0px 0px 0px",
+            threshold: 0.01
+        });
+
+        // å¾ç
+        document.querySelectorAll(`
+        img[data-load-src],
+        img[data-src],
+        picture img[data-src]
+    `).forEach(img => io.observe(img));
+
+        // è§é¢
+        document.querySelectorAll(`
+        video[data-load-src],
+        video[data-src]
+    `).forEach(video => io.observe(video));
+    }
+
+</script>
+<a id="backtotop"></a>
+
+<script src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/js/slick-swiper-gsap-ScrollTrigger-blazy.min.js"></script>
+<script src="https://d13pvy8xd75yde.cloudfront.net/global/homepage/new_global/js/current_25_11_6.js"></script>
+<script src="https://d13pvy8xd75yde.cloudfront.net/static/new-js/main-min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+[
+  {
+    "name": "ink on canvas",
+    "foreground": "ink",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on canvas",
+    "foreground": "muted",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "accent on canvas",
+    "foreground": "accent",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "high on canvas",
+    "foreground": "high",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "low on canvas",
+    "foreground": "low",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "insufficient on canvas",
+    "foreground": "insufficient",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "error on canvas",
+    "foreground": "error",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border boundary on canvas",
+    "foreground": "border",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "focus boundary on canvas",
+    "foreground": "focus",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent boundary on canvas",
+    "foreground": "accent",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "ink on surface",
+    "foreground": "ink",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on surface",
+    "foreground": "muted",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "accent on surface",
+    "foreground": "accent",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "high on surface",
+    "foreground": "high",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "low on surface",
+    "foreground": "low",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "insufficient on surface",
+    "foreground": "insufficient",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "error on surface",
+    "foreground": "error",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border boundary on surface",
+    "foreground": "border",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "focus boundary on surface",
+    "foreground": "focus",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent boundary on surface",
+    "foreground": "accent",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "surface label on accent",
+    "foreground": "surface",
+    "background": "accent",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "surface border on accent",
+    "foreground": "surface",
+    "background": "accent",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "surface label on accent-hover",
+    "foreground": "surface",
+    "background": "accent-hover",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "surface border on accent-hover",
+    "foreground": "surface",
+    "background": "accent-hover",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "disabled-ink label on disabled-bg",
+    "foreground": "disabled-ink",
+    "background": "disabled-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "disabled-ink border on disabled-bg",
+    "foreground": "disabled-ink",
+    "background": "disabled-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "fair label on fair-bg",
+    "foreground": "fair",
+    "background": "fair-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "fair border on fair-bg",
+    "foreground": "fair",
+    "background": "fair-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "high label on high-bg",
+    "foreground": "high",
+    "background": "high-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "high border on high-bg",
+    "foreground": "high",
+    "background": "high-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "low label on low-bg",
+    "foreground": "low",
+    "background": "low-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "low border on low-bg",
+    "foreground": "low",
+    "background": "low-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "insufficient label on insufficient-bg",
+    "foreground": "insufficient",
+    "background": "insufficient-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "insufficient border on insufficient-bg",
+    "foreground": "insufficient",
+    "background": "insufficient-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "error label on error-bg",
+    "foreground": "error",
+    "background": "error-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "error border on error-bg",
+    "foreground": "error",
+    "background": "error-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent label on accent-soft",
+    "foreground": "accent",
+    "background": "accent-soft",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "accent border on accent-soft",
+    "foreground": "accent",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "ink on fair-bg",
+    "foreground": "ink",
+    "background": "fair-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on high-bg",
+    "foreground": "ink",
+    "background": "high-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on low-bg",
+    "foreground": "ink",
+    "background": "low-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on insufficient-bg",
+    "foreground": "ink",
+    "background": "insufficient-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on error-bg",
+    "foreground": "ink",
+    "background": "error-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on disabled-bg",
+    "foreground": "border",
+    "background": "disabled-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "border on accent-soft",
+    "foreground": "border",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "focus on accent-soft",
+    "foreground": "focus",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "muted on fair-bg",
+    "foreground": "muted",
+    "background": "fair-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on fair-bg",
+    "foreground": "border",
+    "background": "fair-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent on fair-bg",
+    "foreground": "accent",
+    "background": "fair-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on high-bg",
+    "foreground": "muted",
+    "background": "high-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on high-bg",
+    "foreground": "border",
+    "background": "high-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent on high-bg",
+    "foreground": "accent",
+    "background": "high-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on low-bg",
+    "foreground": "muted",
+    "background": "low-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on low-bg",
+    "foreground": "border",
+    "background": "low-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent on low-bg",
+    "foreground": "accent",
+    "background": "low-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on insufficient-bg",
+    "foreground": "muted",
+    "background": "insufficient-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on insufficient-bg",
+    "foreground": "border",
+    "background": "insufficient-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent on insufficient-bg",
+    "foreground": "accent",
+    "background": "insufficient-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on error-bg",
+    "foreground": "muted",
+    "background": "error-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "border on error-bg",
+    "foreground": "border",
+    "background": "error-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "accent on error-bg",
+    "foreground": "accent",
+    "background": "error-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on accent-soft",
+    "foreground": "ink",
+    "background": "accent-soft",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on accent-soft",
+    "foreground": "muted",
+    "background": "accent-soft",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "ink on disabled-bg",
+    "foreground": "ink",
+    "background": "disabled-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "muted on disabled-bg",
+    "foreground": "muted",
+    "background": "disabled-bg",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "accent on disabled-bg",
+    "foreground": "accent",
+    "background": "disabled-bg",
+    "kind": "text",
+    "minimum": 4.5
+  }
+]

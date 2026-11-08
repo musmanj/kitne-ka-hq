@@ -1,0 +1,35 @@
+flowchart TD
+ CF[Confirm: category / brand / model / variant / swappable condition and PKR / optional city and price]
+ CF --> CD[Detected + Edit; Please check focused first]
+ CD --> CV{Model + Condition + phone PTA answer set?}
+ CV -->|No| CX[Disabled Check price; explain missing field]
+ CX --> CF
+ CV -->|Yes| CP[Phone PTA: approved / Non-PTA / Not sure]
+ CP -->|Not sure: widen matching; force low confidence| AN
+ CP -->|Check price| AN[Analysing: Finding listings - Matching variants - Building range; skeleton]
+ AN -->|Long| AL[Still checking more sources]
+ AL --> AN
+ AN -->|Cancel; inputs preserved| CF
+ AN --> RB{Layer 1 ordered outcome}
+ RB -->|1 Failure or timeout| RE[Error outside verdict enum; inputs preserved]
+ RE -->|Retry| AN
+ RE -->|Edit| CF
+ RB -->|2 Insufficient evidence| RI[Insufficient: no range or verdict; explain why]
+ RI -->|Edit / nearby variant / later| CF
+ RB -->|3 Range available| RA{Layer 2 verdict slot}
+ RA -->|Price absent| RN[No asking price: Add asking price; range + sources]
+ RA -->|Price present| RF[Full: verdict + range + sources]
+ RN -->|Add asking price| VR[Recheck verdict only against existing range; pending CTO]
+ VR -->|CTO accepts| RF
+ VR -->|CTO declines| AN
+ RF & RN --> LC{Low confidence modifier?}
+ LC -->|Yes| RL[Caution + reasons + evidence count; Indicative if verdict present]
+ LC -->|No| OK[Unmodified layout]
+ RF & RN --> CI[Confidence sheet]
+ RF & RN & RI --> SH[Share]
+ RF & RN & RI --> RC[Save device-local snapshot; never save Error]
+ RC --> REC[Recent: Checked n days ago; Check again; Clear recent checks]
+ REC -->|Check again with saved inputs| AN
+ RF & RN & RI --> H[Check another: Home]
+ AN -->|No connection| OFF[Offline: preserve inputs / auto retry on reconnect / Retry]
+ OFF -->|Resume pending operation| AN

@@ -1,0 +1,44 @@
+[
+  {
+    "key": "whatmobile-robots",
+    "url": "https://www.whatmobile.com.pk/robots.txt",
+    "final_url": "https://www.whatmobile.com.pk/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "whatmobile-terms",
+    "url": "https://www.whatmobile.com.pk/terms.php",
+    "final_url": "https://www.whatmobile.com.pk/terms.php",
+    "status": 404,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "hamariweb-robots",
+    "url": "https://hamariweb.com/robots.txt",
+    "final_url": "https://hamariweb.com/robots.txt",
+    "status": 200,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "hamariweb-terms",
+    "url": "https://hamariweb.com/terms.aspx",
+    "final_url": "https://hamariweb.com/terms.aspx",
+    "status": 403,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mobilemall-robots",
+    "url": "https://mobilemall.pk/robots.txt",
+    "final_url": "https://mobilemall.pk/robots.txt",
+    "status": 403,
+    "date": "2026-11-09 PKT"
+  },
+  {
+    "key": "mobilemall-terms",
+    "url": "https://mobilemall.pk/terms-and-conditions",
+    "final_url": "https://mobilemall.pk/terms-and-conditions",
+    "status": 403,
+    "date": "2026-11-09 PKT"
+  }
+]

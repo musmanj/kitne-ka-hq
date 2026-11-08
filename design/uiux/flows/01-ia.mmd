@@ -1,0 +1,23 @@
+flowchart TD
+ H[Home: promise / entry cards / categories / privacy placeholder / header language control]
+ H --> A[Upload Screenshot]
+ H --> B[Paste Product Link]
+ H --> C[Search Product]
+ A --> CF[Confirm details]
+ B --> CF
+ C --> CF
+ CF --> AN[Analysing]
+ AN --> R{Results}
+ R --> RF[Full]
+ RF & RN --> RL[Low confidence modifier]
+ R --> RN[No asking price]
+ R --> RI[Insufficient data]
+ R --> RE[Error]
+ RF & RL & RN & RI --> SH[Share card]
+ SH --> SNAP[Public read-only dated snapshot]
+ SNAP -->|Check your own price| H
+ H --> REC[Recent checks: device-local]
+ REC --> STORED[Stored snapshot: Checked n days ago; Check again; Clear recent checks]
+ STORED -->|Check again| AN
+ H --> PRIV[Privacy info sheet]
+ RF & RL & RN --> CONF[How confidence is calculated: info sheet]

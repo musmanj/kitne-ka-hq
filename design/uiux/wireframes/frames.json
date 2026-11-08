@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "01-home",
+    "title": "Home",
+    "node": "H",
+    "share": false
+  },
+  {
+    "slug": "02-upload",
+    "title": "Upload \u2014 picker",
+    "node": "A0",
+    "share": false
+  },
+  {
+    "slug": "03-preview",
+    "title": "Upload \u2014 preview",
+    "node": "A5",
+    "share": false
+  },
+  {
+    "slug": "04-extracting",
+    "title": "Upload \u2014 extracting",
+    "node": "A6",
+    "share": false
+  },
+  {
+    "slug": "05-file-unsupported",
+    "title": "Unsupported file",
+    "node": "A2",
+    "share": false
+  },
+  {
+    "slug": "06-file-large",
+    "title": "File too large",
+    "node": "A3",
+    "share": false
+  },
+  {
+    "slug": "07-unreadable",
+    "title": "Unreadable / no text \u2014 shared UI",
+    "node": "AU",
+    "share": false
+  },
+  {
+    "slug": "08-outside",
+    "title": "Outside MVP categories",
+    "node": "A9",
+    "share": false
+  },
+  {
+    "slug": "09-multiple",
+    "title": "Multiple products",
+    "node": "A10",
+    "share": false
+  },
+  {
+    "slug": "10-no-visible-price",
+    "title": "No price visible \u2014 Confirm prompt",
+    "node": "A12",
+    "share": false
+  },
+  {
+    "slug": "11-link",
+    "title": "Paste Product Link",
+    "node": "B0",
+    "share": false
+  },
+  {
+    "slug": "12-link-extract",
+    "title": "Link \u2014 extracting",
+    "node": "B6",
+    "share": false
+  },
+  {
+    "slug": "13-link-fallback",
+    "title": "Link \u2014 source fallback variants",
+    "node": "FB",
+    "share": false
+  },
+  {
+    "slug": "14-invalid-url",
+    "title": "Invalid URL",
+    "node": "B2",
+    "share": false
+  },
+  {
+    "slug": "15-non-product",
+    "title": "Not a product page",
+    "node": "B8",
+    "share": false
+  },
+  {
+    "slug": "16-expired",
+    "title": "Expired / removed link",
+    "node": "B9",
+    "share": false
+  },
+  {
+    "slug": "17-link-timeout",
+    "title": "Link timeout",
+    "node": "B10",
+    "share": false
+  },
+  {
+    "slug": "18-search",
+    "title": "Search \u2014 entry",
+    "node": "C0",
+    "share": false
+  },
+  {
+    "slug": "19-typeahead",
+    "title": "Search \u2014 typeahead",
+    "node": "C5",
+    "share": false
+  },
+  {
+    "slug": "20-no-matches",
+    "title": "Search \u2014 no matches",
+    "node": "C3",
+    "share": false
+  },
+  {
+    "slug": "21-short",
+    "title": "Search \u2014 too short",
+    "node": "C2",
+    "share": false
+  },
+  {
+    "slug": "22-catalogue-error",
+    "title": "Search \u2014 catalogue unavailable",
+    "node": "C4",
+    "share": false
+  },
+  {
+    "slug": "23-confirm",
+    "title": "Confirm \u2014 disabled CTA",
+    "node": "CF",
+    "share": false
+  },
+  {
+    "slug": "24-manual-confirm",
+    "title": "Confirm \u2014 empty manual fallback",
+    "node": "BM",
+    "share": false
+  },
+  {
+    "slug": "25-analysing",
+    "title": "Analysing \u2014 long running",
+    "node": "AN",
+    "share": false
+  },
+  {
+    "slug": "26-full",
+    "title": "Results \u2014 Full",
+    "node": "RF",
+    "share": false
+  },
+  {
+    "slug": "27-full-low",
+    "title": "Results \u2014 Full + low-confidence modifier",
+    "node": "RL",
+    "share": false
+  },
+  {
+    "slug": "28-no-price",
+    "title": "Results \u2014 No asking price",
+    "node": "RN",
+    "share": false
+  },
+  {
+    "slug": "29-no-price-low",
+    "title": "Results \u2014 No price + low-confidence modifier",
+    "node": "RL",
+    "share": false
+  },
+  {
+    "slug": "30-insufficient",
+    "title": "Results \u2014 Insufficient data",
+    "node": "RI",
+    "share": false
+  },
+  {
+    "slug": "31-error",
+    "title": "Results \u2014 Error",
+    "node": "RE",
+    "share": false
+  },
+  {
+    "slug": "32-offline",
+    "title": "Global \u2014 Offline",
+    "node": "OFF",
+    "share": false
+  },
+  {
+    "slug": "33-share",
+    "title": "Share \u2014 options",
+    "node": "SH",
+    "share": false
+  },
+  {
+    "slug": "34-share-card",
+    "title": "Share card \u2014 indicative example",
+    "node": "SAFE",
+    "share": true
+  },
+  {
+    "slug": "35-snapshot",
+    "title": "Public snapshot \u2014 frozen read-only",
+    "node": "S7",
+    "share": false
+  },
+  {
+    "slug": "36-share-failed",
+    "title": "Share \u2014 generation failed",
+    "node": "GF",
+    "share": false
+  },
+  {
+    "slug": "37-recent",
+    "title": "Recent \u2014 stored snapshot",
+    "node": "REC",
+    "share": false
+  },
+  {
+    "slug": "38-confidence",
+    "title": "Confidence \u2014 info sheet",
+    "node": "CI",
+    "share": false
+  },
+  {
+    "slug": "39-privacy",
+    "title": "Privacy \u2014 policy placeholder",
+    "node": "PRIV",
+    "share": false
+  }
+]
