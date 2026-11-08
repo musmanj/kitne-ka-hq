@@ -1,0 +1,22 @@
+# Component props and state contract
+Implementation-ready interface guidance, not framework code. 13-family state board: `../design-system/components.html`.
+
+|Component|Props / data|States and implementation notes|
+|---|---|---|
+|Button|label, variant primary/secondary/text, disabled, busy, accessibleName|default/hover/focus-visible/disabled/error+message/loading. 48 target; loading status and duplicate prevention. Focus token plum #653B75, surface separation gap3.|
+|Input / price|id,label,value,error,description,disabled,busy,prefix,locale,formatOption|Associated label, invalid describedby, Rs prefix not repeated by SR. A/B grouping swappable; parse exact paisa server Money, no floating monetary persistence. Only numeric display is formatted.|
+|Chip|label,pressed,disabled|Use button aria-pressed for independent choices. Keyboard reachable; selected accent-soft border, focus ring separate.|
+|Segmented choices|label,options,value,onChange,disabled,error|Production use native radio group with arrow navigation OR button group aria-pressed with normal Tab. Do not mix fake radio roles without keyboard behavior. PTA options approved/non/not sure; condition config-driven. Static frames show selected/focus.|
+|Card / product summary|title,detectedFields,uncertainFields,inlineEdit|Compact summary; only Please check expands; no full-width Edit. Loading skeleton, field errors inline.|
+|Range-v2|rangeLow/high,marketMedian,fairBandLow/high,asking nullable,serverVerdict,locale,dir|Only geometry in range.cjs. Fair band comes from server; missing band is contract gap, not client calculation. Market solid track, dashed overflow segments either side; solid verdict marker18px+surface ring3, share28px+ring4. In range same core. Fair band boundary accent with tint and text equivalent. Marker outside band for HIGH/LOW, inside for FAIR even when outside listings range. No-price retains band/no marker. Split informational no verdict; omit marker to avoid implying classification.|
+|Verdict badge/block|enum,label,icon,indicative|Fair teal ✓, High amber ↑, Unusually Low blue ↓ + full caution. Indicative chip before label, 2px verdict border, canvas fill, no heavy tint. Never label from color alone.|
+|Confidence|level,score,reasons,count,newestObservedAt,methodologyVersion|Caution neutral info icon, no blue. Always count/freshness where evidence exists; Error unavailable, never invent N/date. NONE not zero probability.|
+|Source row|sourceName,url nullable,price,variant,condition,city,observedAt,retrievedAt|Flat rows/dividers, links48, source-specific datesPKT. Omit disabled link if URL unavailable. Evidence heading N + Show all N; inline expand, no pagination; sorted match quality then retrieved_at, cap50 with total/truncated metadata.|
+|Banner|tone neutral/error,icon,text,role|Low confidence neutral/insufficient palette+ⓘ. Blue reserved Unusually Low semantic. Live role status for informative async, alert for actionable newly occurring failure only; avoid repeated announcements.|
+|Bottom sheet|title,content,closeLabel,open,returnFocus|Production modal dialog aria-modal, labelled heading, initial focus, focus trap, Escape and return focus; static state preview not implemented modal.|
+|Skeleton|layout,statusLabel,reducedMotion|No fake numbers or progress; aria-hidden visuals with separate polite status. Static visual, no shimmer required.|
+|Toast|message,action optional,priority|Polite role status; error alert only if urgent. No proof delivery from resolved native share. Persistent actionable errors not toast-only.|
+
+### Range geometry — C1/C2 revision
+Uniform numeric LTR axis in every locale. Domain min(server Fair low, market low, asking) to max(server Fair high, market high, asking), excluding absent asking, with5% span padding at both ends. Thus asking plots at its true position; no routine clamp for extremes. Only values outside an explicitly fixed domain clamp to its edges. Geometry never computes Fair thresholds or verdicts.
+Most listings text identifies the dark segment; no Low/High labels at tinted box ends. Small Fair tag at tint top-start; Median micro-label anchored to tick. Same solid core/ring for every asking position; share omits duplicate marker price label because hero states it. Exact monetary values remain in captions/SR equivalent. Numeric axis remains dir=ltr within surrounding RTL UI, to validate with Urdu-reading users before Urdu launch.

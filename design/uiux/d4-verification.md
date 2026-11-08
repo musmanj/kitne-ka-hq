@@ -1,0 +1,94 @@
+# D4 export verification
+
+33 frames, each with clean + margin-annotated DPR2 PNG. 86 current D4 PNGs including thumbnails/emulations; all decoded and nonblank. Also checked all 131 PNGs in UIUX tree (including unchanged D2 flows/low-fi): nonblank RGB standard deviation >1 and size>1000 bytes.
+
+No horizontal overflow in 33 clean layouts; no share verdict/footer overlap; share canvases2160×2700. Clean mobile720px physical width;768/1280 at1536/2560; annotated adds704 physical px margin. No-price has Fair zone/no marker; no-price/split have no Indicative chip. Stale median terminology and developer meta not present in main UI.
+
+|File|Physical pixels|Bytes|
+|---|---|---|
+| hifi/png/annotated/confidence-info.png | 1424×2000 | 247738 |
+| hifi/png/annotated/confirm-option-b.png | 1424×2806 | 410603 |
+| hifi/png/annotated/confirm.png | 1424×2806 | 422113 |
+| hifi/png/annotated/home.png | 1424×2000 | 327002 |
+| hifi/png/annotated/link-fallback.png | 1424×2000 | 223296 |
+| hifi/png/annotated/offline.png | 1424×2000 | 203498 |
+| hifi/png/annotated/recent-snapshot.png | 1424×2178 | 367849 |
+| hifi/png/annotated/results-error.png | 1424×2000 | 280496 |
+| hifi/png/annotated/results-fair.png | 1424×3356 | 636585 |
+| hifi/png/annotated/results-full-low.png | 1424×3642 | 656670 |
+| hifi/png/annotated/results-full.png | 1424×3274 | 627849 |
+| hifi/png/annotated/results-insufficient.png | 1424×2000 | 292658 |
+| hifi/png/annotated/results-no-price-low.png | 1424×3494 | 642415 |
+| hifi/png/annotated/results-no-price.png | 1424×3248 | 618664 |
+| hifi/png/annotated/results-pta-split-one.png | 1424×2960 | 508011 |
+| hifi/png/annotated/results-pta-split.png | 1424×3452 | 606407 |
+| hifi/png/annotated/results-threshold-rounding.png | 1424×3274 | 558252 |
+| hifi/png/annotated/results-unusually-low.png | 1424×3476 | 655610 |
+| hifi/png/annotated/search-empty.png | 1424×2000 | 199840 |
+| hifi/png/annotated/share-failed.png | 1424×2000 | 215996 |
+| hifi/png/annotated/share-indicative-fallback.png | 2864×2806 | 576375 |
+| hifi/png/annotated/share-indicative.png | 2864×2806 | 595691 |
+| hifi/png/annotated/share-normal-fallback.png | 2864×2806 | 547144 |
+| hifi/png/annotated/share-normal.png | 2864×2806 | 565806 |
+| hifi/png/annotated/share-preview.png | 1424×2000 | 234991 |
+| hifi/png/confidence-info.png | 720×1480 | 112233 |
+| hifi/png/confirm-option-b.png | 720×1654 | 119248 |
+| hifi/png/confirm.png | 720×1766 | 129639 |
+| hifi/png/home.png | 720×1694 | 135540 |
+| hifi/png/link-fallback.png | 720×1480 | 67043 |
+| hifi/png/offline.png | 720×1480 | 45487 |
+| hifi/png/recent-snapshot.png | 720×1874 | 146583 |
+| hifi/png/results-error.png | 720×1480 | 87502 |
+| hifi/png/results-fair.png | 720×3356 | 281455 |
+| hifi/png/results-full-low.png | 720×3642 | 300244 |
+| hifi/png/results-full.png | 720×3274 | 271988 |
+| hifi/png/results-insufficient.png | 720×1480 | 103564 |
+| hifi/png/results-no-price-low.png | 720×3494 | 286405 |
+| hifi/png/results-no-price.png | 720×3224 | 264071 |
+| hifi/png/results-pta-split-one.png | 720×2512 | 192887 |
+| hifi/png/results-pta-split.png | 720×3198 | 236953 |
+| hifi/png/results-threshold-rounding.png | 720×3274 | 266877 |
+| hifi/png/results-unusually-low.png | 720×3476 | 298682 |
+| hifi/png/search-empty.png | 720×1480 | 68894 |
+| hifi/png/share-failed.png | 720×1480 | 55024 |
+| hifi/png/share-indicative-fallback-thumb-180.png | 180×225 | 25104 |
+| hifi/png/share-indicative-fallback-thumb-270.png | 270×338 | 45054 |
+| hifi/png/share-indicative-fallback-thumb-320.png | 320×400 | 55168 |
+| hifi/png/share-indicative-fallback-thumb-360.png | 360×450 | 65567 |
+| hifi/png/share-indicative-fallback.png | 2160×2700 | 270088 |
+| hifi/png/share-indicative-thumb-180.png | 180×225 | 26378 |
+| hifi/png/share-indicative-thumb-270.png | 270×338 | 47786 |
+| hifi/png/share-indicative-thumb-320.png | 320×400 | 58480 |
+| hifi/png/share-indicative-thumb-360.png | 360×450 | 69867 |
+| hifi/png/share-indicative-thumbnail.png | 270×338 | 47786 |
+| hifi/png/share-indicative.png | 2160×2700 | 288526 |
+| hifi/png/share-normal-fallback-thumb-180.png | 180×225 | 22869 |
+| hifi/png/share-normal-fallback-thumb-270.png | 270×338 | 41256 |
+| hifi/png/share-normal-fallback-thumb-320.png | 320×400 | 49979 |
+| hifi/png/share-normal-fallback-thumb-360.png | 360×450 | 60289 |
+| hifi/png/share-normal-fallback.png | 2160×2700 | 240851 |
+| hifi/png/share-normal-thumb-180.png | 180×225 | 24087 |
+| hifi/png/share-normal-thumb-270.png | 270×338 | 43803 |
+| hifi/png/share-normal-thumb-320.png | 320×400 | 52849 |
+| hifi/png/share-normal-thumb-360.png | 360×450 | 64062 |
+| hifi/png/share-normal-thumbnail.png | 270×338 | 43803 |
+| hifi/png/share-normal.png | 2160×2700 | 259545 |
+| hifi/png/share-preview.png | 720×1480 | 88325 |
+| hifi/png/status-emulation.png | 2000×3350 | 721932 |
+| hifi/png/thumbnail-emulation.png | 2000×5804 | 1361245 |
+| responsive/png/annotated/confirm-1280.png | 3264×2000 | 337280 |
+| responsive/png/annotated/confirm-768.png | 2240×2000 | 323028 |
+| responsive/png/annotated/home-1280.png | 3264×2000 | 326547 |
+| responsive/png/annotated/home-768.png | 2240×2000 | 313510 |
+| responsive/png/annotated/results-full-1280.png | 3264×2456 | 553283 |
+| responsive/png/annotated/results-full-768.png | 2240×2544 | 535171 |
+| responsive/png/confirm-1280.png | 2560×1868 | 149615 |
+| responsive/png/confirm-768.png | 1536×1804 | 139807 |
+| responsive/png/home-1280.png | 2560×1480 | 134620 |
+| responsive/png/home-768.png | 1536×1480 | 128994 |
+| responsive/png/results-full-1280.png | 2560×2456 | 299600 |
+| responsive/png/results-full-768.png | 1536×2544 | 290238 |
+| rtl/png/annotated/confirm-rtl.png | 1424×2160 | 341135 |
+| rtl/png/annotated/results-full-rtl.png | 1424×3274 | 545600 |
+| rtl/png/confirm-rtl.png | 720×1766 | 129825 |
+| rtl/png/results-full-rtl.png | 720×3274 | 271013 |

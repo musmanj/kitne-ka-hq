@@ -1,38 +1,177 @@
 [
   {
+    "folder": "hifi",
     "name": "home",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "confirm",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "confirm-option-b",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "results-full",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "results-full-low",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "results-no-price",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "results-no-price-low",
-    "share": false
+    "width": 360,
+    "share": false,
+    "rtl": false
   },
   {
+    "folder": "hifi",
+    "name": "results-fair",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-unusually-low",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-threshold-rounding",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-pta-split",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-pta-split-one",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-insufficient",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-error",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "offline",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "search-empty",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "link-fallback",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "recent-snapshot",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-failed",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "confidence-info",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-preview",
+    "width": 360,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
     "name": "share-normal",
-    "share": true
+    "width": 1080,
+    "share": true,
+    "rtl": false
   },
   {
+    "folder": "hifi",
     "name": "share-indicative",
-    "share": true
+    "width": 1080,
+    "share": true,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-normal-fallback",
+    "width": 1080,
+    "share": true,
+    "rtl": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-indicative-fallback",
+    "width": 1080,
+    "share": true,
+    "rtl": false
   }
 ]

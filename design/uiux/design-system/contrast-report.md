@@ -2,7 +2,7 @@
 
 Computed from sRGB relative luminance (WCAG formula). Text minimum 4.5:1; large text and non-text UI minimum 3:1. All defined text uses the stricter 4.5:1. Disabled controls also tested though exempt. Focus ring separated from filled controls by a 3px surface gap. Shadows are decorative, not boundaries. No translucent text. Skeleton uses border as its meaningful boundary; shading is decorative. This is pair coverage, not a complete accessibility audit.
 
-66/66 pairs pass.
+85/85 pairs pass.
 
 |Pair|Colors|Type|Ratio|Minimum|Result|
 |---|---|---|---|---|---|
@@ -14,7 +14,7 @@ Computed from sRGB relative luminance (WCAG formula). Text minimum 4.5:1; large 
 | insufficient on canvas | #505A60 / #F7F5EF | text | 6.48:1 | 4.5:1 | PASS |
 | error on canvas | #963B32 / #F7F5EF | text | 6.49:1 | 4.5:1 | PASS |
 | border boundary on canvas | #687B75 / #F7F5EF | ui | 4.12:1 | 3:1 | PASS |
-| focus boundary on canvas | #174F87 / #F7F5EF | ui | 7.69:1 | 3:1 | PASS |
+| focus boundary on canvas | #653B75 / #F7F5EF | ui | 7.91:1 | 3:1 | PASS |
 | accent boundary on canvas | #145C50 / #F7F5EF | ui | 7.20:1 | 3:1 | PASS |
 | ink on surface | #182B2A / #FFFFFF | text | 14.81:1 | 4.5:1 | PASS |
 | muted on surface | #4E605D / #FFFFFF | text | 6.66:1 | 4.5:1 | PASS |
@@ -24,7 +24,7 @@ Computed from sRGB relative luminance (WCAG formula). Text minimum 4.5:1; large 
 | insufficient on surface | #505A60 / #FFFFFF | text | 7.06:1 | 4.5:1 | PASS |
 | error on surface | #963B32 / #FFFFFF | text | 7.07:1 | 4.5:1 | PASS |
 | border boundary on surface | #687B75 / #FFFFFF | ui | 4.49:1 | 3:1 | PASS |
-| focus boundary on surface | #174F87 / #FFFFFF | ui | 8.38:1 | 3:1 | PASS |
+| focus boundary on surface | #653B75 / #FFFFFF | ui | 8.62:1 | 3:1 | PASS |
 | accent boundary on surface | #145C50 / #FFFFFF | ui | 7.85:1 | 3:1 | PASS |
 | surface label on accent | #FFFFFF / #145C50 | text | 7.85:1 | 4.5:1 | PASS |
 | surface border on accent | #FFFFFF / #145C50 | ui | 7.85:1 | 3:1 | PASS |
@@ -51,7 +51,7 @@ Computed from sRGB relative luminance (WCAG formula). Text minimum 4.5:1; large 
 | ink on error-bg | #182B2A / #FBEDE8 | text | 12.96:1 | 4.5:1 | PASS |
 | border on disabled-bg | #687B75 / #E1E5E1 | ui | 3.53:1 | 3:1 | PASS |
 | border on accent-soft | #687B75 / #E5F0EB | ui | 3.85:1 | 3:1 | PASS |
-| focus on accent-soft | #174F87 / #E5F0EB | ui | 7.18:1 | 3:1 | PASS |
+| focus on accent-soft | #653B75 / #E5F0EB | ui | 7.39:1 | 3:1 | PASS |
 | muted on fair-bg | #4E605D / #E5F0EB | text | 5.70:1 | 4.5:1 | PASS |
 | border on fair-bg | #687B75 / #E5F0EB | ui | 3.85:1 | 3:1 | PASS |
 | accent on fair-bg | #145C50 / #E5F0EB | text | 6.72:1 | 4.5:1 | PASS |
@@ -72,3 +72,22 @@ Computed from sRGB relative luminance (WCAG formula). Text minimum 4.5:1; large 
 | ink on disabled-bg | #182B2A / #E1E5E1 | text | 11.64:1 | 4.5:1 | PASS |
 | muted on disabled-bg | #4E605D / #E1E5E1 | text | 5.23:1 | 4.5:1 | PASS |
 | accent on disabled-bg | #145C50 / #E1E5E1 | text | 6.16:1 | 4.5:1 | PASS |
+| Focus ring on canvas | #653B75 / #F7F5EF | ui | 7.91:1 | 3:1 | PASS |
+| Focus ring on surface | #653B75 / #FFFFFF | ui | 8.62:1 | 3:1 | PASS |
+| Focus ring on accent-soft | #653B75 / #E5F0EB | ui | 7.39:1 | 3:1 | PASS |
+| Focus ring on high-bg | #653B75 / #FFF0CF | ui | 7.64:1 | 3:1 | PASS |
+| Focus ring on low-bg | #653B75 / #E8F1FC | ui | 7.56:1 | 3:1 | PASS |
+| Focus ring on insufficient-bg | #653B75 / #E9ECEE | ui | 7.27:1 | 3:1 | PASS |
+| Annotation on surface | #9B1764 / #FFFFFF | text | 7.78:1 | 4.5:1 | PASS |
+| fair marker on surface | #145C50 / #FFFFFF | ui | 7.85:1 | 3:1 | PASS |
+| fair marker on canvas | #145C50 / #F7F5EF | ui | 7.20:1 | 3:1 | PASS |
+| fair marker on accent-soft | #145C50 / #E5F0EB | ui | 6.72:1 | 3:1 | PASS |
+| high marker on surface | #795000 / #FFFFFF | ui | 7.09:1 | 3:1 | PASS |
+| high marker on canvas | #795000 / #F7F5EF | ui | 6.51:1 | 3:1 | PASS |
+| high marker on accent-soft | #795000 / #E5F0EB | ui | 6.08:1 | 3:1 | PASS |
+| low marker on surface | #174F87 / #FFFFFF | ui | 8.38:1 | 3:1 | PASS |
+| low marker on canvas | #174F87 / #F7F5EF | ui | 7.69:1 | 3:1 | PASS |
+| low marker on accent-soft | #174F87 / #E5F0EB | ui | 7.18:1 | 3:1 | PASS |
+| Surface separator against muted market track | #FFFFFF / #4E605D | ui | 6.66:1 | 3:1 | PASS |
+| C1 Fair tag text | #145C50 / #E5F0EB | text | 6.72:1 | 4.5:1 | PASS |
+| C1 Median label text | #182B2A / #F7F5EF | text | 13.59:1 | 4.5:1 | PASS |

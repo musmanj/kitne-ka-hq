@@ -460,5 +460,138 @@
     "background": "disabled-bg",
     "kind": "text",
     "minimum": 4.5
+  },
+  {
+    "name": "Focus ring on canvas",
+    "foreground": "focus",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Focus ring on surface",
+    "foreground": "focus",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Focus ring on accent-soft",
+    "foreground": "focus",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Focus ring on high-bg",
+    "foreground": "focus",
+    "background": "high-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Focus ring on low-bg",
+    "foreground": "focus",
+    "background": "low-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Focus ring on insufficient-bg",
+    "foreground": "focus",
+    "background": "insufficient-bg",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Annotation on surface",
+    "foreground": "annotation",
+    "background": "surface",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "fair marker on surface",
+    "foreground": "fair",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "fair marker on canvas",
+    "foreground": "fair",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "fair marker on accent-soft",
+    "foreground": "fair",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "high marker on surface",
+    "foreground": "high",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "high marker on canvas",
+    "foreground": "high",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "high marker on accent-soft",
+    "foreground": "high",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "low marker on surface",
+    "foreground": "low",
+    "background": "surface",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "low marker on canvas",
+    "foreground": "low",
+    "background": "canvas",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "low marker on accent-soft",
+    "foreground": "low",
+    "background": "accent-soft",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "Surface separator against muted market track",
+    "foreground": "surface",
+    "background": "muted",
+    "kind": "ui",
+    "minimum": 3
+  },
+  {
+    "name": "C1 Fair tag text",
+    "foreground": "accent",
+    "background": "accent-soft",
+    "kind": "text",
+    "minimum": 4.5
+  },
+  {
+    "name": "C1 Median label text",
+    "foreground": "ink",
+    "background": "canvas",
+    "kind": "text",
+    "minimum": 4.5
   }
 ]

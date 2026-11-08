@@ -1,0 +1,25 @@
+# Screen spacing / type / responsive spec
+All lengths CSS px; refer to `../design-system/tokens.css` and `tokens.json`. Base body16, line-height1.6, tabular numbers; heading24, subheading20, hero32. Warm `color-canvas`, `color-ink`, `color-muted`. Space8/16/24/32/48/64; touch48. Radius12 inputs/chips,16 cards. `elevation-card` only for verdict block and minimal primary entry/product-summary structure; evidence/new-used flat. No dense source-card stack.
+
+|Frame family|Layout / spacing / typography|Actions / state behavior|
+|---|---|---|
+|Home|16 inset and vertical gap16; header wordmark24/EN pill48; primary entry cards padding16, icon glyph24 in tile44; title24; recent section divider|Three entry cards only primary. Recent whole row opens dated snapshot; separate Check again inline; Clear quiet at section end; Privacy text link + policy placeholder.|
+|Confirm A/B|One product summary padding16/radius16. Inline Edit; only Model Please check field expanded. Form gap16; PTA3 chips visible, condition A2x2 or B2 chips. Asking Rs prefix16 inset + input padding-inline-start48; muted placeholder. Optional city disclosure left-aligned in LTR/logical start in RTL.|Selected + plum focus state shown. Disabled CTA reason immediately above. Uncertain required non-PTA field blocks; missing PTA normalises NOT_SURE in CTO proposal (Founder/DD ratification outstanding). A/B assumptions in annotations, not UI.|
+|Range result Full/Fair/Low/No-price|Product header, combined verdict card padding16/stack16. Server verdict icon+label first, asking hero32, C1 range-v2 axis136, market median and server Fair band caption, difference line. Neutral low caution; Indicative chip before label only for LOW verdict. Flat new/used, evidence with count heading and Show all N.|Share filled accent and Check another outline sticky mobile; no-price input directly below range; classify against existing evidence only. Fair108000 uses position line despite above listings range. Unusually Low85000 carries exact verification caution.|
+|PTA split / one branch|Product + neutral caution + PTA-selection slot; two separate flat branch sections. Each independent range/median/Fair band/count/date; LOW PTA unconfirmed. If missing branch: plain reason, no numbers.|No global verdict/difference/median; no Indicative. PTA chips reclassify selected stored branch. No-price PTA-selection API gap remains open.|
+|Insufficient|Product header; no verdict card/range/price values. Diagnostic count/reason only.|Edit details filled primary; nearby variant outline secondary; Share tertiary text link. No Check again later.|
+|Error / Offline|Heading + neutral info banner; flat action stack16|Error Retry/back; inputs kept, no share/save. Offline manual Retry + bounded automatic reconnect resume. Never fabricate evidence summary on Error.|
+|Search empty|Label/input48 then empty title/tips/category browse|Preserve query/chips; no matches200, unavailable is distinct Error.|
+|Link fallback|URL retained48, explicit reason neutral banner, upload/manual actions48|Show actual policy reason. Image route only if rights-cleared. Manual entry never triggers source-site fetch.|
+|Recent snapshot|Dated stored banner + read-only result|Check again starts full new assessment; never present stale as current.|
+|Share generation failed|Neutral info + Copy link primary, returned safe URL|Image failure still snapshot exists; if snapshot creation fails no URL and Retry instead.|
+|Share normal / Indicative|1080×1350, inset48, gaps24, product48, verdict64, asking120, market track28, marker28 white ring4. Evidence inside block. Footer pinned bottom220 with date/URL/disclaimer.|Indicative outline2 verdict color/light canvas fill, chip+caution adjacent. Supporting difference line removed in fallback safe crop. No screenshot or seller data. Human thumbnail check pending.|
+
+## Responsive
+At768: insets32, gaps32, Home 3 entry columns; Confirm form max640; Results 2 columns (verdict/confidence/new-used | evidence). At1280: insets48, gaps48, columns1.1fr/1fr. Header spans all. Mobile<768: single column, sticky Share/Check another. Tablet/desktop action bar static. Component board responsive via minmax240 columns. No layout inferred as a product breakpoint decision without DD review.
+
+## Annotation exports
+Every product frame has a toggleable margin panel in `color-annotation` magenta. Clean PNGs hide it; annotated PNGs add352 CSS px to capture width. The product main width stays fixed via --frame-width. Margin notes contain assumptions/API notes/fixture provenance, never product messages. Minimal Example badge remains to avoid confusing fictional data with live evidence.
+
+## C1/C2 follow-up
+Most listings text replaces bar-end Low/High labels at every breakpoint, Fair tag marks tint top-start, Median labels the tick. Uniform domain contains asking and Fair/listings bounds plus5% padding. Share axis160 reserves label clearance; hero120/marker28 unchanged, duplicate marker value omitted. Numeric axis stays LTR within RTL UI. Evidence Show all N is an inline expand of capped/sorted observations, no pagination; use evidence.truncated notice when required.

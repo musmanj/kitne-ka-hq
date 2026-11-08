@@ -1,10 +1,11 @@
 # API contract v0 — draft typed schemas / HTTP semantics
+> Current: Design handoff v0.5 at end governs payload/classify/evidence; v0.4 governs pricing; SecOps v0.3 governs privacy. Local-only OCR, mandatory confirmation, no image/raw OCR/provider upload, retention1h/24h/30d, revoked/expired shares410. Price policy:02-pricing-methodology-v0.1.md.
 Owner CTO, 9 Nov 2026 PKT. Proposed for Design/PM/QA review before G2. No endpoints implemented. Base `/api/v0`; JSON unless image. Server validates schemas; prices integer PKR minor units (paisa), no binary floating monetary persistence. ISO8601 timestamps include explicit offset; render dates/times Asia/Karachi (PKT). Per-field extraction confidence is not market confidence.
 
 ## Types
 ```ts
 type ISODateTime = string; // RFC3339
-// integer >= 0, validated safe integer; PKR currency only in MVP
+// positive safe integer paisa; use null for absent price, never zero; PKR only
 type Money = { amount_minor: number; currency: 'PKR' };
 type CategoryId = string; // registry initially phones, laptops, consoles
 type AttributeValue = string | number | boolean | null;
@@ -14,14 +15,14 @@ type Verdict = 'FAIR' | 'HIGH' | 'UNUSUALLY_LOW' |
   'INSUFFICIENT_DATA' | 'NO_ASKING_PRICE';
 type ConfidenceReason = 'FEW_COMPARABLES' | 'SINGLE_SOURCE' | 'NEAR_EXPIRY' |
   'WIDE_SPREAD' | 'ATTRIBUTE_MATCH_NOT_SKU' | 'GEOGRAPHIC_MIX' |
-  'ASKING_NOT_SOLD_PRICES' | 'PTA_UNCONFIRMED';
+  'ASKING_NOT_SOLD_PRICES' | 'PTA_UNCONFIRMED' | 'GEO_SPREAD';
 type LinkFailure = 'INVALID_URL' | 'SOURCE_NOT_SUPPORTED' | 'NOT_PERMITTED' |
   'FETCH_FAILED' | 'NOT_PRODUCT_PAGE' | 'NOT_FOUND_OR_REMOVED' |
   'TIMEOUT' | 'UNSAFE_URL' | 'RATE_LIMITED';
 type ExclusionReason = 'DUPLICATE' | 'TARGET_LISTING' | 'VARIANT_MISMATCH' |
   'UNKNOWN_CRITICAL_ATTRIBUTE' | 'CONDITION_MISMATCH' | 'STALE' | 'UNDATED' |
   'NOT_IN_STOCK' | 'PRICE_NOT_COMPARABLE' | 'UNVERIFIED_RIGHTS' |
-  'UNVERIFIED_PROVENANCE' | 'STATISTICAL_OUTLIER' | 'UNSUPPORTED_CURRENCY';
+  'UNVERIFIED_PROVENANCE' | 'STATISTICAL_OUTLIER' | 'UNSUPPORTED_CURRENCY' | 'INVALID_TIMESTAMP';
 
 type CategoryConfig = {
   id: CategoryId; version: string; label_key: string;
@@ -40,7 +41,7 @@ type Variant = { product_id: string; config_version: string;
   attributes: Record<string, AttributeValue>; condition: Condition;
   used_grade: UsedGrade|null; city: string|null };
 type ExtractedField<T> = { value: T|null; confidence: number|null; // 0..1, null=unknown
-  origin: 'OCR'|'VISION'|'USER'|'CATALOGUE'; raw_text: string|null;
+  origin: 'OCR'|'USER'|'CATALOGUE'; // no raw_text; VISION disabled at launch
   requires_confirmation: boolean; reason_codes: string[] };
 type Extraction = {
   fields: Record<string, ExtractedField<AttributeValue>>;
@@ -48,7 +49,8 @@ type Extraction = {
   candidates: Array<{candidate_id: string; fields: Extraction['fields']}>;
   unsupported_category: boolean; candidate_selection_required: boolean; provider: string; // e.g. local-ocr; not a secret
   input_retention: { original_uploaded: false; remote_image_stored: false;
-    private_fields_expires_at: ISODateTime; provider_notice_key: string|null };
+    unresolved_expires_at: ISODateTime; // creation+1h max
+    provider_notice_key: string|null };
 };
 
 type SourceProvenance = {
@@ -56,7 +58,7 @@ type SourceProvenance = {
   method: 'LICENSED_API'|'PERMISSIONED_FEED'|'RIGHTS_CLEARED_DIRECT_QUOTE';
   permission_record_id: string;
   url: string|null; // public merchant URL only; never private query tokens
-  retrieved_at: ISODateTime; observed_at: ISODateTime;
+  retrieved_at: ISODateTime; observed_at: ISODateTime|null;
   source_updated_at: ISODateTime|null; expires_at: ISODateTime;
 };
 type Listing = {
@@ -73,6 +75,7 @@ type Confidence = { score: number|null; level: 'NONE'|'LOW'|'MEDIUM'|'HIGH';
     params: Record<string,string|number> }> };
 type MarketPool = {
   range_low: Money; range_high: Money; median: Money;
+  fair_band_low: Money; fair_band_high: Money;
   range_method: 'MIN_MAX'|'P10_P90'; observation_ids: string[];
   provenance: SourceProvenance[]; confidence: Confidence;
   n_effective: number; independent_sources: number;
@@ -86,11 +89,17 @@ type Assessment = {
   verdict: Verdict; indicative: boolean; confidence: Confidence;
   selected_pool: 'NEW'|'USED';
   range_low: Money|null; range_high: Money|null; median: Money|null;
+  fair_band_low: Money|null; fair_band_high: Money|null; // median x0.85 / x1.10, half-even output
   // not (low+high)/2; median anchors verdict; avoid ambiguous "midpoint"
   diff_absolute_minor: number|null; diff_percent: number|null;
+  // Server-computed, unrounded (e.g. 0.0882 = +8.82%); clients round for display only via Intl. Null when asking_price or median is null.
+  // Fair thresholds compare exact median ratios, not rounded Money labels.
+  // Band present whenever median present (incl. NO_ASKING_PRICE); null for INSUFFICIENT_DATA. Range endpoints are never verdict thresholds.
   new_market: MarketPool|null; used_market: MarketPool|null;
   verified_retail: VerifiedRetail|null;
   evidence: {
+    evidence_total_included: number; evidence_truncated: boolean;
+    evidence_newest_effective_at: ISODateTime|null;
     retrieved_count: number;
     included_count: number; // selected pool only; UI "listings used"
     used_condition_included_count: number; // avoids ambiguity with "used"
@@ -98,10 +107,10 @@ type Assessment = {
     excluded_by_reason: Array<{code: ExclusionReason; count: number}>;
     new_pool_count: number; used_pool_count: number;
     independent_sources: number;
-    observations: PriceObservation[]; // selected pool; public safe fields only
+    observations: EvidenceObservation[]; // selected pool; sorted inline, at most50; v0.5
   };
   insufficient_reasons: Array<'TOO_FEW_COMPARABLES'|'IDENTITY_UNCONFIRMED'|
-    'NO_PERMITTED_SOURCE'|'EXCESSIVE_SPREAD'|'NO_FRESH_EVIDENCE'>;
+    'NO_PERMITTED_SOURCE'|'EXCESSIVE_SPREAD'|'NO_FRESH_EVIDENCE'|'NO_STORED_RANGE'>;
   explanation: Array<{message_key: string; params: Record<string,string|number>}>;
   // deterministic localised rendering, NOT ungrounded LLM prose
   warnings: string[];
@@ -122,10 +131,10 @@ Phones: `storage_gb`, `ram_gb`, `pta_status={APPROVED,NON_PTA}`, `lock_status`, 
 | GET `/extractions/{id}` | Extraction | 200 when complete; owner capability; raw OCR trimmed/redacted and never public |
 | POST `/assessments` | `{extraction_id?,product_id,variant,asking_price:null|Money,confirmed_fields:string[]}` | 202 job envelope; server validates catalogue/category config; inputs requiring confirmation return422; never trusts client prices as market evidence |
 | GET `/assessments/{id}` | CheckResult (below; check_id aliases assessment_id) | 200 owner capability; service failure is503, not false “no market” |
-| POST `/checks/{id}/classify` | asking_price + optional confirmed PTA; CheckResult | 200 no new collection; 409 stale/invalidated; full revision below |
+| POST `/checks/{id}/classify` | optional asking_price/null and/or confirmed PTA; at least one effective field; CheckResult | 200 no new collection; 409 stale/invalidated; full revision below |
 | DELETE `/jobs/{id}` | no body | 202 cancellation requested; 204 already terminal; revoke input buffers, provider cancellation best effort; don't falsely promise all remote processing stopped |
 | POST `/shares` | `{assessment_id,locale:'en-PK'|'ur-PK',confirm_public:true}` | 201 `{snapshot_id,url,og_image_url:null|string,image_status:'READY'|'PENDING'|'FAILED',expires_at,revoke_token}`; explicit preview before publish; no automatic creation from result fetch |
-| GET `/s/{snapshot_id}` | server-rendered immutable safe HTML + OG tags | 200; random >=128-bit CSPRNG URL-safe ID, no sequential IDs; noindex; frozen checked_at and expiry. 404 unknown/revoked,410 expired. Locale support not promise of Urdu translation at launch |
+| GET `/s/{snapshot_id}` | server-rendered immutable safe HTML + OG tags | 200; random >=128-bit CSPRNG URL-safe ID, no sequential IDs; noindex; frozen checked_at and expiry. 404 unknown,410 revoked/expired while tombstone exists (then404). Locale support not promise of Urdu translation at launch |
 | DELETE `/shares/{snapshot_id}` | Authorization with revoke token | 204; immutable payload remains unchanged, availability revoked; expire/delete public storage per policy |
 
 All private reads are `Cache-Control: no-store`. Rate limit anonymous actions; capability token bound to job/assessment and expiry, never job ID alone; same-origin CORS. `Idempotency-Key` scoped to capability/session, TTL24h. Share noindex is not confidentiality; anybody with link can read it. Proposed expiry30 days; explicit public consent permits retaining sanitised snapshot that long, separate from 24h temporary extraction expiry. Snapshot fields: safe product+variant+condition, asking price (opt-in), ranges/verdict/confidence/counts, checked_at, methodology, safe attribution only. No image, seller PII or raw listing URL by default. A clearly insufficient snapshot may contain no prices.
@@ -170,11 +179,12 @@ Reviewed UI/UX state inventory `design/uiux/d2-ia-and-flows.md` and PRD v0.2 on9
 ```ts
 type PriceVerdict = 'FAIR'|'HIGH'|'UNUSUALLY_LOW';
 type EvidenceSummary = Assessment['evidence'];
-type InsufficientReason = Assessment['insufficient_reasons'][number];
+type InsufficientReason = Assessment['insufficient_reasons'][number]; // NO_STORED_RANGE is classify-only
 type PtaBranch = {
   pta_status:'APPROVED'|'NON_PTA';
   state:'INSUFFICIENT_DATA'|'RANGE_AVAILABLE';
   pool:MarketPool|null; // null on insufficient; never a fabricated range
+  fair_band_low:Money|null; fair_band_high:Money|null; // per-branch, informational only; no branch verdict until PTA selected
   evidence:EvidenceSummary; insufficient_reasons:InsufficientReason[];
 };
 type RangeData = {
@@ -189,6 +199,7 @@ type RangeData = {
 };
 type ResultBase = {
   check_id:string; classification_version:number;
+  confirmed_context:ConfirmedCanonicalContext|null;
   checked_at:ISODateTime; // immutable evidence assessment time
   classified_at:ISODateTime; // this asking-price classification time
   valid_until:ISODateTime|null;
@@ -206,16 +217,16 @@ type CheckResult = ResultBase & (
 ```
 Evaluate Error first, then Insufficient, then Range available. Error is **not** a market verdict. Top-level duplicate confidence/modifier must equal data values when range available. Insufficient data has no displayed range/retail/price verdict; retain diagnostic counts/reasons, no numbers masquerading as estimates. Private stored records can retain inputs without exposing them in result envelope.
 
-Known PTA: one selected assessment, slot NO_ASKING_PRICE with verdict=null if price absent, PRICE_VERDICT otherwise. Unknown target PTA: collect separately; one or both branches must independently pass n>=3 and all gates. If neither does, INSUFFICIENT_DATA; otherwise PTA_SPLIT with `selected_assessment=null`, slot PTA_SELECTION_REQUIRED and verdict=null, even if asking price exists. Branch-level new/used/verified retail remain labelled and nullable per original types. Candidate PTA unknown is excluded. No n2+n2 aggregation. Passing branch confidence capped49, PTA_UNCONFIRMED reason; split summary=min(passing branch capped scores), LOW, with reason and explanation that this is the **weakest displayed branch**, not a blended market estimate. Branch n, sources, dates/exclusions remain independent; aggregate evidence summary deduplicates across branches and does not imply pooled sufficiency. Display no single median/range/difference for split. Selecting PTA can classify using its stored valid branch; absent branch gives NO_STORED_RANGE, not the other PTA's valuation.
+Known PTA: one selected assessment, slot NO_ASKING_PRICE with verdict=null if price absent, PRICE_VERDICT otherwise. Unknown target PTA: collect separately; one or both branches must independently pass n>=3 and all gates. If neither does, INSUFFICIENT_DATA; otherwise PTA_SPLIT with `selected_assessment=null`, slot PTA_SELECTION_REQUIRED and verdict=null, even if asking price exists. Branch-level new/used/verified retail remain labelled and nullable per original types. Candidate PTA unknown is excluded. No n2+n2 aggregation. Passing branch confidence capped49, PTA_UNCONFIRMED reason; split summary=min(passing branch capped scores), LOW, with reason and explanation that this is the **weakest displayed branch**, not a blended market estimate. Branch n, sources, dates/exclusions remain independent; aggregate evidence summary deduplicates across branches and does not imply pooled sufficiency. Display no single median/range/difference for split. Selecting PTA uses only its stored branch; stored insufficient branch returns200 INSUFFICIENT_DATA/NO_STORED_RANGE under v0.5; absent/unevaluated branch422 NO_STORED_RANGE. Never use the other PTA valuation.
 
 **Confidence bands:** LOW integer0–49; MEDIUM50–79; HIGH80–100. NONE/null means evidence gates failed, not score below some cutoff. n3–4 or d<2 caps49; normal confidence needs n>=5,d>=2. All other methodology gates/caps apply. `indicative` is true only when a LOW price verdict exists; no-price/split ranges get caution banner even without an indicative verdict label. Per-field extraction `requires_confirmation=true` when confidence is null or <0.85 (initial UX assumption), OR critical field absent/conflicting; model self-reported score cannot waive a hard-field requirement. User confirmation resolves field routing, not market-evidence confidence.
 
 ### New lightweight endpoint
 `POST /api/v0/checks/{id}/classify`, where id is existing check_id/assessment_id (one identifier, not a second check service).
 - Capability-authenticated, `Idempotency-Key` and `If-Match` classification version required.
-- Input `{asking_price:Money, pta_status?:'APPROVED'|'NON_PTA'}`; positive safe integer PKR amount. Changing model, condition, storage or other variant attributes is rejected422 VARIANT_CHANGE_REQUIRES_CHECK.
+- Input `ClassifyRequest` below: optional nullable asking_price and/or confirmed PTA; at least one field present; explicit null clears asking price, selected PTA rules still apply. Positive safe integer PKR when price supplied. Changing model, condition, storage or other variant attributes is rejected422 VARIANT_CHANGE_REQUIRES_CHECK.
 - Success200 CheckResult, new classification_version; same fixed comparable snapshot/median, no OCR/LLM/source calls. Preserve checked_at/observed_at/retrieved_at and valid_until; classified_at now. Recompute recency score/caps using stored evidence only, not a refreshed range. Original snapshots unchanged.
-- Stale409 RANGE_STALE when now>earliest evidence observed_at+14/30days or earlier contractual expiry. For split use selected branch validity, not the other branch. Permission/config/methodology revoked409 EVIDENCE_INVALIDATED; unknown/no retained qualifying branch422 NO_STORED_RANGE; PTA still unknown422 PTA_SELECTION_REQUIRED; concurrency409 VERSION_CONFLICT; expired private check410 CHECK_EXPIRED; unknown/unauthorised404 CHECK_NOT_FOUND. All require edit or explicit full recheck; never auto-incur collection spend. No storing original check for longer than its retention policy to support classify.
+- Stale409 RANGE_STALE when now>earliest evidence observed_at+14/30days or earlier contractual expiry. For split use selected branch validity, not the other branch. Permission/config/methodology revoked409 EVIDENCE_INVALIDATED; selected insufficient branch200 INSUFFICIENT_DATA with NO_STORED_RANGE; unknown/unevaluated branch422 NO_STORED_RANGE; PTA still unknown422 PTA_SELECTION_REQUIRED; concurrency409 VERSION_CONFLICT; expired private check410 CHECK_EXPIRED; unknown/unauthorised404 CHECK_NOT_FOUND. All require edit or explicit full recheck; never auto-incur collection spend. No storing original check for longer than its retention policy to support classify.
 - Low score is not rejected if evidence gate passes. “Check again” from Recent always starts a full assessment, not this endpoint. Classify stale ranges never silently trims expired observations/rebuilds a new range.
 
 ### Error contract: synchronous and asynchronous
@@ -257,7 +268,7 @@ Known PTA: one selected assessment, slot NO_ASKING_PRICE with verdict=null if pr
 | Invalid/missing critical confirmed field | CONFIRMATION_REQUIRED |422|false|errors.check.confirm_fields|
 | Classify range stale | RANGE_STALE |409|false|errors.classify.range_stale|
 | Classify permission/config invalidated | EVIDENCE_INVALIDATED |409|false|errors.classify.invalidated|
-| Classify no stored qualifying range | NO_STORED_RANGE |422|false|errors.classify.no_range|
+| Classify unknown/unevaluated branch (not stored insufficient branch) | NO_STORED_RANGE |422|false|errors.classify.no_range|
 | Classify PTA still unknown | PTA_SELECTION_REQUIRED |422|false|errors.classify.confirm_pta|
 | Classify changed variant | VARIANT_CHANGE_REQUIRES_CHECK |422|false|errors.classify.variant_changed|
 | Concurrent stage/classification | VERSION_CONFLICT |409|true|errors.request.version_conflict|
@@ -308,10 +319,180 @@ Every row in the UI/UX inventory is covered below; frontend-only failures have *
 | S1/S2/S3 native success/cancel | Only invoke Web Share on gesture; resolved promise returns to result (not proof WhatsApp delivered); AbortError=CLIENT_SHARE_CANCELLED http=null retryable=false share.cancelled, neutral return, not failure toast |
 | S4/S5/S6 native unavailable/failure/copy/download | CLIENT_SHARE_UNAVAILABLE/CLIENT_SHARE_FAILED http=null retryable=false share.unavailable/share.failed →Copy link/Download. CLIENT_COPY_FAILED/CLIENT_DOWNLOAD_FAILED http=null retryable=true share.copy_failed/share.download_failed → selectable URL/manual copy or retry download; no delivery claim |
 | GF image generation fails | Persist snapshot before PNG rendering; POST/shares201 still returns valid url,image_status=FAILED,og_image_url=null +warning SHARE_IMAGE_FAILED/message share.image_failed. Copy link survives; Download unavailable/retry image only. Snapshot-creation failure503 SHARE_SNAPSHOT_UNAVAILABLE retryable=true share.snapshot_unavailable returns no URL—show retry, do not invent link |
-| S7/SNAP public | Immutable dated server HTML+noindex+128bit ID; CTA home. Unknown/revoked404 SNAPSHOT_NOT_FOUND,share.snapshot_not_found; expired410 SNAPSHOT_EXPIRED,share.snapshot_expired; service503 SNAPSHOT_UNAVAILABLE,retryable=true,share.snapshot_unavailable. 404/410 not retryable; offer fresh check. OG failure doesn't remove HTML |
+| S7/SNAP public | Immutable dated server HTML+noindex+128bit ID; CTA home. Unknown404 SNAPSHOT_NOT_FOUND,share.snapshot_not_found; revoked410 SNAPSHOT_REVOKED,share.snapshot_revoked; expired410 SNAPSHOT_EXPIRED,share.snapshot_expired; service503 SNAPSHOT_UNAVAILABLE,retryable=true,share.snapshot_unavailable. 404/410 not retryable; offer fresh check. OG failure doesn't remove HTML |
 
 ### Consolidated screenshot posture (replaces unconditional PRD fallback)
 Distinguish transient **target extraction** from ingestion/redistribution. User ownership of a screenshot does not establish rights to all depicted content. For user's own/rights-cleared ad images: conditional private extraction, EXIF stripped, redacted, no image retention beyond request processing and no reuse as comparables. For OLX/Daraz or other third-party platform screenshots: **legal-review gate before enabling automated extraction in MVP**; absent clearance return INPUT_RIGHTS_UNCLEARED with manual facts fallback. This is a conservative launch policy under ambiguous third-party processing rights, not a claim that every private screenshot analysis is legally prohibited. EXIF removal, short retention or uploader consent alone do not grant platform/content rights. No screenshot/target ever enters its own benchmark; reusable evidence needs separate rights/provenance verification, not merely consent. No source-site fetch for pasted restricted URL. Apply origin/rights question before client OCR; client processing must not bypass app policy. Cannot reliably infer platform origin from every image, so use explicit rights/origin declaration and documented review policy, not a claimed automatic copyright detector.
 
 ### Additional required tests (specification only)
 Every error/status/key row; async semantic status vs200 transport; n2/n3 and49/50/79/80 boundaries; error+insufficient precedence; split n2+n2 insufficient, one eligible branch, missing PTA permits submission, no global split verdict; classify fresh/exact-expiry/expired/revoked/config-version/price-only/unchanged n/methodology; stale action no provider calls; cancellation/offline replay; failed PNG with working snapshot; copy/download/cancel/public404/410; all inventory traceability rows. Nothing executed in this document task.
+
+
+## SecOps revision v0.3 — current launch contract (9 Nov2026 PKT)
+This section overrides earlier multipart/LOCAL_OCR raw-text submissions, optional provider retry,24h unresolved extraction TTL and404-revoked semantics. Read SecOps threat/privacy/CI proposals in full. Recommendations accepted by CTO, pending SecOps confirmation/Founder ratification; no implementation claimed.
+
+### Input boundary, confirmation and lean data
+**Images and raw OCR never leave device at launch.** Browser Tesseract is pinned/self-hosted; rights/origin gate applies before OCR; all submitted model/variant/condition/price fields require explicit user confirmation, even high-confidence suggestions. Unknown PTA may still be confirmed as Not sure and branch, not blocked. Local raw OCR held in session memory only and discarded after parsing/confirmation/reset; never persisted in LocalStorage/IndexedDB/Recent, sent as telemetry or cached by service worker. No provider response exists in enabled path; no provider key configured. No raw provider response/raw OCR persistence if a future provider is approved either.
+
+`POST/extractions` is either a catalogue candidate request or legacy URL policy classification. It accepts JSON<=64KiB with **bounded allowlisted product/candidate IDs and typed canonical specs only**, not OCR text or arbitrary model prose. Local extraction need not create server job/record. Requests with `kind:'IMAGE'`, multipart/image media types fail415 REMOTE_IMAGE_DISABLED, retryable=false, message_key=errors.image.remote_disabled. Requests containing raw_text, raw_response, image/base64 or unknown keys fail400 DISALLOWED_INPUT_FIELD, retryable=false, errors.request.disallowed_field. No upstream request, decode, DB body or log payload before rejection. Apply independent streamed-byte/content-encoding caps at gateway/body reader (JSON64KiB, identity encoding); don't buffer arbitrary hostile bodies to reject them. Local parser uses strict decimal values/config, not data trusted merely because browser asserts it.
+
+`POST/assessments` accepts only canonical product_id/config-version, confirmed allowlisted attributes, positive integer-paisa asking price or null, optional coarse city ID, and explicit confirmed_fields/confirmation attestation. Server validates canonical schema independently; client confirmation is a UX requirement not a security credential. `raw_text` removed from ExtractedField/storage/API. No original file name, seller/name/contact, precise location, arbitrary URL input or full request/provider JSON in jobs/idempotency/errors/logs. URL string retained in browser session only; source-policy classifier may inspect bounded URL transiently, never persists it. Catalogue resolver uncertainty can return minimal canonical candidates with1h TTL; no raw source snippets.
+
+Price schema version0.1 separates lean PriceObservation from ComparableCandidate; authoritative definitions:
+```ts
+type PriceObservationV01 = {
+  id:string; listing_id:string; price:Money;
+  observed_at:ISODateTime|null; source_updated_at:ISODateTime|null;
+  retrieved_at:ISODateTime; provenance_ref:string;
+};
+type ComparableCandidate = {
+  observation:PriceObservationV01; listing_id:string; canonical_listing_id:string;
+  sellerOwnerId:string; // resolved ultimate merchant owner; opaque, not contact data
+  inStock:boolean; city:string|null;
+  variantMatch:{matched:boolean; exclusion_reason:ExclusionReason|null; quality:number};
+  variant:Variant; source:SourceProvenance; price_basis:string;
+};
+```
+These replace the earlier observation embedding all variant/match/seller metadata. Public evidence DTO joins safe canonical Listing/provenance fields when licensed; sellerOwnerId/private policy IDs need not be exposed. Internal independent_sources=d counts distinct resolved sellerOwnerId after dedupe/filter/trim, not API/platform hosts (v0.1 explicit revision). Candidates and observations never sourced from user target as benchmark. `fair_band_low/high:Money` added to selected-pool output, rounded half-even from exact median×.85/1.10; thresholds still use unrounded ratio. `diff_ratio` exact rational/internal, `diff_percent`=ratio (legacy name;0.0882 means8.82%), never a rounded verdict input. Private check retains exact statistical rationals+included evidence refs for classify, not just rounded display Money; public shares never expose internal rationals.
+
+### Retention classes and read/delete semantics
+All TTLs from creation, never last read/retry/classify. Each row has retention_class/created_at/expires_at; enforce `now>=expires_at` on every read/mutation before data access, irrespective of purge timing.
+- `UNRESOLVED_EXTRACTION`:1h max, minimal canonical candidates/confidence/notice version only, no raw OCR. Confirmation/cancel removes superseded fields immediately. Local-only may keep this entirely on device; server doesn't need to receive it. Expired GET/extraction410 EXTRACTION_EXPIRED, retryable=false, errors.extract.expired; unknown404 EXTRACTION_NOT_FOUND.
+- `SANITISED_CHECK`:24h from original check creation; canonical facts, optional asking price/coarse city, pools/evidence refs, policy/methodology/config, lease/idempotency metadata/capability hashes only. Confirmation discards unconfirmed raw/free-text material. Classify does not extend TTL; expired private check410 CHECK_EXPIRED even if evidence freshness window longer.
+- `PUBLIC_SHARE`:explicit preview/consent, maximum30d from publish or earlier contracted display expiry, fixed no sliding renewal. Asking price excluded by default unless explicitly opted-in. Separate independent creator revocation capability, hashed server-side. Share is independent safe payload, no FK requiring check/raw input retention.
+- Never persist OCR/provider responses anywhere, including debug/trace/queue/blob/idempotency/backups; allowlisted operational logs only. App-log7d/security-audit30d, unlinkable aggregate counters<=90d, rate/session identifiers<=24h, optional Recent7d/max10 are proposed SecOps schedules, pending approved sink configuration. Do not promise third-party backup/log erasure follows app TTL.
+- One cleanup job every15min, plan support to verify, deletes active expired rows/children in bounded batches; normal-operation objective physical removal<=15min after logical expiry, alerts overdue>15min. Reads fail closed during scheduler outage. Free DB paused/resumed→purge overdue before reopening; original provider backups/recipient copies outside immediate deletion claim.
+
+| Method | Current contract |
+|---|---|
+| DELETE `/extractions/{id}` | Resource-scoped creator capability,204 active-row deletion+child cleanup and token revocation; no content in receipt. Unknown/wrong token404; absent capability401. DELETE is not merely cancel |
+| DELETE `/checks/{id}` | Alias existing assessment/check ID, creator capability,204 private payload/job/candidate cleanup+token revocation; no parent payload retained for idempotency. Explicit separate share-revoke option in UI with its management token; private delete alone does not silently retract public shares |
+| DELETE `/shares/{id}` | **Independent creator revocation token in Authorization header**, scope revoke+share_id; compare hashed token constant-time.204 after immediate active-public-payload removal/unavailability, idempotent replay with valid token/tombstone204. No ID-only revoke or token in URL/Recent/analytics. Unknown/wrong token404, absent401. Revocation works after original private check expired |
+| GET `/s/{id}` and `/s/{id}/image.png` | Check current status before serving; HTML+PNG no-store initially. **410 SNAPSHOT_REVOKED**, share.snapshot_revoked, retryable=false for revoked; **410 SNAPSHOT_EXPIRED**, share.snapshot_expired,false for expired;404 SNAPSHOT_NOT_FOUND for unknown/tombstone removed;503 SNAPSHOT_UNAVAILABLE for service failure. No direct public object URL bypass |
+
+Keep minimal hashed opaque-ID/status/original-expiry tombstone until original share expiry+24h (and token hash only as necessary for idempotent creator auth); then hard-delete and404. No public payload/price/product content retained on revoke. Existing messaging caches/downloads cannot be recalled; UI says revoke stops future first-party access only. Management token lives in protected creator session, separate from Recent; lost capability may make anonymous recovery impossible, disclose before publish. No invented recovery identity/contact; Founder must appoint actual privacy/takedown owner.
+
+### Future image capability — disabled, not implicitly authorised
+If ever enabled, client EXIF removal is insufficient. Require independently reviewed **server-side isolated decode/re-encode/strip metadata**, plus magic-byte/container/EOF/stream-size/pixel/frame/time/memory validation and strict post-reencode output allowlist. Planned4MiB/4MP future profile not live API acceptance; do not put native hostile decoding onto free Worker to meet deadline. A safe processing service/new runtime requires explicit privacy/security/spend approval. Current local-only image boundary is verified by network-spy tests asserting no image/raw OCR/provider calls, not by claiming client re-encoding protects server.
+
+### Stage/prod boundary and required negative tests
+Separate staging/prod Workers and Supabase projects/DBs, secrets, signing keys, runtime/migrator roles, rate namespaces and source policy. No production bindings in any preview/PR. A Cloudflare version URL reuses existing resources, not isolation; official sources in ADR/reconciliation. CI uses ephemeral local DB and synthetic data; trusted exact-commit staging deploy only with isolated credentials. Tests required: network no-image/rawOCR/model spy; mandatory all-field confirmation; reject raw_text/base64; synthetic canaries absent from all persistence/logs/errors; clocked1h/24h exact read expiry and15min purge/recovery; check deletion vs cancel; independent revoke after private expiry; HTML+PNG410/no-cache/direct-bypass denial; staging bindings cannot access prod. No tests run in this document task.
+
+
+## Revision v0.4 — authoritative methodology v0.1 DTO amendments (9 Nov2026 PKT)
+This section + `02-pricing-methodology-v0.1.md` override old conflicting rounding, source-owner, confidence-geography and timestamp prose. Old v0 is historical. No endpoints implemented or tests claimed.
+
+```ts
+// InsufficientReason above additionally includes classify-only NO_STORED_RANGE.
+type AssessmentWarning = 'IQR_ZERO_SPREAD_REVIEW';
+type PriceNormalizationError = 'ZERO' | 'NEGATIVE' | 'NON_FINITE'
+  | 'NOT_A_NUMBER' | 'TOO_SMALL' | 'TOO_LARGE' | 'UNSUPPORTED_CURRENCY';
+// PricePool addition, present on successful branch, null inside failed branch/no displayed range:
+type FairBand = {fair_band_low:Money|null; fair_band_high:Money|null};
+// Fixture flat DTO aliases fair_band_low_minor/high_minor map to the Money.amount_minor fields.
+type TimestampPolicy = {future_skew_max_seconds:300; freshness_new_days:14; freshness_used_days:30};
+type AssessmentMetadata = {methodology_version:'0.1'; config_version:string;
+  checked_at:string; classified_at:string|null; warnings:AssessmentWarning[]};
+// Internal domain: not a raw OCR/LLM/provider object or persistence instruction.
+type PriceObservation = {id:string; listing_id:string; price:Money;
+  observed_at:string|null; source_updated_at:string|null; retrieved_at:string; provenance_ref:string};
+type ComparableCandidate = {observation:PriceObservation; canonicalListingId:string;
+  sellerOwnerId:string|null; inStock:boolean|null; city:string|null;
+  variantMatch:{matched:boolean; exclusion_reason:ExclusionReason|null; quality:1|0.9};
+  source_ref:string; rights_status:'PERMITTED'|'UNVERIFIED'|'DENIED';
+  price_basis:'FULL_CASH_TAX_INCLUSIVE'|'NOT_COMPARABLE'};
+// sellerOwnerId means resolved ultimate commercial seller, NOT API/platform owner id.
+// Minimal canonical metadata is sanitised retention-limited material, not verbatim listing/URL dumps.
+```
+
+- `fair_band_low/high` output = exact median×.85/1.10 then half-even to paisa; verdict compares unrounded ratios, **never rounded fair-band labels**. Median, range, abs-diff output same rule. Rational median retained server-side only for exact classify.
+- Confidence: exact formula, round half-even integer **once**, apply caps, map0–49LOW/50–79MEDIUM/80–100HIGH.78.5→78;72.5→72;49.5→50 then small-n cap49. Insufficient=NONE/null, not LOW/0. GEO_SPREAD and NEAR_EXPIRY are reasons only; no extra penalties, normal continuous R age still applies.
+- INVALID_TIMESTAMP if any provided timestamp malformed or >now+300s; exactly300s accepted; age clamped0 for accepted future skew. Effective timestamp older of observed_at/source_updated_at, retrieved_at never freshness. Fractional days milliseconds/86,400,000. Inclusive14/30day limit. checked_at injected check clock; classified_at injected classify clock.
+- NEAR_EXPIRY when max included age>=.8window. GEO_SPREAD uses>=2cities with>=2 observations/city, gap of city **medians** / overall median **including missing-city observations** >.15. No-city/singleton excluded from city groups only.
+- IQR warning `IQR_ZERO_SPREAD_REVIEW` only IQR0 plus nonzero range; keep observations, final gates still apply. One IQR pass before final min3 and(max−min)/median>.60. P90/P10 cap>.30 computed even for n3–4 while displaying min/max.
+- Reasons unique in methodology order. All-stale → `[NO_FRESH_EVIDENCE,TOO_FEW_COMPARABLES]`. Candidate primary exclusions ordered per methodology §5, one count each; unknown candidate PTA→UNKNOWN_CRITICAL_ATTRIBUTE; zero/EMI→PRICE_NOT_COMPARABLE.
+- Split summary=min(scores of passing branches), including a sole passing branch; never null-as-zero. No merged range/price verdict. NO_ASKING_PRICE+LOW → indicative=false,low_confidence_modifier=true; indicative=true only LOW price verdict.
+- Normalisation positive input rounding0→`ZERO`. API supplied zero/negative/noninteger/out-of-safe-bounds target (POST/assessments or classify) →422 INVALID_ASKING_PRICE,retryable=false,`errors.price.invalid`; only null means no price. classify accepts null price with a confirmed PTA selection; v0.5 below. Malformed outer JSON/type400 INVALID_REQUEST remains separate.
+- Missing approved category plausibility config→503 CONFIGURATION_REQUIRED,retryable=false,`errors.configuration.required`; this is a policy/configuration block, not "Insufficient market data" or user-blame. Config min/max are **TBD approval**, no invented defaults. Technical Money1..Number.MAX_SAFE_INTEGER paisa is not market plausibility.
+- Classify validates capability/private24h TTL first (expired410 CHECK_EXPIRED,errors.check.expired,retryable=false); then variant/branch existence; then hard freshness (any included age>window→409 RANGE_STALE, equality passes); source policy/version invalidation409 RANGE_STALE; no retrieval. Recompute R/flags at classified_at against same stored evidence; do not renew checked_at,evidence times,record TTL or snapshot TTL. Freshness unit fixtures must keep private record alive; 14/30day observation age alone says nothing about record lifetime.
+
+Expected frontend states unchanged: offline/retry retain confirm fields only within1h; provider/server errors outrank insufficient; no stale range rendered as current. Local-only OCR SDK progress is client-side, canonical job progress server-side. API accepts no images/raw text, even via free-text metadata, URLs or diagnostics.
+
+
+## Revision v0.5 — Design payload handoff and latest rulings (9 Nov2026 PKT)
+Read `design/uiux/handoff/payload-mapping.md` in full. This section overrides older required-price/classify errors, evidence completeness, percentage units and share payload ambiguity. Documentation only; no endpoints or tests implemented.
+
+### Classify input and selected-branch state
+```ts
+type PtaStatus = 'APPROVED'|'NON_PTA'|'NOT_SURE';
+type ClassifyRequest = {asking_price?:Money|null; pta_status?:'APPROVED'|'NON_PTA'};
+// Validation: at least one own field is present (asking_price or pta_status).
+// {} ->422 CLASSIFICATION_INPUT_REQUIRED; explicit asking_price:null counts as provided.
+```
+- `{pta_status:'APPROVED',asking_price:null}` is valid; price explicitly cleared, no invented price. Omitted asking_price preserves stored asking_price, including null; omitted PTA preserves current selection. Unsupported PTA values/null, unexpected variant keys or invalid supplied Money fail validation. Price-only requests (including explicit null) on an unselected split still require PTA_SELECTION_REQUIRED; explicit null alone on a previously selected pool validly clears asking price.
+- A selected **passing** branch returns200 RANGE_AVAILABLE, mode SINGLE_POOL, selected_assessment for **that branch only**. If effective price null: verdict_slot NO_ASKING_PRICE/verdict=null, assessment.verdict NO_ASKING_PRICE, both diff fields null, range/median/fair_band_low/high present; indicative=false. Set confirmed_context PTA to selected value. No other branch substitution. Recompute confidence/caps; remove only PTA_UNCONFIRMED uncertainty when selection confirms it, retain all other caps.
+- A selected **stored insufficient** branch returns200 INSUFFICIENT_DATA, data=null, confidence NONE/null, low modifier=false; insufficient_reasons includes **NO_STORED_RANGE** and original applicable branch reasons; evidence contains chosen branch diagnostic counts only, observations=[]; no other branch range, fair band or verdict leaks. Order NO_STORED_RANGE first, then existing methodology reason order. Selection/version are recorded even when insufficient; any supplied valid asking price remains private canonical state, not a displayed comparison. Unknown/unevaluated branch is422 NO_STORED_RANGE, not substituted.
+- Private24h TTL/capability checks first. Known passing branch stale/rights-invalid→409 RANGE_STALE, even for null price; chosen insufficient branch has no range to freshness-test and returns the defined insufficient outcome unless check/policy expired/invalid. Supersedes old422 for a stored insufficient branch and old non-null price requirement. Idempotency/If-Match still apply; preserve checked_at/evidence times/valid_until/TTL; classified_at/version update. **Zero source/OCR/LLM calls**.
+-422 CLASSIFICATION_INPUT_REQUIRED,retryable=false,`errors.classify.input_required`; malformed PTA422 INVALID_PTA_STATUS,false,`errors.classify.pta_invalid`; invalid positive-Money rule remains422 INVALID_ASKING_PRICE. No automatic refresh.
+
+### Safe confirmed context — fixes missing headers and public product schema
+```ts
+type ConfirmedCanonicalContext = {
+  product:{id:string; display_name:string}; // server catalogue name, never listing/OCR title
+  variant:{config_version:string; attributes:Record<string,AttributeValue>;
+    condition:Condition; used_grade:UsedGrade|null; pta_status:PtaStatus|null};
+};
+// Add to ResultBase on every CheckResult state:
+// confirmed_context:ConfirmedCanonicalContext|null; null only before validated confirmation exists.
+```
+Server derives this from validated confirmed fields and versioned catalogue/config, not client-provided display_name. Attributes allowlisted canonical spec keys and values only; no arbitrary text/title/seller keys. Phones unselected→NOT_SURE; selected→APPROVED/NON_PTA; nonphones→null. PTA is authoritative in variant.pta_status, not duplicated in attributes. For ERROR without confirmed context, render generic header; for confirmed insufficient/split results render this context, not an absent selected_assessment. A fresh unknown-target insufficient check still has safe product context.
+
+### Evidence DTO, complete inline up to explicit safety cap
+```ts
+type EvidenceObservation = {
+  observation_id:string; price:Money; variant:Variant; match_quality:number;
+  source:{source_id:string; source_name:string; url:string|null;
+    observed_at:ISODateTime|null; source_updated_at:ISODateTime|null; retrieved_at:ISODateTime};
+};
+// EvidenceSummary extends the existing count/reason fields:
+// evidence_total_included:number; evidence_truncated:boolean; observations:EvidenceObservation[];
+```
+All included source/observation rows inline, **no pagination/cursor/evidence endpoint in v0**. For each selected assessment or independent branch, sort full included set by match_quality DESC, retrieved_at instant DESC, source.source_id ASC (ordinal); final tie observation_id ASC makes output deterministic. After sorting return first50; evidence_total_included=included_count=full post-filter/dedup/trim count, evidence_truncated=(count>50). Exactly50→false. No cap before pricing/confidence/gates; all included offers influence computation. No fake "Show all N" beyond50: show returned/total and ICU `evidence.truncated` params{shown,total}; otherwise "Show all" expands already-inline rows only.
+
+Excluded listings appear only as counts by primary reason; **never return excluded row records/URLs/prices/titles**. Insufficient outcomes still expose diagnostic counts, evidence_total_included and excluded_by_reason but observations=[] (no pricing leakage); evidence_truncated=false for state-suppressed rows, not mislabelled safety truncation. Explain insufficiency rather than showing a row expander. Restricted internal permission IDs, seller identities, raw titles and hashes are not public DTO fields. Existing count equality unaffected by safety cap.
+
+Newest evidence date must not be derived from the capped match-sorted subset: add `evidence_newest_effective_at:ISODateTime|null` to EvidenceSummary, server max effective timestamp over **all** included evidence, null when empty. Effective timestamp older of observed/source_updated with accepted future skew clamped to evaluation now. `retrieved_at` sorting is retrieval chronology, not market freshness. UI uses this field and PKT formatting.
+
+### Server-built public snapshot payload
+```ts
+type ShareSnapshotPayload = {snapshot_id:string; locale:'en-PK'|'ur-PK';
+  confirmed_context:ConfirmedCanonicalContext;
+  checked_at:ISODateTime; classified_at:ISODateTime|null; expires_at:ISODateTime;
+  methodology_version:string; category_config_version:string;
+  result_state:'RANGE_AVAILABLE'|'INSUFFICIENT_DATA';
+  result:SanitisedSnapshotResult};
+type SnapshotPool = {range_low:Money; range_high:Money; median:Money;
+  fair_band_low:Money; fair_band_high:Money; range_method:'MIN_MAX'|'P10_P90';
+  confidence:Confidence; evidence:SnapshotEvidence};
+type SnapshotEvidence = {included_count:number; evidence_total_included:number; evidence_truncated:boolean;
+  excluded_count:number; excluded_by_reason:Array<{code:ExclusionReason;count:number}>;
+  evidence_newest_effective_at:ISODateTime|null; observations:EvidenceObservation[]};
+type SanitisedSnapshotResult =
+  | {state:'INSUFFICIENT_DATA'; reasons:InsufficientReason[];
+      evidence:{included_count:number;excluded_count:number;excluded_by_reason:Array<{code:ExclusionReason;count:number}>}}
+  | {state:'SINGLE_POOL';pool:SnapshotPool; asking_price:Money|null;
+      verdict:PriceVerdict|'NO_ASKING_PRICE'; indicative:boolean;
+      diff_absolute_minor:number|null;diff_percent:number|null}
+  | {state:'PTA_SPLIT';branches:Array<{pta_status:'APPROVED'|'NON_PTA';
+      pool:SnapshotPool|null; insufficient_reasons:InsufficientReason[]}>};
+```
+POST/shares accepts check/assessment ID, matching classification_version, locale, confirm_public:true and optional `include_asking_price:boolean` defaultfalse; **not a client-built snapshot/result/product object**. Server freezes allowlisted validated confirmed context and safe version-matched result. Concurrent version409 VERSION_CONFLICT. Never include raw OCR, image/base64, listing titles, seller strings/IDs, target URL, capabilities/tokens, raw request/provider output or internal exact statistical objects; no blind serialisation/spread of internal records. Evidence source_name is approved publisher/retailer catalogue attribution, not an imported seller-string; URLs publicly licensed and scrubbed of tokens/private query data. Exclude coarse target city from public context by default. Evidence variant.city only approved coarse canonical city, no seller strings.
+
+Without asking-price opt-in, public asking_price/diffs null and SINGLE_POOL verdict NO_ASKING_PRICE, indicative=false while range/fair band/confidence remain; do not leak asking price indirectly via verdict/diffs. With opt-in copy exact server-classified selected result. Failed branch pool null, no alternate-branch substitution; insufficient snapshot no pricing. Public payload contains neither revoke_token nor private check ID; revoke token only creator POST response. HTML/PNG use this frozen server payload, never OCR/client strings. Expiry/revoke410, independent consent30d max and rights restrictions unchanged.
+
+### Additional mapping fixes and open gaps
+- **Percentage unit fixed:** public `diff_percent` is a decimal **fraction** (0.0882→8.82% via Intl percent), consistent with Designer mapping and original Assessment comment. Legacy field name retained; all old percent-point prose/flat QA fixture conventions need adapter `/100`, never UI double conversion. Internally exact ratio unchanged; verdict thresholds unchanged.
+- Wire EvidenceObservation is distinct from lean internal PriceObservationV01; never expose source-owner/policy identifiers just to satisfy evidence rows. MarketPool fair-band fields explicitly typed; duplicate Assessment declarations removed; malformed extraction-retention comment closed.
+- Confidence.reasons remains typed objects `{code,message_key,params}`, not string array; low/split/no-price modifiers unchanged. Actual ICU resources/translations are not claimed supplied. en-PK launch; ur-PK resources/availability require approved product scope; never silently claim Urdu complete.
+- Already decided: missing target PTA nonblocking and local-only1h/24h/30d controls are not newly open technical questions. Outstanding: PM/Founder condition taxonomy/plausibility and Urdu scope; privacy notice/SecOps operational verification; integration tests/implementation. Designer-owned mapping not edited.
+- Required tests (not run): PTA+null success/failed/stale branch, {} rejection, price omission vs explicitnull, null-only on selected pool, branch isolation, confidence/TTL/idempotency, evidence0/50/51 ordering+totals, exclusion suppression, full-set newest date, public confirmed-context canary tests, no title/seller/OCR/token leakage, no-ask privacy/diff fraction and snapshot version race.

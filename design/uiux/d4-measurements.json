@@ -1,0 +1,502 @@
+[
+  {
+    "folder": "hifi",
+    "name": "home",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 847,
+    "mainHeight": 846.96875,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "confirm",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 883,
+    "mainHeight": 883.34375,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "confirm-option-b",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 827,
+    "mainHeight": 827.34375,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-full",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1637,
+    "mainHeight": 1636.65625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-full-low",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1821,
+    "mainHeight": 1821.4375,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-no-price",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1612,
+    "mainHeight": 1611.875,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-no-price-low",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1747,
+    "mainHeight": 1746.65625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-fair",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1678,
+    "mainHeight": 1678.25,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-unusually-low",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1738,
+    "mainHeight": 1737.84375,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-threshold-rounding",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1637,
+    "mainHeight": 1636.65625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-pta-split",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1599,
+    "mainHeight": 1598.6875,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-pta-split-one",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 1256,
+    "mainHeight": 1255.90625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-insufficient",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "results-error",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "offline",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "search-empty",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "link-fallback",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "recent-snapshot",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 937,
+    "mainHeight": 936.71875,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-failed",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "confidence-info",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-preview",
+    "width": 360,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-normal",
+    "width": 1080,
+    "share": true,
+    "rtl": false,
+    "height": 1350,
+    "mainHeight": 1350,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-indicative",
+    "width": 1080,
+    "share": true,
+    "rtl": false,
+    "height": 1350,
+    "mainHeight": 1350,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-normal-fallback",
+    "width": 1080,
+    "share": true,
+    "rtl": false,
+    "height": 1350,
+    "mainHeight": 1350,
+    "shareOverlap": false
+  },
+  {
+    "folder": "hifi",
+    "name": "share-indicative-fallback",
+    "width": 1080,
+    "share": true,
+    "rtl": false,
+    "height": 1350,
+    "mainHeight": 1350,
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "home-768",
+    "width": 768,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "confirm-768",
+    "width": 768,
+    "share": false,
+    "rtl": false,
+    "height": 902,
+    "mainHeight": 902.15625,
+    "cta": {
+      "x": 64,
+      "y": 771.5625,
+      "width": 640,
+      "height": 98.59375,
+      "top": 771.5625,
+      "right": 704,
+      "bottom": 870.15625,
+      "left": 64
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "results-full-768",
+    "width": 768,
+    "share": false,
+    "rtl": false,
+    "height": 1272,
+    "mainHeight": 1272.296875,
+    "cta": {
+      "x": 32,
+      "y": 1175.296875,
+      "width": 704,
+      "height": 65,
+      "top": 1175.296875,
+      "right": 736,
+      "bottom": 1240.296875,
+      "left": 32
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "home-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false,
+    "height": 740,
+    "mainHeight": 740,
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "confirm-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false,
+    "height": 934,
+    "mainHeight": 934.15625,
+    "cta": {
+      "x": 320,
+      "y": 787.5625,
+      "width": 640,
+      "height": 98.59375,
+      "top": 787.5625,
+      "right": 960,
+      "bottom": 886.15625,
+      "left": 320
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "responsive",
+    "name": "results-full-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false,
+    "height": 1228,
+    "mainHeight": 1227.515625,
+    "cta": {
+      "x": 48,
+      "y": 1114.515625,
+      "width": 1184,
+      "height": 65,
+      "top": 1114.515625,
+      "right": 1232,
+      "bottom": 1179.515625,
+      "left": 48
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "rtl",
+    "name": "confirm-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true,
+    "height": 883,
+    "mainHeight": 883.34375,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "rtl",
+    "name": "results-full-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true,
+    "height": 1637,
+    "mainHeight": 1636.65625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  }
+]

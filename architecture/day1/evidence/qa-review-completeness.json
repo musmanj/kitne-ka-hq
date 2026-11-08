@@ -1,0 +1,31 @@
+{
+  "scope": "documentation and independent arithmetic review only; not engine/test execution",
+  "vectors": 120,
+  "groups": {
+    "RNG": 5,
+    "INS": 9,
+    "VER": 16,
+    "CON": 15,
+    "PTA": 8,
+    "OUT": 5,
+    "FIL": 16,
+    "PRE": 1,
+    "CLS": 4,
+    "NRM": 32,
+    "BND": 2,
+    "NEX": 3,
+    "GEO": 4
+  },
+  "snapshot_sha256": "19a2526232776869f4b404bf3c69d4c2dc18f3d1d9821fec2e7b2c1533fdd1b6",
+  "sections": {
+    "00-summary.md": {
+      "words": 267
+    },
+    "08-secops-reconciliation.md": {
+      "words": 244
+    },
+    "09-qa-answers.md": {
+      "words": 310
+    }
+  }
+}

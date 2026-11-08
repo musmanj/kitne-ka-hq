@@ -1,0 +1,44 @@
+[
+  {
+    "key": "secops-gemini-terms",
+    "url": "https://aistudio.google.com/docs/terms",
+    "final_url": "https://aistudio.google.com/docs/terms",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  },
+  {
+    "key": "secops-gemini-abuse",
+    "url": "https://aistudio.google.com/docs/usage-policies",
+    "final_url": "https://aistudio.google.com/docs/usage-policies",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  },
+  {
+    "key": "secops-cloudflare-versions",
+    "url": "https://developers.cloudflare.com/workers/versions-and-deployments/version-urls/",
+    "final_url": "https://developers.cloudflare.com/workers/versions-and-deployments/version-urls/",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  },
+  {
+    "key": "secops-supabase-pricing",
+    "url": "https://supabase.com/pricing",
+    "final_url": "https://supabase.com/pricing",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  },
+  {
+    "key": "secops-cloudflare-envs",
+    "url": "https://developers.cloudflare.com/workers/wrangler/environments/",
+    "final_url": "https://developers.cloudflare.com/workers/wrangler/environments/",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  },
+  {
+    "key": "secops-supabase-branching",
+    "url": "https://supabase.com/docs/guides/deployment/branching",
+    "final_url": "https://supabase.com/docs/guides/deployment/branching",
+    "status": 200,
+    "retrieved_date": "2026-11-09 PKT"
+  }
+]

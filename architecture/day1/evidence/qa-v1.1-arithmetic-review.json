@@ -1,0 +1,751 @@
+{
+  "scope": "120 synthetic vectors inventoried; independent spot arithmetic, no engine execution",
+  "reviews": [
+    {
+      "id": "RNG-01",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "RNG-02",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 11000000,
+        "range_low_minor": 10000000,
+        "range_high_minor": 12000000,
+        "fair_band_low_minor": 9350000,
+        "fair_band_high_minor": 12100000
+      }
+    },
+    {
+      "id": "RNG-03",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10500000,
+        "range_low_minor": 10000000,
+        "range_high_minor": 11000000,
+        "fair_band_low_minor": 8925000,
+        "fair_band_high_minor": 11550000
+      }
+    },
+    {
+      "id": "RNG-04",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10250000,
+        "range_low_minor": 9250000,
+        "range_high_minor": 11500000,
+        "fair_band_low_minor": 8712500,
+        "fair_band_high_minor": 11275000
+      }
+    },
+    {
+      "id": "RNG-05",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000002,
+        "range_low_minor": 10000000,
+        "range_high_minor": 10000010,
+        "fair_band_low_minor": 8500001,
+        "fair_band_high_minor": 11000002
+      }
+    },
+    {
+      "id": "INS-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-04",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-05",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10100000,
+        "range_low_minor": 10000000,
+        "range_high_minor": 10200000,
+        "fair_band_low_minor": 8585000,
+        "fair_band_high_minor": 11110000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "INS-06",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 7000000,
+        "range_high_minor": 13000000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000
+      }
+    },
+    {
+      "id": "INS-07",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-08",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "INS-09",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "VER-01",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "UNUSUALLY_LOW"
+      }
+    },
+    {
+      "id": "VER-02",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-03",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-04",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-05",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-06",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-07",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "VER-08",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "UNUSUALLY_LOW"
+      }
+    },
+    {
+      "id": "VER-09",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "VER-10",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-11",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000,
+        "verdict": "UNUSUALLY_LOW"
+      }
+    },
+    {
+      "id": "VER-12",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000,
+        "verdict": "FAIR"
+      }
+    },
+    {
+      "id": "VER-13",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "VER-14",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000
+      }
+    },
+    {
+      "id": "VER-15",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000
+      }
+    },
+    {
+      "id": "VER-16",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10100000,
+        "range_low_minor": 10000000,
+        "range_high_minor": 10200000,
+        "fair_band_low_minor": 8585000,
+        "fair_band_high_minor": 11110000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "CON-01",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 82
+    },
+    {
+      "id": "CON-02",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 49
+    },
+    {
+      "id": "CON-03",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 49
+    },
+    {
+      "id": "CON-04",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 49
+    },
+    {
+      "id": "CON-05",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 79
+    },
+    {
+      "id": "CON-06",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 82
+    },
+    {
+      "id": "CON-07",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 79
+    },
+    {
+      "id": "CON-08",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 80
+    },
+    {
+      "id": "CON-09",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 79
+    },
+    {
+      "id": "CON-10",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 78
+    },
+    {
+      "id": "CON-11",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 73
+    },
+    {
+      "id": "CON-12",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 72
+    },
+    {
+      "id": "CON-13",
+      "review": "independent exact score rounding/caps",
+      "calculated_score": 100
+    },
+    {
+      "id": "CON-14",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "CON-15",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-04",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-05",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-06",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-07",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PTA-08",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "OUT-01",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10300000,
+        "range_low_minor": 10060000,
+        "range_high_minor": 10540000,
+        "fair_band_low_minor": 8755000,
+        "fair_band_high_minor": 11330000
+      }
+    },
+    {
+      "id": "OUT-02",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10350000,
+        "range_low_minor": 10070000,
+        "range_high_minor": 10735000,
+        "fair_band_low_minor": 8797500,
+        "fair_band_high_minor": 11385000
+      }
+    },
+    {
+      "id": "OUT-03",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 10000000,
+        "range_high_minor": 11500000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000
+      }
+    },
+    {
+      "id": "OUT-04",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10350000,
+        "range_low_minor": 10070000,
+        "range_high_minor": 10630000,
+        "fair_band_low_minor": 8797500,
+        "fair_band_high_minor": 11385000
+      }
+    },
+    {
+      "id": "OUT-05",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-04",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-05",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-06",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-07",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-08",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-09",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-10",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-11",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-12",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "PRE-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "CLS-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "CLS-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "CLS-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "CLS-04",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10250000,
+        "range_low_minor": 9250000,
+        "range_high_minor": 11500000,
+        "fair_band_low_minor": 8712500,
+        "fair_band_high_minor": 11275000,
+        "verdict": "HIGH"
+      }
+    },
+    {
+      "id": "NRM-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-04",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-05",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-06",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-07",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-08",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-09",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-10",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-11",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-12",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-13",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-20",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-21",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-22",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-23",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-24",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-25",
+      "review": "independent decimal-string rational conversion",
+      "amount_minor": 12345600
+    },
+    {
+      "id": "NRM-26",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-27",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-30",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-31",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-32",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-33",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-34",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-13",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-14",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-15",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "FIL-16",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "BND-01",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10200000,
+        "range_low_minor": 9880000,
+        "range_high_minor": 10520000,
+        "fair_band_low_minor": 8670000,
+        "fair_band_high_minor": 11220000
+      }
+    },
+    {
+      "id": "BND-02",
+      "review": "independent rational spot-check",
+      "calculated": {
+        "median_minor": 10000000,
+        "range_low_minor": 9680000,
+        "range_high_minor": 10320000,
+        "fair_band_low_minor": 8500000,
+        "fair_band_high_minor": 11000000
+      }
+    },
+    {
+      "id": "NEX-01",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NEX-02",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NEX-03",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "GEO-01",
+      "review": "independent city medians; all included overall median",
+      "ratio": "9/55",
+      "fires": true
+    },
+    {
+      "id": "GEO-02",
+      "review": "independent city medians; all included overall median",
+      "ratio": "7/54",
+      "fires": false
+    },
+    {
+      "id": "GEO-03",
+      "review": "independent city medians; all included overall median",
+      "ratio": "None",
+      "fires": false
+    },
+    {
+      "id": "GEO-04",
+      "review": "independent city medians; all included overall median",
+      "ratio": "3/20",
+      "fires": false
+    },
+    {
+      "id": "NRM-40",
+      "review": "independent decimal-string rational conversion",
+      "amount_minor": 12
+    },
+    {
+      "id": "NRM-41",
+      "review": "independent decimal-string rational conversion",
+      "amount_minor": 14
+    },
+    {
+      "id": "NRM-42",
+      "review": "independent decimal-string rational conversion",
+      "amount_minor": 12345679
+    },
+    {
+      "id": "NRM-43",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-44",
+      "review": "semantic/contract review; not executed against engine"
+    },
+    {
+      "id": "NRM-45",
+      "review": "semantic/contract review; not executed against engine"
+    }
+  ],
+  "numeric_conflicts": [
+    {
+      "id": "CON-12",
+      "field": "score",
+      "expected": 73,
+      "correct": 72
+    },
+    {
+      "id": "NRM-25",
+      "field": "amount_minor",
+      "expected": 12345670,
+      "correct": 12345600
+    }
+  ]
+}

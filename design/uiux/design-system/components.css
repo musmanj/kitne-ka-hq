@@ -5,3 +5,67 @@
 a{display:inline-flex;align-items:center;min-block-size:48px}.range a{display:inline}.segments button{min-inline-size:48px}
 /* Four taxonomy choices wrap in a two-column grid; never squeeze long labels. */
 .screen .segments:has(button:nth-child(4)){display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+/* D4: neutral caution; blue is only the Unusually Low verdict. Focus is plum. */
+.banner{background:var(--color-insufficient-bg);color:var(--color-insufficient)}
+.banner .info{font-weight:700;margin-inline-end:8px}
+.example-badge{font-size:16px;color:var(--color-muted);display:inline-block}
+.screen{inline-size:var(--frame-width,360px);max-inline-size:100%;margin-inline:auto}
+.screen .content{display:grid;gap:24px}.screen .left-column,.screen .right-column{display:grid;gap:24px;align-content:start}
+.flat{border-block-end:1px solid var(--color-border);padding-block:16px;display:grid;gap:8px}
+.verdict-block{background:var(--color-high-bg);border:1px solid var(--color-high);box-shadow:var(--elevation-card)}
+.verdict-block.fair{background:var(--color-fair-bg);border-color:var(--color-fair);color:var(--color-ink)}
+.verdict-block.low{background:var(--color-low-bg);border-color:var(--color-low);color:var(--color-ink)}
+.verdict-block.indicative{border:2px solid var(--verdict-color,var(--color-high));background:var(--color-canvas)}
+.indicative-chip{display:inline-flex;padding:0 8px;min-block-size:32px;align-items:center;border:1px solid currentColor;border-radius:12px;font-weight:700;color:var(--color-muted)}
+.verdict-title{color:var(--verdict-color,var(--color-high));font-size:32px;font-weight:750;line-height:1.4}
+.range-v2{margin-block:16px;--marker-color:var(--verdict-color,var(--color-high))}
+.range-axis{block-size:104px;position:relative;margin-inline:8px}
+.fair-zone{position:absolute;inset-block-start:48px;block-size:40px;border:1px solid var(--color-accent);border-radius:8px;background:var(--color-accent-soft)}
+.overflow-line{position:absolute;inset-inline:0;inset-block-start:66px;border-block-start:2px dashed var(--color-muted)}
+.market-track{position:absolute;inset-block-start:61px;block-size:12px;background:var(--color-muted);border:1px solid var(--color-ink);border-radius:8px}
+.median-tick{position:absolute;inset-block-start:52px;block-size:32px;border-inline-start:2px solid var(--color-ink)}
+.ask-marker{position:absolute;inset-block-start:58px;inline-size:18px;block-size:18px;border-radius:50%;background:var(--marker-color);outline:3px solid var(--color-surface);transform:translateX(-50%)}
+[dir=rtl] .ask-marker{transform:translateX(50%)}
+.ask-value{position:absolute;inset-block-start:4px;font-weight:700;line-height:1.4;white-space:nowrap;transform:translateX(-50%);color:var(--color-ink)}
+.ask-value.end{transform:translateX(-100%)}.ask-value.start{transform:none}
+[dir=rtl] .ask-value{transform:translateX(50%)}[dir=rtl] .ask-value.end{transform:translateX(100%)}[dir=rtl] .ask-value.start{transform:none}
+.range-ends{display:flex;justify-content:space-between;gap:8px;color:var(--color-muted)}
+.range-caption{margin-block-start:8px}.num{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.price-field{position:relative}.price-field .prefix{position:absolute;inset-inline-start:16px;inset-block-start:12px;color:var(--color-muted)}.price-field input{padding-inline-start:48px;font-weight:400}
+.entry .icon{inline-size:44px;block-size:44px;border-radius:12px;background:var(--color-accent-soft);font-size:24px;display:grid;place-items:center}
+.recent-main{display:block;color:var(--color-ink);text-decoration:none;min-block-size:72px;padding-block:8px}.recent-main:focus-visible{outline-offset:0}.recent-row{border-block-end:1px solid var(--color-border)}
+.quiet{font-weight:400;color:var(--color-muted)}.add-city{align-self:flex-start;text-align:start;justify-content:flex-start;padding-inline:0}.screen[dir=rtl] .add-city{align-self:flex-start}
+.segment-focus{outline:3px solid var(--color-focus);outline-offset:3px;box-shadow:0 0 0 3px var(--color-surface)}
+.annotation-toggle{position:fixed;inset-inline-end:16px;inset-block-start:16px;z-index:5;color:var(--color-annotation);border-color:var(--color-annotation);background:var(--color-surface)}
+.annotations{display:none;position:absolute;inset-inline-start:calc(var(--frame-width,360px) + 24px);inset-block-start:88px;inline-size:296px;color:var(--color-annotation);background:var(--color-surface);padding:16px;border:2px solid var(--color-annotation);border-radius:12px;font:16px/1.6 system-ui}
+body.annotated .annotations{display:block}body.annotated .screen{margin-inline:0}body.annotated .annotation-toggle{position:absolute;inset-inline-start:calc(var(--frame-width,360px) + 24px);inset-inline-end:auto}
+.annotations li{margin-block:16px}.annotations a{color:var(--color-annotation)}
+body.export-clean .annotation-toggle,body.export-clean .annotations{display:none!important}.annotation-caption{color:var(--color-annotation);font-weight:700}
+.responsive{padding:32px}.responsive header{margin-block-end:8px}.responsive .home-entries{display:grid;gap:16px}.responsive .confirm-form{max-inline-size:640px;margin-inline:auto;inline-size:100%}.responsive .content{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}.responsive .entry{min-block-size:144px}.responsive .sticky{position:static}.responsive.home .home-entries{grid-template-columns:repeat(3,minmax(0,1fr))}.responsive.home .entry{display:grid}.responsive .hero{font-size:40px}
+@media(min-width:1000px){.responsive .content{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px}.responsive{padding:48px}.responsive.home .entry{display:flex}}
+.share-card{position:relative;block-size:1350px;inline-size:1080px;padding:48px;gap:24px;font-size:28px;line-height:1.5;overflow:hidden}.share-card .price{font-size:var(--font-size-share-price);line-height:1.1;font-weight:750}.share-card .verdict-title{font-size:64px}.share-card .indicative-chip{font-size:32px;padding:8px 16px}.share-card .range-axis{block-size:128px}.share-card .fair-zone{inset-block-start:64px;block-size:48px}.share-card .overflow-line{inset-block-start:86px}.share-card .market-track{inset-block-start:74px;block-size:28px}.share-card .median-tick{inset-block-start:62px;block-size:52px}.share-card .ask-marker{inset-block-start:74px;inline-size:28px;block-size:28px;outline-width:4px}.share-card .ask-value{inset-block-start:8px}.share-card .range-caption{font-size:28px}.share-card footer{position:absolute;inset-inline:0;inset-block-end:0;block-size:220px;background:var(--color-accent-soft);border-block-start:1px solid var(--color-accent);padding:32px 48px;margin:0;display:flex;flex-direction:column;justify-content:center;gap:8px}.share-card .card{padding:24px;margin-block-end:0}.share-card .supporting-line{font-size:28px}.share-card .range-v2{margin-block:0}.share-card .banner{padding:12px 16px}.share-card .evidence-line{border-block-start:1px solid var(--color-border);padding-block-start:16px}
+.share-card.compact-share .supporting-line{display:none}.share-card.compact-share .card{margin-block-end:0}
+@media print{.annotations,.annotation-toggle{display:none!important}}
+.share-card .card.stack{gap:8px}.share-card .indicative-chip{align-self:flex-start;font-size:28px;padding:4px 12px;inline-size:max-content;max-inline-size:100%}.share-card .range-axis{block-size:112px}.share-card .range-caption{font-size:24px}.share-card .supporting-line{font-size:24px}.share-card .evidence-line{font-size:26px;line-height:1.4;padding-block-start:12px}
+/* Component rows remain flat, not elevated mini-cards. */
+.range-v2 .range-ends{line-height:1.5}.annotation-toggle:focus-visible{outline-color:var(--color-focus)}
+html{scroll-padding-block:24px 128px}button,input,a{scroll-margin-block:128px}.range-axis .overflow-arrow{display:inline-block}.screen .right-column{min-inline-size:0}.screen .left-column{min-inline-size:0}
+/* Keep 768px product breakpoint fixed when a review margin widens the capture viewport. */
+body[style*="--frame-width:768px"] .responsive{padding:32px}body[style*="--frame-width:768px"] .responsive .content{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}body[style*="--frame-width:768px"] .responsive.home .entry{display:grid}
+/* Normal and compact share variants fill the available composition, not an empty lower half. */
+.share-card .card{min-block-size:800px}
+/* Two-tone median tick stays identifiable against both track and Fair tint. */
+.median-tick{background:var(--color-surface);inline-size:4px;outline:1px solid var(--color-surface)}
+/* Review-only controls stay outside the product canvas even before notes are opened. */
+body>main.screen{margin-inline:0}.annotation-toggle{position:absolute;inset-inline-start:calc(var(--frame-width,360px) + 24px);inset-inline-end:auto}
+.verdict-block.insufficient{background:var(--color-surface);border-color:var(--color-border);color:var(--color-ink)}
+.annotations{overflow-wrap:anywhere;word-break:normal}.annotations li{min-inline-size:0}
+/* C1/C2: labels identify the correct shapes; all numeric axes remain LTR. */
+.range-v2[dir=ltr]{direction:ltr;text-align:start}.range-v2[dir=ltr] .ask-marker{transform:translateX(-50%)}.range-v2[dir=ltr] .ask-value{transform:translateX(-50%)}.range-v2[dir=ltr] .ask-value.end{transform:translateX(-100%)}.range-v2[dir=ltr] .ask-value.start{transform:none}
+.range-axis{block-size:136px}.fair-tag{position:absolute;inset-inline-start:0;inset-block-start:-28px;font-size:16px;font-weight:700;color:var(--color-accent);background:var(--color-accent-soft);border:1px solid var(--color-accent);padding-inline:8px;border-radius:8px;line-height:24px}
+.median-label{position:absolute;inset-inline-start:0;inset-block-start:40px;transform:translateX(-50%);font-size:16px;line-height:24px;font-weight:600;color:var(--color-ink);white-space:nowrap;background:var(--color-canvas);padding-inline:4px}
+.most-listings{color:var(--color-muted)}.range-ends{display:none}
+.share-card .range-axis{block-size:136px}.share-card .fair-tag{font-size:24px;line-height:32px;inset-block-start:-36px}.share-card .median-label{font-size:24px;line-height:32px;inset-block-start:52px}.share-card .most-listings{font-size:24px}.share-card .ask-value{display:none}
+.share-card .range-axis{block-size:160px}
+/* Keep below-range value labels clear of the Fair tag at narrow widths. */
+.range-v2:not(.share-card .range-v2) .fair-tag{inset-block-start:-12px}.share-card .range-v2 .fair-tag{inset-block-start:-36px}

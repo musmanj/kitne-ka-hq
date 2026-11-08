@@ -1,0 +1,44 @@
+[
+  {
+    "folder": "responsive",
+    "name": "home-768",
+    "width": 768,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "responsive",
+    "name": "confirm-768",
+    "width": 768,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "responsive",
+    "name": "results-full-768",
+    "width": 768,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "responsive",
+    "name": "home-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "responsive",
+    "name": "confirm-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false
+  },
+  {
+    "folder": "responsive",
+    "name": "results-full-1280",
+    "width": 1280,
+    "share": false,
+    "rtl": false
+  }
+]

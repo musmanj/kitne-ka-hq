@@ -1,3 +1,5 @@
+> **Historical v0 — superseded9 Nov2026 PKT:** use `02-pricing-methodology-v0.1.md`. Conflicting rounding, ownership, geographic caps and freshness wording below is not authoritative.
+
 # Pricing methodology v0 — deterministic, evidence first
 Owner CTO. Date 9 Nov 2026 PKT. **Initial assumptions to calibrate, not empirically validated thresholds.** Aligned with parent/PM v0 steering: 3 minimum; 5+ and 2 sources for normal confidence; 14/30-day freshness; median; -15%/+10%; P10–P90. No implementation or test success claimed.
 

@@ -1,3 +1,5 @@
+> Historical D3 report. D4 updates these design-system/hi-fi files in place; current verdict examples, focus/marker semantics, measurements and dependencies are in [d4-README.md](d4-README.md), [CHANGELOG.md](CHANGELOG.md) and [G2 pack](g2-pack/README.md). D2 low-fi unchanged.
+
 # D3 — Lean identity, design system v0 and hi-fi
 Review draft · 9 Nov 2026, PKT. No low-fi frames reissued or modified. All product amounts and evidence are explicitly fictional examples, not a market assessment. No external publishing or commits.
 

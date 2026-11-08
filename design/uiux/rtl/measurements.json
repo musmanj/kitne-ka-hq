@@ -1,0 +1,42 @@
+[
+  {
+    "folder": "rtl",
+    "name": "confirm-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true,
+    "height": 883,
+    "mainHeight": 883.34375,
+    "cta": {
+      "x": 16,
+      "y": 641.40625,
+      "width": 328,
+      "height": 98.59375,
+      "top": 641.40625,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  },
+  {
+    "folder": "rtl",
+    "name": "results-full-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true,
+    "height": 1637,
+    "mainHeight": 1636.65625,
+    "cta": {
+      "x": 16,
+      "y": 675,
+      "width": 328,
+      "height": 65,
+      "top": 675,
+      "right": 344,
+      "bottom": 740,
+      "left": 16
+    },
+    "shareOverlap": false
+  }
+]

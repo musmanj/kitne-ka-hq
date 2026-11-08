@@ -1,61 +1,54 @@
-# Revised Day 1 CTO assessment — Chief of Staff
-**9 Nov 2026 PKT · Proposed G1/G2 decisions; no signup, spend, push or implementation claimed**
+# Day1 CTO technical assessment — revised handoff
+9 Nov2026 PKT. Assessment/design only; no signups, paid commitments, deployments, messages or pushes. Current authority: **pricing v0.1 in02; API revision v0.4 in03**. Old02-v0 remains explicitly historical. Detailed legal URLs, fetched clauses/dates and vendor pricing evidence are in01/ADR/06; no unrestricted scraping permission is assumed.
 
-Reviewed PRD v0.2 and the full UI/UX state inventory. Updated methodology, API, ADR, source-policy reconciliation and foundations; detailed PM amendments are in `07-prd-reconciliation.md`.
+## Send-ready full assessment for Chief of Staff
+**Recommendation:** proceed with low-risk modular-monolith foundations, but do not promise live market coverage until legally permitted, independently attributable evidence passes G1. The14-day MVP is evidence-backed price checking, not a scraper project. Existing GitHub ADR-0001 default is accepted; ADR-0002 recommends React/Vite PWA, Hono on Cloudflare Worker with Static Assets, and Supabase Postgres. Separate app repo from HQ docs, feature modules/contracts/pure pricing engine in one deployable, no microservices. No repo was created or pushed.
 
-## 1. Result states, confidence and PTA
-Adopt **ERROR → INSUFFICIENT_DATA → RANGE_AVAILABLE** precedence. Error is operational, outside the market verdict enum. Low confidence modifies any range layout, including no-price results; it never overrides insufficient evidence.
+**Consolidated source policy (retrieval evidence in01):**
+|Source|Status and reason|
+|---|---|
+|Owned/synthetic target screenshots + rights-cleared manual/partner observations|Conditional enabled class: permitted input processing only; independent verified provenance/rights before benchmarking. Synthetic data never production evidence.|
+|User-pasted URLs|Conditional: canonicalise client-side; no request for blocked hosts, not benchmark evidence.|
+|OLX Pakistan automation/pasted-fetch|Excluded: explicit anti-automation terms; pasted links NOT_PERMITTED403. Third-party listing screenshots remain legal-review gated, local OCR not exemption.|
+|Daraz scrape/pasted-fetch|Excluded: terms ban robots/data mining; NOT_PERMITTED403.|
+|Daraz affiliate/Open Platform|Conditional: application/access/redistribution licence and Founder decision; not permission for scraping.|
+|PriceOye|Partnership target; bot/query restrictions, no general automated licence established.|
+|Samsung PK, Xiaomi PK, Infinix/Tecno, Apple-authorised resellers|Partnership targets; official merchant feed/permission required, no assumed public API.|
+|Mega.pk, gaming retailers|Conditional legal review; no proven reusable automated licence.|
+|Telemart, iShopping|Conditional legal review: robots/public product availability is not ToS permission.|
+|WhatMobile, Hamariweb|Conditional manual citation/reference only; neither scraped nor independent verified retail offers by default.|
+|Mobilemall/other reference sites|Conditional legal review/manual reference, not admitted benchmark by default.|
+|Google Shopping/SerpAPI/Serper|Conditional licensed search discovery only; API payment does not grant underlying listing reuse rights or independent-source diversity.|
 
-**LOW 0–49; MEDIUM 50–79; HIGH 80–100**, inclusive integer scores. Insufficient is not “below Low”: it means fewer than three eligible independent comparables or another failed identity/permission/freshness/spread gate; confidence is NONE/null. Three–four comparables or one independent source caps49; normal confidence requires five-plus and two underlying independent source owners. The weighted score is not calibrated probability.
+**Methodology v0.1:** strict category-configured model/variant matching; never mix condition or PTA pools. Unknown target PTA doesn't block: separate Approved/Non-PTA branches, each independently sufficient, no merged median/verdict until selected. Exclude unknown candidate PTA. Resolve ultimate commercial seller owner, not platform parent; dedup to one owner/variant/condition offer. This intentionally tightens/clarifies source independence, affecting QA FIL-08.
 
-**Missing PTA does not block Check.** Ask Approved/Non-PTA/Not sure; skipped means Not sure. Search the two known-PTA pools separately; never mix their prices or counts. Each branch independently needs three comparables and all gates. Two-plus-two is insufficient. If one/both qualify, show labelled exploratory ranges, forced LOW/cap49 with PTA_UNCONFIRMED; no global verdict until PTA is selected. This safely refines Design’s “widen matching” assumption. Other critical attributes remain confirmation-gated.
+Minimum3 final comparables; fewer→Insufficient with no range/median/score. New<=14days, used<=30days, fractional/inclusive; effective timestamp is older observed/update, retrieval doesn't rejuvenate evidence. Exactly300s future tolerated with age0; beyond/malformed INVALID_TIMESTAMP. Single IQR pass at pre-trim n>=8, then hard final(max−min)/median>.60 blocks. Display min/max n3–4 or P10/P90 n>=5; median anchor, Fair−15%/+10% inclusive, High above+10%, Unusually Low below−15% with caution. Exact arithmetic until half-even Money output; confidence half-even once then caps. LOW0–49,MEDIUM50–79,HIGH80–100; n3–4 or d1 cap49. GEO_SPREAD/NEAR_EXPIRY informative only. v0.1 documents every QA ruling and API fields/errors.
 
-Pricing otherwise unchanged: median anchor; min–max for n3–4, P10–P90 for n≥5; IQR filtering only n≥8; 14-day new/30-day used expiry; separate condition/variant pools; Fair−15% through+10%, High above+10%, Unusually Low below−15% with caution. Thresholds remain provisional.
+**Security/architecture:** launch **Tesseract browser-only plus mandatory confirmation**. No image/raw OCR/provider result stored or sent; Gemini/remote model fallback OFF. Official Gemini terms include55-day abuse monitoring and age restrictions; reactivation needs Founder/privacy/age-gate/disclosure approval. Server unresolved canonical candidates1h, sanitised checks24h, consented sanitised shares30d maximum/revocable; expiry410 at read time, no retained raw backups/telemetry. Future image ingestion must validate bytes/magic/pixels and server re-encode, not trust client EXIF stripping. Separate staging/prod Workers, DB projects/secrets; preview URL alone insufficient. Backup/log retention compliance remains release-blocking.
 
-## 2. Complete API/UX contract
-The revised discriminated response includes state, confidence/reasons, branch counts/exclusions, nullable price pools and per-source provenance. The extraction/catalogue error table specifies **code, HTTP status, retryable flag and ICU key**; async jobs preserve semantic error status inside a200 polling response. Successful multiple-product/no-price extraction and200 empty catalogue results are distinct from errors.
+**Contracts/foundations:** typed ERROR→INSUFFICIENT→RANGE union, LOW modifier, confidence reasons/counts, nullable provenance-backed pools/fair bands, per-field extraction confidence, category variants, ICU/PKR formatting, progress polling, safe error/retry matrix, unguessable snapshots/capabilities, deletion/revocation410. Classify-only uses stored exact median/evidence and recalculates age; rejects expired/stale range without new collection. Engineer can start pure domain/schema, synthetic fixture adapters, local OCR confirmation, accessible PWA states, RLS/retention/migrations, CI and threat-model tests; no blocked source clients or paid setup.
 
-Every inventory row is mapped: upload validation/privacy/preview, unreadable versus no text, candidates/category/price, clipboard failure, all link failures, short/empty/unavailable search, confirmation, real progress/long/cancel, offline replay, all result/confidence states, local dated Recent, native-share success/cancel/failure, copy/download failure and invalid public snapshots. Offline retry preserves inputs/idempotency; no duplicate paid operation. Snapshot creation precedes PNG rendering, so image failure retains Copy link; snapshot failure cannot invent a URL.
+|Option/commitment|Illustrative MVP monthly cost/approval|
+|---|---|
+|Browser OCR / remote models OFF|**$0 model usage**, no provider activation.|
+|Cloudflare free Worker/static assets|Target$0 within existing free limits; separate environments share account quotas; paid~$5+ only Founder approval.|
+|Supabase free projects|Target$0 if two environment allocations fit existing quota; paid plan from~$25/month, extra projects from~$10/month; add-ons can increase total; approval before any commitment.|
+|Serper/SerpAPI|Disabled; published illustrative$50/50k credits or$25/1k monthly search tier; neither approved nor launch default.|
+|Future Gemini/OpenAI/Cloud Vision|Disabled; estimates/free limits and official references in06; each reactivation/billing needs Founder approval.|
+|Feed/licensing,domain,legal|Unknown/negotiated; no allocation or purchase; Founder approval.|
+Assumption1,000 checks/month illustrative only, not benchmark/guaranteed cost; OCR bundle/browser resources and legal-source ops still need measurement.
 
-Added **POST /checks/{id}/classify**: positive asking price plus optional confirmed PTA; capability/version/idempotency required. Reuses stored median/evidence, no OCR/LLM/source calls. Reject409 RANGE_STALE past earliest observation’s14/30-day or contractual expiry; reject invalidated policy/config. No silent refresh/spend. Evidence dates/expiry and existing public snapshots remain unchanged.
+**QA:** all120 v1.1 vectors specification-reviewed; independent exact arithmetic spot checks, not engine tests.09 answers all18 requested Q1–10/Q17–24. Conflicts: CON-12 score72 not73; NRM-25 amount12345600 not12345670; FIL-08 platform-owner fixture must become seller-owner; NRM-34 is not safe-integer overflow; classify fixtures must respect24h lifetime. QA originals untouched.
 
-## 3. Source policy and PRD correction
-**No external market integration is enabled.** Statuses below describe launch policy, not implemented connectors. Conditional means clearance still required, not permission to collect now. Evidence URLs/quotes/retrieval dates remain in the source matrix.
+**Founder/G1 decisions:** permitted data/licensing and coverage, third-party screenshot policy, category plausibility bounds/normalisation scope, actual free environment quotas, backup/log expiry compliance, domain/vendor budget. No live evidence→honest Insufficient, never synthetic production valuation.
 
-| Source | Status | Reason |
-|---|---|---|
-| OLX website/API | Excluded | Explicit extraction/aggregation restriction absent licence |
-| Daraz storefront | Excluded | Robots/data-mining/commercial collection prohibition |
-| Daraz Open Platform | Conditional | Official API; authorised scope/display rights unverified |
-| Daraz affiliate | Partnership target | Programme exists; comparison feed not verified |
-| PriceOye | Partnership target | Bot restrictions; substantive reuse terms unresolved |
-| Samsung PK | Partnership target | Personal-use/no-licence framing |
-| Apple website | Excluded | Automated acquisition restriction |
-| Mercantile/local Apple channel | Partnership target | Policy endpoints404; reseller/data authority unverified |
-| Xiaomi/MiStore | Excluded | Unlicensed automation/republication restricted |
-| Infinix | Partnership target | Terms shell, no verified commercial grant |
-| Tecno | Partnership target | Device-software terms not website-data permission |
-| Mega.pk | Partnership target | Robots permissive; commercial licence unverified |
-| iShopping | Partnership target | Warranty terms checked; no reuse grant |
-| Telemart/Telex | Excluded | Redirect observed; commercial/third-party use restricted |
-| Games & Gears | Partnership target | Policy requests failed; coverage unverified |
-| Czone | Partnership target |403 policy access; no clearance |
-| Google Shopping website | Excluded | Crawl restrictions |
-| Google Merchant API | Excluded for market search | Merchant-management API, not universal comparison feed |
-| SerpAPI | Conditional | Service contract does not clear downstream rights |
-| Serper | Conditional | Third-party content rights remain required |
-| WhatMobile | Conditional manual reference | Not verified retail/feed permission |
-| Hamariweb | Conditional manual reference | Retrieval signals not price-redistribution licence |
-| Mobilemall | Partnership target | Policy fetches403; no clearance |
-| Own/rights-cleared ad image | Conditional target input | Private extraction only; never own benchmark |
-| OLX/Daraz/third-party screenshots | Conditional, disabled pending legal review | Consent/EXIF/retention alone insufficient |
-| Permissioned retailer export/direct quote | Conditional preferred source | Written rights/provenance not yet obtained |
+## Concise latest update for Chief of Staff (under400 words; not sent)
+Security reconciliation is complete: all six SecOps challenges accepted, no substantive disagreement. Launch default is **local browser Tesseract plus mandatory confirmation**, remote models/Gemini/image upload OFF, hence **$0 model usage**. Official Gemini terms were independently checked;55-day abuse-monitoring retention and age limits require a separate Founder/privacy/age-gate/disclosure decision before remote fallback returns.
 
-Keep **NOT_PERMITTED403** for OLX/Daraz links, no fetch; **SOURCE_NOT_SUPPORTED422** for unimplemented/unclear sources. PRD F2/US9 must distinguish them. PRD’s blanket approval of platform screenshots must change: legal-review gate before automated extraction, manual facts meanwhile. This is conservative launch policy, not a universal legal conclusion about screenshot analysis.
+No raw OCR/provider output/images cross or persist at the server. TTLs: unresolved canonical fields1h, sanitised checks24h, explicit sanitised shares30d maximum, creator revocation and410 on HTML+PNG. Cache/CDN and backup/log retention compliance are release gates. Future ingress needs server byte/magic/pixel checks and re-encoding. Staging/prod require separate Workers, DB projects/secrets; no prod credentials/data in previews.
 
-## 4. Architecture, foundations, costs and decisions
-Keep modular monolith: React/Vite+Hono on one Worker, Supabase Free; browser Tesseract, optional approved paid Gemini fallback. LLMs never create market prices. Separate app repo preferred; HQ/app fallback protects Day3. Engineer can prepare pure domain/tests, disabled adapters, schemas, CI/secret/privacy scaffolding and new state/classify tests; nothing tested here.
+Pricing **v0.1 is published** and API v0.4 aligns all18 requested QA answers, timestamps, fair bands and confidence reasons. All120 synthetic vectors were reviewed with independent spot arithmetic, **not Engineer/QA engine execution**. Half-even confidence then caps, fractional inclusive freshness, city-median geography and post-IQR gating are explicit. Concrete fixture corrections: CON-12=72, NRM-25=12345600paisa; FIL-08 needs ultimate seller ownership, NRM-34 isn't safe-integer overflow, and classify cases must keep private check within24h. QA files untouched.
 
-At1,000 model calls/month with assumed3,000 input/500 output tokens: Gemini **$2.15**, Worker/Supabase **$0 target**, Worker contingency **$5**; proposed **$15 capped envelope** needs Founder approval. Alternatives: OpenAI$2; Vision first1,000 OCR units free; Vercel$20+, Supabase Pro$25; SerpAPI$25/1k monthly; Serper$50 prepaid50k/6months; licences TBD. Official fetched rates/limits remain in cost register; alternatives not automatically additive.
+Changed: `02-pricing-methodology-v0.1.md` (v0 historical pointer),03 API,ADR-0002,05 foundations,06 costs,08 SecOps,09 QA,00 summary. PM07 lists required PRD changes: NOT_PERMITTED403 for known-blocked links, SOURCE_NOT_SUPPORTED422 for unclear/unsupported hosts; third-party listing screenshots remain legal-review gated, local OCR not permission; update local-only/TTL/revoke/confirmation and v0.1 terminology.
 
-Founder decisions: source rights/coverage, PTA/taxonomy, vendor/budget and Security retention approval. Proposed image request-only processing,24h temporary fields and30-day sanitised shares are not approved privacy promises. G1 **10 Nov**, build **11 Nov**, G2 **12 Nov**, launch **22 Nov 2026 PKT** unchanged. Missing permitted evidence at G2 requires explicit scope escalation, never prohibited scraping.
+Still no approved live feed/coverage or paid commitments. Founder/PM decisions needed on source rights, category plausibility bounds/parser scope, actual free staging/prod quotas and backup/log expiry. Please have SecOps confirm agreement and QA update owned fixtures/re-run after implementation. Nothing provisioned, sent, signed up, paid or pushed.

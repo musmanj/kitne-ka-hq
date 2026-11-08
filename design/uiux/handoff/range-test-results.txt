@@ -1,0 +1,18 @@
+PASS No price retains Fair band, no marker
+PASS High marker beyond listings/Fair but true position
+PASS Fair 108000 beyond listings inside Fair band
+PASS Low 85000 below Fair/listings
+PASS Inside 102000 sits on median
+PASS Extreme high expands domain rather than clamping
+PASS Extreme low expands domain rather than clamping
+PASS RTL numeric axis stays LTR
+PASS Missing server Fair band rejected
+PASS Server verdict passed through
+PASS Domain includes asking + exact 5 percent span padding
+PASS No-price domain includes Fair bounds + 5 percent padding
+PASS Labels anchored to dark segment, not Fair edges
+PASS Fair tag and Median label anchor their own shapes
+PASS Uniform linear positions
+PASS Explicit frozen-domain outlier clamps right only beyond domain
+PASS Explicit frozen-domain outlier clamps left only beyond domain
+17 geometry tests pass; no pricing engine tested.

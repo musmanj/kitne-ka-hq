@@ -1,0 +1,16 @@
+[
+  {
+    "folder": "rtl",
+    "name": "confirm-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true
+  },
+  {
+    "folder": "rtl",
+    "name": "results-full-rtl",
+    "width": 360,
+    "share": false,
+    "rtl": true
+  }
+]

@@ -1,4 +1,6 @@
 :root {
+  --color-annotation: #9B1764;
+  --font-size-share-price: 120px;
   --font-size-subheading: 18px;
   --font-size-heading: 20px;
   --font-size-share-title: 48px;
@@ -23,7 +25,7 @@
   --color-insufficient-bg: #E9ECEE;
   --color-error: #963B32;
   --color-error-bg: #FBEDE8;
-  --color-focus: #174F87;
+  --color-focus: #653B75;
   --font-family: Inter, system-ui, sans-serif;
   --font-size-body: 16px;
   --font-size-label: 16px;
