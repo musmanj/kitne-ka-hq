@@ -1,0 +1,19 @@
+{
+  "qa_sha256": "e50b30e8c56d5c1127b656af8289f4630f0fa8d8f9513cb5badf4b4077d96ce1",
+  "qa_mtime_pkt": "2026-11-09T02:00:42.169722+05:00",
+  "harness_sha256": "cc1eb7617485cba31c1229e6a54ed638b51cf680484f450e8c83b0ab244f28b2",
+  "vectors": 381,
+  "changelog": "v1.13 2026-11-09 02:00 PKT: four additional adversarial probes per F1/F2/F3; empty proposed suite now explicit todo.",
+  "copied_qa_files": [
+    {
+      "source": "/workspace/kitne-ka/qa/tools/vectors.harness.test.ts",
+      "destination": "tests/vectors.harness.test.ts",
+      "sha256": "cc1eb7617485cba31c1229e6a54ed638b51cf680484f450e8c83b0ab244f28b2"
+    }
+  ],
+  "qa_snapshot_sha256": "e50b30e8c56d5c1127b656af8289f4630f0fa8d8f9513cb5badf4b4077d96ce1",
+  "harness_copy_sha256": "cc1eb7617485cba31c1229e6a54ed638b51cf680484f450e8c83b0ab244f28b2",
+  "qa_after_sha256": "e50b30e8c56d5c1127b656af8289f4630f0fa8d8f9513cb5badf4b4077d96ce1",
+  "harness_after_sha256": "cc1eb7617485cba31c1229e6a54ed638b51cf680484f450e8c83b0ab244f28b2",
+  "stable_during_final_runs": true
+}
