@@ -1,0 +1,4031 @@
+{
+ "_changelog": [
+  "v1.1 2026-11-09 ~00:50 PKT: added basis field; applied CTO rulings reported by Engineer (agent msg 00:39 PKT, not seen by QA, not yet in 02-methodology); resolved RNG-05, FIL-03, NRM-25/31/32; added FIL-13..16, BND-01/02, NEX-01..03, GEO-01..04, NRM-40..45.",
+  "v1.0 2026-11-09 ~00:45 PKT: initial"
+ ],
+ "_label": "SYNTHETIC DATA - not real market prices. Expected values derived from cto/02-pricing-methodology-v0.md and cto/03-api-contract-v0.md (9 Nov 2026). Not executed against any engine.",
+ "money_unit": "amount_minor = PKR paisa (integer); exact rationals shown as \"num/den\" strings where non-integer",
+ "vectors": [
+  {
+   "id": "RNG-01",
+   "group": "range",
+   "description": "CTO §7 worked example, n=5 -> P10-P90",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 11500000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "HIGH",
+    "diff_percent": "650/51",
+    "diff_percent_approx": 12.745098,
+    "diff_absolute_minor": 1300000
+   },
+   "notes": "Matches methodology §7 and API example.",
+   "basis": "spec"
+  },
+  {
+   "id": "RNG-02",
+   "group": "range",
+   "description": "n=3 -> MIN_MAX",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 110000,
+      "amount_minor": 11000000
+     },
+     {
+      "price_pkr": 120000,
+      "amount_minor": 12000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 3,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 10000000,
+    "range_high_minor": 12000000,
+    "median_minor": 11000000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "RNG-03",
+   "group": "range",
+   "description": "n=4 even median = mean of middle two, MIN_MAX",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     },
+     {
+      "price_pkr": 110000,
+      "amount_minor": 11000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 4,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 10000000,
+    "range_high_minor": 11000000,
+    "median_minor": 10500000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "RNG-04",
+   "group": "range",
+   "description": "n=6 even, P10-P90 interpolated",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 90000,
+      "amount_minor": 9000000
+     },
+     {
+      "price_pkr": 95000,
+      "amount_minor": 9500000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 110000,
+      "amount_minor": 11000000
+     },
+     {
+      "price_pkr": 120000,
+      "amount_minor": 12000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 6,
+    "range_method": "P10_P90",
+    "range_low_minor": 9250000,
+    "range_high_minor": 11500000,
+    "median_minor": 10250000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "RNG-05",
+   "group": "range",
+   "description": "n=4 with odd-paisa middle values -> fractional-paisa median",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "amount_minor": 10000000
+     },
+     {
+      "amount_minor": 10000001
+     },
+     {
+      "amount_minor": 10000002
+     },
+     {
+      "amount_minor": 10000010
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "median_minor_exact": "20000003/2",
+    "median_minor": 10000002,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 10000000,
+    "range_high_minor": 10000010,
+    "fair_band_low_minor": 8500001,
+    "fair_band_high_minor": 11000002
+   },
+   "notes": "Median=(10000001+10000002)/2=10000001.5 paisa -> half-even -> 10000002 (2 is even). Fair band computed on UNROUNDED median: 10000001.5*0.85=8500001.275 -> 8500001; *1.10=11000001.65 -> 11000002.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "INS-01",
+   "group": "insufficient",
+   "description": "n=0 -> INSUFFICIENT_DATA",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [],
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 0,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "TOO_FEW_COMPARABLES"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-02",
+   "group": "insufficient",
+   "description": "n=1 -> INSUFFICIENT_DATA",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     }
+    ],
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 1,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "TOO_FEW_COMPARABLES"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-03",
+   "group": "insufficient",
+   "description": "n=2 (PRD boundary n=2) -> INSUFFICIENT_DATA",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     }
+    ],
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 2,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "TOO_FEW_COMPARABLES"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-04",
+   "group": "insufficient",
+   "description": "n=2 and no asking price -> INSUFFICIENT_DATA overrides NO_ASKING_PRICE",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 2,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "TOO_FEW_COMPARABLES"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-05",
+   "group": "insufficient",
+   "description": "n=3 boundary passes (contrast to INS-03)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     }
+    ],
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 3,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 10000000,
+    "range_high_minor": 10200000,
+    "median_minor": 10100000,
+    "verdict": "FAIR",
+    "diff_percent": "-100/101",
+    "diff_percent_approx": -0.990099,
+    "diff_absolute_minor": -100000,
+    "confidence": {
+     "level": "LOW",
+     "score_max": 49
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-06",
+   "group": "insufficient",
+   "description": "spread exactly 0.60 passes (<=0.60)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 70000,
+      "amount_minor": 7000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 130000,
+      "amount_minor": 13000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 3,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 7000000,
+    "range_high_minor": 13000000,
+    "median_minor": 10000000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null
+   },
+   "notes": "(130000-70000)/100000 = 0.60",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-07",
+   "group": "insufficient",
+   "description": "spread just above 0.60 -> INSUFFICIENT_DATA EXCESSIVE_SPREAD",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 69999,
+      "amount_minor": 6999900
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 130000,
+      "amount_minor": 13000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 3,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "EXCESSIVE_SPREAD"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "60001/100000 = 0.60001 > 0.60",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-08",
+   "group": "insufficient",
+   "description": "n=7 with extreme value: no IQR trim (<8) -> spread gate fails",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 103000,
+      "amount_minor": 10300000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 200000,
+      "amount_minor": 20000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "n_effective": 7,
+    "range_low": null,
+    "range_high": null,
+    "median": null,
+    "verdict": "INSUFFICIENT_DATA",
+    "diff_percent": null,
+    "diff_absolute_minor": null,
+    "insufficient_reasons": [
+     "EXCESSIVE_SPREAD"
+    ],
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "median 103000; (200000-100000)/103000 = 0.9709 > 0.60",
+   "basis": "spec"
+  },
+  {
+   "id": "INS-09",
+   "group": "insufficient",
+   "description": "All observations stale (age 15d new) -> excluded STALE -> n=0",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "age_days": 15
+     },
+     {
+      "price_pkr": 100000,
+      "age_days": 15
+     },
+     {
+      "price_pkr": 102000,
+      "age_days": 15
+     },
+     {
+      "price_pkr": 104000,
+      "age_days": 15
+     },
+     {
+      "price_pkr": 106000,
+      "age_days": 15
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q6: which insufficient_reasons code(s) when every observation is stale: NO_FRESH_EVIDENCE alone, or with TOO_FEW_COMPARABLES?",
+    "result_state": "INSUFFICIENT_DATA",
+    "excluded_by_reason": [
+     {
+      "code": "STALE",
+      "count": 5
+     }
+    ],
+    "insufficient_reasons": [
+     "TOO_FEW_COMPARABLES or NO_FRESH_EVIDENCE: TBD - needs CTO decision"
+    ]
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "VER-01",
+   "group": "verdict",
+   "description": "A=84999 vs M=100000 (just below -15%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 8499900
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "UNUSUALLY_LOW",
+    "diff_percent": "-15001/1000",
+    "diff_percent_approx": -15.001,
+    "diff_absolute_minor": -1500100
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-02",
+   "group": "verdict",
+   "description": "A=85000 vs M=100000 (exactly -15%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 8500000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "FAIR",
+    "diff_percent": -15,
+    "diff_percent_approx": -15.0,
+    "diff_absolute_minor": -1500000
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-03",
+   "group": "verdict",
+   "description": "A=85001 vs M=100000 (just above -15%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 8500100
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "FAIR",
+    "diff_percent": "-14999/1000",
+    "diff_percent_approx": -14.999,
+    "diff_absolute_minor": -1499900
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-04",
+   "group": "verdict",
+   "description": "A=100000 vs M=100000 (equal to median)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "FAIR",
+    "diff_percent": 0,
+    "diff_percent_approx": 0.0,
+    "diff_absolute_minor": 0
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-05",
+   "group": "verdict",
+   "description": "A=109999 vs M=100000 (just below +10%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 10999900
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "FAIR",
+    "diff_percent": "9999/1000",
+    "diff_percent_approx": 9.999,
+    "diff_absolute_minor": 999900
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-06",
+   "group": "verdict",
+   "description": "A=110000 vs M=100000 (exactly +10%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 11000000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "FAIR",
+    "diff_percent": 10,
+    "diff_percent_approx": 10.0,
+    "diff_absolute_minor": 1000000
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-07",
+   "group": "verdict",
+   "description": "A=110001 vs M=100000 (just above +10%)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 11000100
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "HIGH",
+    "diff_percent": "10001/1000",
+    "diff_percent_approx": 10.001,
+    "diff_absolute_minor": 1000100
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-08",
+   "group": "verdict",
+   "description": "paisa precision just below -15%: A=84,999.99",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 8499999
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "UNUSUALLY_LOW",
+    "diff_percent": "-1500001/100000",
+    "diff_percent_approx": -15.00001,
+    "diff_absolute_minor": -1500001
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-09",
+   "group": "verdict",
+   "description": "paisa precision just above +10%: A=110,000.01",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ],
+    "asking_price_minor": 11000001
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9680000,
+    "range_high_minor": 10320000,
+    "median_minor": 10000000,
+    "verdict": "HIGH",
+    "diff_percent": "1000001/100000",
+    "diff_percent_approx": 10.00001,
+    "diff_absolute_minor": 1000001
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-10",
+   "group": "verdict",
+   "description": "CTO example median 102000, A=86700 (band edge)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 8670000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "FAIR",
+    "diff_percent": -15,
+    "diff_percent_approx": -15.0,
+    "diff_absolute_minor": -1530000
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-11",
+   "group": "verdict",
+   "description": "CTO example median 102000, A=86699 (band edge)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 8669900
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "UNUSUALLY_LOW",
+    "diff_percent": "-15301/1020",
+    "diff_percent_approx": -15.00098,
+    "diff_absolute_minor": -1530100
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-12",
+   "group": "verdict",
+   "description": "CTO example median 102000, A=112200 (band edge)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 11220000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "FAIR",
+    "diff_percent": 10,
+    "diff_percent_approx": 10.0,
+    "diff_absolute_minor": 1020000
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-13",
+   "group": "verdict",
+   "description": "CTO example median 102000, A=112201 (band edge)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 11220100
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "HIGH",
+    "diff_percent": "10201/1020",
+    "diff_percent_approx": 10.00098,
+    "diff_absolute_minor": 1020100
+   },
+   "notes": "Inclusive band is in spec §5 and re-confirmed by CTO ruling.",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-14",
+   "group": "verdict",
+   "description": "Valid evidence, asking price null -> NO_ASKING_PRICE, diffs null",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null,
+    "verdict_slot": "NO_ASKING_PRICE"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "VER-15",
+   "group": "verdict",
+   "description": "Asking price 0 is not \"absent\"",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "asking_price_minor": 0
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q7: on POST /assessments, is asking_price amount_minor=0 rejected (which code) or treated as null? Methodology: \"absence of a target price is not a zero price\".",
+    "http_status": "400 or 422 (classify requires positive amount)"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "VER-16",
+   "group": "verdict",
+   "description": "LOW-confidence price verdict sets indicative=true",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     }
+    ],
+    "asking_price_minor": 11500000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 3,
+    "range_method": "MIN_MAX",
+    "range_low_minor": 10000000,
+    "range_high_minor": 10200000,
+    "median_minor": 10100000,
+    "verdict": "HIGH",
+    "diff_percent": "1400/101",
+    "diff_percent_approx": 13.861386,
+    "diff_absolute_minor": 1400000,
+    "indicative": true,
+    "low_confidence_modifier": true
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-01",
+   "group": "confidence",
+   "description": "CTO §7 example",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 3,
+    "ages_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1",
+    "R": "25/28",
+    "Q": "1",
+    "C_raw_exact": "2305/28",
+    "C_raw_approx": 82.321429,
+    "score": 82,
+    "level": "HIGH"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-02",
+   "group": "confidence",
+   "description": "single source owner d=1 -> cap 49",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 1,
+    "ages_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1/3",
+    "R": "25/28",
+    "Q": "1",
+    "C_raw_exact": "5515/84",
+    "C_raw_approx": 65.654762,
+    "score": 49,
+    "level": "LOW",
+    "reasons_include": [
+     "SINGLE_SOURCE"
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-03",
+   "group": "confidence",
+   "description": "n=3 -> cap 49",
+   "input": {
+    "n_effective": 3,
+    "independent_sources": 3,
+    "ages_days": [
+     1,
+     2,
+     3
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "3/10",
+    "D": "1",
+    "R": "13/14",
+    "Q": "1",
+    "C_raw_exact": "1081/14",
+    "C_raw_approx": 77.214286,
+    "score": 49,
+    "level": "LOW",
+    "reasons_include": [
+     "FEW_COMPARABLES"
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-04",
+   "group": "confidence",
+   "description": "n=4,d=2 -> cap 49",
+   "input": {
+    "n_effective": 4,
+    "independent_sources": 2,
+    "ages_days": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "2/5",
+    "D": "2/3",
+    "R": "1",
+    "Q": "1",
+    "C_raw_exact": "221/3",
+    "C_raw_approx": 73.666667,
+    "score": 49,
+    "level": "LOW",
+    "reasons_include": [
+     "FEW_COMPARABLES"
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-05",
+   "group": "confidence",
+   "description": "one obs match_quality 0.9 -> cap 79",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 3,
+    "ages_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "9/10"
+    ]
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1",
+    "R": "25/28",
+    "Q": "49/50",
+    "C_raw_exact": "11469/140",
+    "C_raw_approx": 81.921429,
+    "score": 79,
+    "level": "MEDIUM",
+    "reasons_include": [
+     "ATTRIBUTE_MATCH_NOT_SKU"
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-06",
+   "group": "confidence",
+   "description": "(P90-P10)/M exactly 0.30 -> no cap",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 3,
+    "ages_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "P10": "85000",
+    "P90": "115000",
+    "M": "100000"
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1",
+    "R": "25/28",
+    "Q": "1",
+    "C_raw_exact": "2305/28",
+    "C_raw_approx": 82.321429,
+    "score": 82,
+    "level": "HIGH",
+    "pool_prices": [
+     81250,
+     90625,
+     100000,
+     109375,
+     118750
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-07",
+   "group": "confidence",
+   "description": "(P90-P10)/M = 0.300032 -> cap 79, WIDE_SPREAD",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 3,
+    "ages_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "P10": "424992/5",
+    "P90": "575008/5",
+    "M": "100000"
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1",
+    "R": "25/28",
+    "Q": "1",
+    "C_raw_exact": "2305/28",
+    "C_raw_approx": 82.321429,
+    "score": 79,
+    "level": "MEDIUM",
+    "pool_prices": [
+     81248,
+     90624,
+     100000,
+     109376,
+     118752
+    ],
+    "reasons_include": [
+     "WIDE_SPREAD"
+    ]
+   },
+   "notes": "",
+   "basis": "assumption"
+  },
+  {
+   "id": "CON-08",
+   "group": "confidence",
+   "description": "uncapped 79.96 -> 80 HIGH (band edge)",
+   "input": {
+    "n_effective": 6,
+    "independent_sources": 3,
+    "ages_days": [
+     9,
+     9,
+     9,
+     9,
+     9,
+     9
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "3/5",
+    "D": "1",
+    "R": "19/28",
+    "Q": "1",
+    "C_raw_exact": "2239/28",
+    "C_raw_approx": 79.964286,
+    "score": 80,
+    "level": "HIGH"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-09",
+   "group": "confidence",
+   "description": "uncapped 79.07 -> 79 MEDIUM (band edge)",
+   "input": {
+    "n_effective": 6,
+    "independent_sources": 3,
+    "ages_days": [
+     10,
+     10,
+     10,
+     10,
+     10,
+     10
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "3/5",
+    "D": "1",
+    "R": "9/14",
+    "Q": "1",
+    "C_raw_exact": "1107/14",
+    "C_raw_approx": 79.071429,
+    "score": 79,
+    "level": "MEDIUM"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-10",
+   "group": "confidence",
+   "description": "C_raw exactly 78.5 (rounding tie)",
+   "input": {
+    "n_effective": 7,
+    "independent_sources": 3,
+    "ages_days": [
+     14,
+     14,
+     14,
+     14,
+     14,
+     14,
+     14
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q3: rounding of C_raw tie. The CTO ruling (\"half-even only at output\") is reported for money; it is NOT clear that it covers the confidence score. If half-even: 78. If half-up: 79. QA probe 00:45: engine float Math.round gave 78 (78.4999... float error). Require exact rational arithmetic either way.",
+    "S": "7/10",
+    "D": "1",
+    "R": "1/2",
+    "Q": "1",
+    "C_raw_exact": "157/2",
+    "C_raw_approx": 78.5,
+    "score": "79 if half-up (JS Math.round) / 78 if half-even: TBD - needs CTO decision",
+    "level": "MEDIUM"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "CON-11",
+   "group": "confidence",
+   "description": "used pool, 30-day window",
+   "input": {
+    "n_effective": 6,
+    "independent_sources": 2,
+    "ages_days": [
+     0,
+     6,
+     12,
+     18,
+     24,
+     30
+    ],
+    "freshness_window_days": 30,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "3/5",
+    "D": "2/3",
+    "R": "3/4",
+    "Q": "1",
+    "C_raw_exact": "881/12",
+    "C_raw_approx": 73.416667,
+    "score": 73,
+    "level": "MEDIUM"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-12",
+   "group": "confidence",
+   "description": "age exactly at window edge contributes R=0.5",
+   "input": {
+    "n_effective": 5,
+    "independent_sources": 3,
+    "ages_days": [
+     14,
+     14,
+     14,
+     14,
+     14
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "1/2",
+    "D": "1",
+    "R": "1/2",
+    "Q": "1",
+    "C_raw_exact": "145/2",
+    "C_raw_approx": 72.5,
+    "score": 73,
+    "level": "MEDIUM"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-13",
+   "group": "confidence",
+   "description": "n>10 saturates S at 1, d>3 saturates D",
+   "input": {
+    "n_effective": 12,
+    "independent_sources": 4,
+    "ages_days": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "freshness_window_days": 14,
+    "match_quality": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   "expected": {
+    "S": "1",
+    "D": "1",
+    "R": "1",
+    "Q": "1",
+    "C_raw_exact": "100",
+    "C_raw_approx": 100.0,
+    "score": 100,
+    "level": "HIGH"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-14",
+   "group": "confidence",
+   "description": "Level mapping function boundaries (pure)",
+   "input": {
+    "scores": [
+     0,
+     49,
+     50,
+     79,
+     80,
+     100
+    ]
+   },
+   "expected": {
+    "levels": [
+     "LOW",
+     "LOW",
+     "MEDIUM",
+     "MEDIUM",
+     "HIGH",
+     "HIGH"
+    ]
+   },
+   "notes": "NOTE: with n>=5,d>=2,Q=1 the minimum uncapped C_raw is 64.17 (n=5,d=2,all ages=window), so score 49/50 is only reachable via caps; test mapping function directly.",
+   "basis": "spec"
+  },
+  {
+   "id": "CON-15",
+   "group": "confidence",
+   "description": "Insufficient -> score null, level NONE (not 0)",
+   "input": {
+    "n_effective": 2
+   },
+   "expected": {
+    "score": null,
+    "level": "NONE",
+    "reasons": []
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-01",
+   "group": "pta",
+   "description": "target NOT_SURE; APPROVED n=2, NON_PTA n=2 -> INSUFFICIENT (no 2+2 pooling)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "NOT_SURE",
+    "freshness_window_days": 14,
+    "branches": {
+     "APPROVED": [
+      {
+       "price_pkr": 100000,
+       "amount_minor": 10000000
+      },
+      {
+       "price_pkr": 102000,
+       "amount_minor": 10200000
+      }
+     ],
+     "NON_PTA": [
+      {
+       "price_pkr": 80000,
+       "amount_minor": 8000000
+      },
+      {
+       "price_pkr": 82000,
+       "amount_minor": 8200000
+      }
+     ]
+    },
+    "asking_price_minor": 10000000
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "data": null,
+    "confidence": {
+     "score": null,
+     "level": "NONE"
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-02",
+   "group": "pta",
+   "description": "target NOT_SURE; APPROVED n=5 passes, NON_PTA n=2 fails",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "NOT_SURE",
+    "freshness_window_days": 14,
+    "branches": {
+     "APPROVED": {
+      "observations": [
+       {
+        "price_pkr": 98000,
+        "amount_minor": 9800000
+       },
+       {
+        "price_pkr": 100000,
+        "amount_minor": 10000000
+       },
+       {
+        "price_pkr": 102000,
+        "amount_minor": 10200000
+       },
+       {
+        "price_pkr": 104000,
+        "amount_minor": 10400000
+       },
+       {
+        "price_pkr": 106000,
+        "amount_minor": 10600000
+       }
+      ],
+      "independent_sources": 3,
+      "ages_days": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "NON_PTA": [
+      {
+       "price_pkr": 80000,
+       "amount_minor": 8000000
+      },
+      {
+       "price_pkr": 82000,
+       "amount_minor": 8200000
+      }
+     ]
+    },
+    "asking_price_minor": 11500000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "mode": "PTA_SPLIT",
+    "selected_assessment": null,
+    "verdict_slot": {
+     "state": "PTA_SELECTION_REQUIRED",
+     "verdict": null
+    },
+    "pta_branches": [
+     {
+      "pta_status": "APPROVED",
+      "state": "RANGE_AVAILABLE",
+      "median_minor": 10200000,
+      "range_low_minor": 9880000,
+      "range_high_minor": 10520000,
+      "confidence": {
+       "score": 49,
+       "level": "LOW",
+       "reasons_include": [
+        "PTA_UNCONFIRMED"
+       ]
+      }
+     },
+     {
+      "pta_status": "NON_PTA",
+      "state": "INSUFFICIENT_DATA",
+      "pool": null
+     }
+    ],
+    "low_confidence_modifier": true
+   },
+   "notes": "Uncapped APPROVED score would be 82 (CON-01) -> capped 49.",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-03",
+   "group": "pta",
+   "description": "target NOT_SURE; both branches pass -> split summary = min of capped scores",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "NOT_SURE",
+    "freshness_window_days": 14,
+    "branches": {
+     "APPROVED": {
+      "observations": [
+       {
+        "price_pkr": 98000,
+        "amount_minor": 9800000
+       },
+       {
+        "price_pkr": 100000,
+        "amount_minor": 10000000
+       },
+       {
+        "price_pkr": 102000,
+        "amount_minor": 10200000
+       },
+       {
+        "price_pkr": 104000,
+        "amount_minor": 10400000
+       },
+       {
+        "price_pkr": 106000,
+        "amount_minor": 10600000
+       }
+      ],
+      "independent_sources": 3,
+      "ages_days": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "NON_PTA": {
+      "observations": [
+       {
+        "price_pkr": 80000,
+        "amount_minor": 8000000
+       },
+       {
+        "price_pkr": 81000,
+        "amount_minor": 8100000
+       },
+       {
+        "price_pkr": 82000,
+        "amount_minor": 8200000
+       }
+      ],
+      "independent_sources": 2,
+      "ages_days": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "mode": "PTA_SPLIT",
+    "verdict_slot": {
+     "state": "PTA_SELECTION_REQUIRED",
+     "verdict": null
+    },
+    "branch_scores": {
+     "APPROVED": 49,
+     "NON_PTA": 49
+    },
+    "confidence": {
+     "score": 49,
+     "level": "LOW"
+    },
+    "no_merged_median": true
+   },
+   "notes": "Asking price absent: slot still PTA_SELECTION_REQUIRED per §9 (\"with no price PTA selection still precedes price verdict\").",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-04",
+   "group": "pta",
+   "description": "target APPROVED; NON_PTA and unknown-PTA candidates present",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     },
+     {
+      "price_pkr": 85000,
+      "pta_status": "NON_PTA"
+     },
+     {
+      "price_pkr": 90000,
+      "pta_status": null
+     }
+    ],
+    "asking_price_minor": 11500000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 5,
+    "range_method": "P10_P90",
+    "range_low_minor": 9880000,
+    "range_high_minor": 10520000,
+    "median_minor": 10200000,
+    "verdict": "HIGH",
+    "diff_percent": "650/51",
+    "diff_percent_approx": 12.745098,
+    "diff_absolute_minor": 1300000,
+    "retrieved_count": 7,
+    "included_count": 5,
+    "excluded_count": 2,
+    "excluded_by_reason": [
+     {
+      "code": "VARIANT_MISMATCH",
+      "count": 1
+     },
+     {
+      "code": "UNKNOWN_CRITICAL_ATTRIBUTE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "Reason code for unknown-PTA candidate assumed UNKNOWN_CRITICAL_ATTRIBUTE (closest enum; confirm with CTO, Q8).",
+   "basis": "assumption"
+  },
+  {
+   "id": "PTA-05",
+   "group": "pta",
+   "description": "target NOT_SURE, neither branch has evidence -> INSUFFICIENT; not CONFIRMATION_REQUIRED",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "NOT_SURE",
+    "freshness_window_days": 14,
+    "branches": {
+     "APPROVED": [],
+     "NON_PTA": []
+    }
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "http_status": "not 422"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-06",
+   "group": "pta",
+   "description": "classify after split with pta_status=APPROVED -> verdict vs APPROVED branch only, cap removed",
+   "input": {
+    "stored": "PTA-02",
+    "classify": {
+     "asking_price_minor": 11500000,
+     "pta_status": "APPROVED"
+    }
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "mode": "SINGLE_POOL",
+    "verdict": "HIGH",
+    "diff_percent": "650/51 (~12.745098)",
+    "confidence": {
+     "score": 82,
+     "level": "HIGH"
+    }
+   },
+   "notes": "Assumes ages unchanged at classify time; recency is recomputed at classify (API §classify), so score may drop with elapsed time.",
+   "basis": "assumption"
+  },
+  {
+   "id": "PTA-07",
+   "group": "pta",
+   "description": "classify after split with pta_status=NON_PTA (branch failed) -> 422 NO_STORED_RANGE",
+   "input": {
+    "stored": "PTA-02",
+    "classify": {
+     "asking_price_minor": 8000000,
+     "pta_status": "NON_PTA"
+    }
+   },
+   "expected": {
+    "http_status": 422,
+    "code": "NO_STORED_RANGE"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "PTA-08",
+   "group": "pta",
+   "description": "classify on split without pta_status -> 422 PTA_SELECTION_REQUIRED",
+   "input": {
+    "stored": "PTA-02",
+    "classify": {
+     "asking_price_minor": 11500000
+    }
+   },
+   "expected": {
+    "http_status": 422,
+    "code": "PTA_SELECTION_REQUIRED"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "OUT-01",
+   "group": "outlier",
+   "description": "n=8 IQR trims 200000",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 103000,
+      "amount_minor": 10300000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     },
+     {
+      "price_pkr": 200000,
+      "amount_minor": 20000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 7,
+    "range_method": "P10_P90",
+    "range_low_minor": 10060000,
+    "range_high_minor": 10540000,
+    "median_minor": 10300000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null,
+    "excluded_by_reason": [
+     {
+      "code": "STATISTICAL_OUTLIER",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "Q1=101750 Q3=105250 IQR=3500 fences [96500,110500]",
+   "basis": "spec"
+  },
+  {
+   "id": "OUT-02",
+   "group": "outlier",
+   "description": "value exactly on upper fence is retained (strictly outside only)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 103000,
+      "amount_minor": 10300000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     },
+     {
+      "price_pkr": 110500,
+      "amount_minor": 11050000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 8,
+    "range_method": "P10_P90",
+    "range_low_minor": 10070000,
+    "range_high_minor": 10735000,
+    "median_minor": 10350000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null
+   },
+   "notes": "Q3 = 105000+0.25*1000 = 105250; upper fence = 110500",
+   "basis": "spec"
+  },
+  {
+   "id": "OUT-03",
+   "group": "outlier",
+   "description": "IQR=0 -> no auto-trim, flag spread anomaly",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 150000,
+      "amount_minor": 15000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q9: what code/field flags the IQR=0 spread anomaly (warnings[] string? which value?) and is the result still shown?",
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 8,
+    "range_method": "P10_P90",
+    "range_low_minor": 10000000,
+    "range_high_minor": 11500000,
+    "median_minor": 10000000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null,
+    "review_flag": "TBD - needs CTO decision"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "OUT-04",
+   "group": "outlier",
+   "description": "n=10 two high outliers trimmed once (no repeated trimming)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 101000,
+      "amount_minor": 10100000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 103000,
+      "amount_minor": 10300000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     },
+     {
+      "price_pkr": 107000,
+      "amount_minor": 10700000
+     },
+     {
+      "price_pkr": 300000,
+      "amount_minor": 30000000
+     },
+     {
+      "price_pkr": 310000,
+      "amount_minor": 31000000
+     }
+    ],
+    "asking_price_minor": null
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 8,
+    "range_method": "P10_P90",
+    "range_low_minor": 10070000,
+    "range_high_minor": 10630000,
+    "median_minor": 10350000,
+    "verdict": "NO_ASKING_PRICE",
+    "diff_percent": null,
+    "diff_percent_approx": null,
+    "diff_absolute_minor": null,
+    "excluded_by_reason": [
+     {
+      "code": "STATISTICAL_OUTLIER",
+      "count": 2
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "OUT-05",
+   "group": "outlier",
+   "description": "trim leaves n<8: no second pass",
+   "input": {
+    "see": "OUT-01"
+   },
+   "expected": {
+    "note": "after trimming n=7; engine must not re-run IQR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-01",
+   "group": "filter",
+   "description": "new obs age exactly 14x24h admitted; 14d+1s excluded STALE",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "age_seconds": 1209600
+     },
+     {
+      "price_pkr": 101000,
+      "age_seconds": 1209601
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [
+     100000
+    ],
+    "excluded_by_reason": [
+     {
+      "code": "STALE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-02",
+   "group": "filter",
+   "description": "used obs age exactly 30x24h admitted; +1s excluded",
+   "input": {
+    "category_id": "phones",
+    "condition": "USED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 30,
+    "used_grade": "GOOD",
+    "observations": [
+     {
+      "price_pkr": 60000,
+      "age_seconds": 2592000
+     },
+     {
+      "price_pkr": 61000,
+      "age_seconds": 2592001
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [
+     60000
+    ],
+    "excluded_by_reason": [
+     {
+      "code": "STALE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-03",
+   "group": "filter",
+   "description": "observed_at in the future excluded",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "age_seconds": -60
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [
+     100000
+    ]
+   },
+   "notes": "Observed 60 s in the future is within the 5-min skew allowance -> admitted. Recency age clamped to 0 is Engineer code, not ruling (ASSUMPTION).",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "FIL-04",
+   "group": "filter",
+   "description": "undated observation excluded UNDATED",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "observed_at": null
+     }
+    ]
+   },
+   "expected": {
+    "excluded_by_reason": [
+     {
+      "code": "UNDATED",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-05",
+   "group": "filter",
+   "description": "fresh retrieved_at does not refresh old observed_at",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "observed_at_age_days": 20,
+      "retrieved_at_age_days": 0
+     }
+    ]
+   },
+   "expected": {
+    "excluded_by_reason": [
+     {
+      "code": "STALE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-06",
+   "group": "filter",
+   "description": "same seller twice -> one effective comparable (latest)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "seller": "S1",
+      "price_pkr": 100000,
+      "age_days": 5
+     },
+     {
+      "seller": "S1",
+      "price_pkr": 99000,
+      "age_days": 1
+     },
+     {
+      "seller": "S2",
+      "price_pkr": 101000
+     },
+     {
+      "seller": "S3",
+      "price_pkr": 102000
+     }
+    ]
+   },
+   "expected": {
+    "n_effective": 3,
+    "included_prices": [
+     99000,
+     101000,
+     102000
+    ],
+    "excluded_by_reason": [
+     {
+      "code": "DUPLICATE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-07",
+   "group": "filter",
+   "description": "target listing in candidates excluded TARGET_LISTING",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "target_listing_id": "L-T",
+    "observations": [
+     {
+      "id": "L-T",
+      "price_pkr": 115000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ]
+   },
+   "expected": {
+    "excluded_by_reason": [
+     {
+      "code": "TARGET_LISTING",
+      "count": 1
+     }
+    ],
+    "n_effective": 5
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-08",
+   "group": "filter",
+   "description": "5 sellers on one platform owner -> d=1",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "seller": "S0",
+      "source_owner_group": "G1",
+      "price_pkr": 98000
+     },
+     {
+      "seller": "S1",
+      "source_owner_group": "G1",
+      "price_pkr": 100000
+     },
+     {
+      "seller": "S2",
+      "source_owner_group": "G1",
+      "price_pkr": 102000
+     },
+     {
+      "seller": "S3",
+      "source_owner_group": "G1",
+      "price_pkr": 104000
+     },
+     {
+      "seller": "S4",
+      "source_owner_group": "G1",
+      "price_pkr": 106000
+     }
+    ]
+   },
+   "expected": {
+    "independent_sources": 1,
+    "confidence": {
+     "score": 49,
+     "level": "LOW",
+     "reasons_include": [
+      "SINGLE_SOURCE"
+     ]
+    }
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-09",
+   "group": "filter",
+   "description": "zero/negative/foreign-currency/instalment prices excluded",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 0
+     },
+     {
+      "price_pkr": -5000
+     },
+     {
+      "currency": "USD",
+      "amount": 500
+     },
+     {
+      "price_basis": "MONTHLY_INSTALMENT",
+      "price_pkr": 5000
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [],
+    "excluded_codes": [
+     "PRICE_NOT_COMPARABLE",
+     "PRICE_NOT_COMPARABLE",
+     "UNSUPPORTED_CURRENCY",
+     "PRICE_NOT_COMPARABLE"
+    ]
+   },
+   "notes": "Mapping of zero/negative/instalment to PRICE_NOT_COMPARABLE is an ASSUMPTION (Q8).",
+   "basis": "assumption"
+  },
+  {
+   "id": "FIL-10",
+   "group": "filter",
+   "description": "used target never filled from new pool",
+   "input": {
+    "category_id": "phones",
+    "condition": "USED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "used_grade": "GOOD",
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ]
+   },
+   "expected": {
+    "result_state": "INSUFFICIENT_DATA",
+    "excluded_by_reason": [
+     {
+      "code": "CONDITION_MISMATCH",
+      "count": 5
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-11",
+   "group": "filter",
+   "description": "out-of-stock offer excluded NOT_IN_STOCK",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "availability": "OUT_OF_STOCK"
+     }
+    ]
+   },
+   "expected": {
+    "excluded_by_reason": [
+     {
+      "code": "NOT_IN_STOCK",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "FIL-12",
+   "group": "filter",
+   "description": "counts invariant included+excluded=retrieved",
+   "input": {
+    "see": "PTA-04"
+   },
+   "expected": {
+    "invariant": "5+2=7"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "PRE-01",
+   "group": "precedence",
+   "description": "DB/service failure -> ERROR, not INSUFFICIENT",
+   "input": {
+    "service": "evidence DB unavailable"
+   },
+   "expected": {
+    "result_state": "ERROR",
+    "error": {
+     "code": "SERVICE_UNAVAILABLE",
+     "http_status": 503,
+     "retryable": true
+    },
+    "data": null
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CLS-01",
+   "group": "classify",
+   "description": "now == valid_until passes",
+   "input": {
+    "stored": "RNG-01 (earliest observed_at age 5d)",
+    "now_minus_earliest_observed": "14d exactly"
+   },
+   "expected": {
+    "http_status": 200
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CLS-02",
+   "group": "classify",
+   "description": "now = valid_until + 1s -> 409 RANGE_STALE",
+   "input": {
+    "stored": "RNG-01",
+    "now_minus_earliest_observed": "14d+1s"
+   },
+   "expected": {
+    "http_status": 409,
+    "code": "RANGE_STALE"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CLS-03",
+   "group": "classify",
+   "description": "variant change -> 422 VARIANT_CHANGE_REQUIRES_CHECK",
+   "input": {
+    "stored": "RNG-01",
+    "classify": {
+     "storage_gb": 256
+    }
+   },
+   "expected": {
+    "http_status": 422,
+    "code": "VARIANT_CHANGE_REQUIRES_CHECK"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "CLS-04",
+   "group": "classify",
+   "description": "verdict anchored on median, not (low+high)/2",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 90000,
+      "amount_minor": 9000000
+     },
+     {
+      "price_pkr": 95000,
+      "amount_minor": 9500000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 105000,
+      "amount_minor": 10500000
+     },
+     {
+      "price_pkr": 110000,
+      "amount_minor": 11000000
+     },
+     {
+      "price_pkr": 120000,
+      "amount_minor": 12000000
+     }
+    ],
+    "asking_price_minor": 11300000
+   },
+   "expected": {
+    "result_state": "RANGE_AVAILABLE",
+    "n_effective": 6,
+    "range_method": "P10_P90",
+    "range_low_minor": 9250000,
+    "range_high_minor": 11500000,
+    "median_minor": 10250000,
+    "verdict": "HIGH",
+    "diff_percent": "420/41",
+    "diff_percent_approx": 10.243902,
+    "diff_absolute_minor": 1050000,
+    "wrong_if_midpoint": "midpoint 103750 -> +8.916% FAIR (WRONG)"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-01",
+   "group": "normaliser",
+   "description": "parse \"Rs 1,25,000\"",
+   "input": {
+    "raw_text": "Rs 1,25,000"
+   },
+   "expected": {
+    "amount_minor": 12500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-02",
+   "group": "normaliser",
+   "description": "parse \"125k\"",
+   "input": {
+    "raw_text": "125k"
+   },
+   "expected": {
+    "amount_minor": 12500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-03",
+   "group": "normaliser",
+   "description": "parse \"1.25 lac\"",
+   "input": {
+    "raw_text": "1.25 lac"
+   },
+   "expected": {
+    "amount_minor": 12500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-04",
+   "group": "normaliser",
+   "description": "parse \"1.25 lakh\"",
+   "input": {
+    "raw_text": "1.25 lakh"
+   },
+   "expected": {
+    "amount_minor": 12500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-05",
+   "group": "normaliser",
+   "description": "parse \"PKR 125000/-\"",
+   "input": {
+    "raw_text": "PKR 125000/-"
+   },
+   "expected": {
+    "amount_minor": 12500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-06",
+   "group": "normaliser",
+   "description": "parse \"85k\"",
+   "input": {
+    "raw_text": "85k"
+   },
+   "expected": {
+    "amount_minor": 8500000,
+    "currency": "PKR"
+   },
+   "notes": "PRD US3",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-07",
+   "group": "normaliser",
+   "description": "parse \"1.2 lac\"",
+   "input": {
+    "raw_text": "1.2 lac"
+   },
+   "expected": {
+    "amount_minor": 12000000,
+    "currency": "PKR"
+   },
+   "notes": "PRD US3",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-08",
+   "group": "normaliser",
+   "description": "parse \"1.2L\"",
+   "input": {
+    "raw_text": "1.2L"
+   },
+   "expected": {
+    "amount_minor": 12000000,
+    "currency": "PKR"
+   },
+   "notes": "PRD §6",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-09",
+   "group": "normaliser",
+   "description": "parse \"1,20,000\"",
+   "input": {
+    "raw_text": "1,20,000"
+   },
+   "expected": {
+    "amount_minor": 12000000,
+    "currency": "PKR"
+   },
+   "notes": "PRD §6 lakh grouping",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-10",
+   "group": "normaliser",
+   "description": "parse \"₨ 120,000\"",
+   "input": {
+    "raw_text": "₨ 120,000"
+   },
+   "expected": {
+    "amount_minor": 12000000,
+    "currency": "PKR"
+   },
+   "notes": "Western grouping",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-11",
+   "group": "normaliser",
+   "description": "parse \"Rs. 85,000\"",
+   "input": {
+    "raw_text": "Rs. 85,000"
+   },
+   "expected": {
+    "amount_minor": 8500000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-12",
+   "group": "normaliser",
+   "description": "parse \"1 crore\"",
+   "input": {
+    "raw_text": "1 crore"
+   },
+   "expected": {
+    "amount_minor": 1000000000,
+    "currency": "PKR"
+   },
+   "notes": "PRD scope lists crore",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-13",
+   "group": "normaliser",
+   "description": "parse \"12.5k\"",
+   "input": {
+    "raw_text": "12.5k"
+   },
+   "expected": {
+    "amount_minor": 1250000,
+    "currency": "PKR"
+   },
+   "notes": "",
+   "basis": "spec"
+  },
+  {
+   "id": "NRM-20",
+   "group": "normaliser",
+   "description": "parse \"۱,۲۵,۰۰۰\"",
+   "input": {
+    "raw_text": "۱,۲۵,۰۰۰"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q11: Eastern Arabic-Indic / Urdu digits support at launch? (expected 12500000 if supported)"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-21",
+   "group": "normaliser",
+   "description": "parse \"125K\"",
+   "input": {
+    "raw_text": "125K"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q12: case-insensitive suffixes (K, LAC, Lakh)? expected 12500000 if yes"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-22",
+   "group": "normaliser",
+   "description": "parse \"1 lac 20 hazar\"",
+   "input": {
+    "raw_text": "1 lac 20 hazar"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q11: Roman Urdu compound amounts in scope (PRD lists as Could)?"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-23",
+   "group": "normaliser",
+   "description": "parse \"1.2\"",
+   "input": {
+    "raw_text": "1.2"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q13: bare decimal without unit - reject, ask user, or treat as lakh?"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-24",
+   "group": "normaliser",
+   "description": "parse \"500\"",
+   "input": {
+    "raw_text": "500"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q14: implausible target (<1000 per PRD vs category-config per CTO CR8) - which threshold flags confirmation?"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-25",
+   "group": "normaliser",
+   "description": "parse \"1.23456 lac\"",
+   "input": {
+    "raw_text": "1.23456 lac"
+   },
+   "expected": {
+    "ok": true,
+    "amount_minor": 12345670
+   },
+   "notes": "1.234567 lac = 123456.7 PKR = 12345670 paisa exactly (no rounding needed). Ruling: half-even, not reject.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-26",
+   "group": "normaliser",
+   "description": "parse \"Rs 1,25,000 Rs 1,10,000 final\"",
+   "input": {
+    "raw_text": "Rs 1,25,000 Rs 1,10,000 final"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "PRD: multiple prices -> ask user; confirm output shape (candidates list + requires_confirmation)"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-27",
+   "group": "normaliser",
+   "description": "parse \"EMI 5,000/month\"",
+   "input": {
+    "raw_text": "EMI 5,000/month"
+   },
+   "expected": {
+    "status": "TBD - needs CTO decision",
+    "open_question": "Q16: target price given only as instalment - reject or ask for cash price?"
+   },
+   "notes": "",
+   "basis": "TBD"
+  },
+  {
+   "id": "NRM-30",
+   "group": "normaliser",
+   "description": "parse \"$500\"",
+   "input": {
+    "raw_text": "$500"
+   },
+   "expected": {
+    "error": "UNSUPPORTED_CURRENCY / ask for PKR price (PRD §6)"
+   },
+   "notes": "Exact error code/field for normaliser rejections not specified; assert value null + requires_confirmation (ASSUMPTION).",
+   "basis": "assumption"
+  },
+  {
+   "id": "NRM-31",
+   "group": "normaliser",
+   "description": "parse \"Rs 0\"",
+   "input": {
+    "raw_text": "Rs 0"
+   },
+   "expected": {
+    "ok": false,
+    "reason": "ZERO"
+   },
+   "notes": "Ruling: normaliser rejects zero.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-32",
+   "group": "normaliser",
+   "description": "parse \"-25000\"",
+   "input": {
+    "raw_text": "-25000"
+   },
+   "expected": {
+    "ok": false,
+    "reason": "NEGATIVE"
+   },
+   "notes": "Ruling: normaliser rejects negative.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-33",
+   "group": "normaliser",
+   "description": "parse \"\"",
+   "input": {
+    "raw_text": ""
+   },
+   "expected": {
+    "amount_minor": null,
+    "no_price_found": true
+   },
+   "notes": "Exact error code/field for normaliser rejections not specified; assert value null + requires_confirmation (ASSUMPTION).",
+   "basis": "assumption"
+  },
+  {
+   "id": "NRM-34",
+   "group": "normaliser",
+   "description": "parse \"Rs 99,99,99,99,99,999\"",
+   "input": {
+    "raw_text": "Rs 99,99,99,99,99,999"
+   },
+   "expected": {
+    "rejected": "exceeds safe integer / absurd -> requires_confirmation"
+   },
+   "notes": "Exact error code/field for normaliser rejections not specified; assert value null + requires_confirmation (ASSUMPTION).",
+   "basis": "assumption"
+  },
+  {
+   "id": "FIL-13",
+   "group": "filter",
+   "description": "observed_at 5 min + 1 s in the future -> INVALID_TIMESTAMP",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "age_seconds": -301
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [],
+    "excluded_by_reason": [
+     {
+      "code": "INVALID_TIMESTAMP",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "FIL-14",
+   "group": "filter",
+   "description": "observed_at exactly 5 min in the future -> admitted",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "age_seconds": -300
+     }
+    ]
+   },
+   "expected": {
+    "admitted": [
+     100000
+    ]
+   },
+   "notes": "Inclusive boundary at exactly 300 s is ASSUMPTION (\"5-minute skew allowed\"); Engineer code admits it.",
+   "basis": "assumption"
+  },
+  {
+   "id": "FIL-15",
+   "group": "filter",
+   "description": "age uses older of observed_at and source_updated_at",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "observed_at_age_days": 10,
+      "source_updated_at_age_days": 16
+     }
+    ]
+   },
+   "expected": {
+    "effective_age_days": 16,
+    "admitted": [],
+    "excluded_by_reason": [
+     {
+      "code": "STALE",
+      "count": 1
+     }
+    ]
+   },
+   "notes": "max(10,16)=16 > 14 -> STALE (new).",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "FIL-16",
+   "group": "filter",
+   "description": "older-of rule, both within window",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "observed_at_age_days": 2,
+      "source_updated_at_age_days": 6
+     }
+    ]
+   },
+   "expected": {
+    "effective_age_days": 6,
+    "admitted": [
+     100000
+    ],
+    "recency_term": "1-0.5*6/14=11/14 (0.785714)"
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "BND-01",
+   "group": "verdict",
+   "description": "fair_band_low/high = median x0.85 / x1.10 (M=102000)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ]
+   },
+   "expected": {
+    "fair_band_low_minor": 8670000,
+    "fair_band_high_minor": 11220000
+   },
+   "notes": "102000*0.85 and 102000*1.10, exact; equals VER band edges.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "BND-02",
+   "group": "verdict",
+   "description": "fair_band_low/high = median x0.85 / x1.10 (M=100000)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 96000,
+      "amount_minor": 9600000
+     },
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     }
+    ]
+   },
+   "expected": {
+    "fair_band_low_minor": 8500000,
+    "fair_band_high_minor": 11000000
+   },
+   "notes": "100000*0.85 and 100000*1.10, exact; equals VER band edges.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NEX-01",
+   "group": "confidence",
+   "description": "oldest included obs age 11.2 d exactly (20% of 14 d remains) -> NEAR_EXPIRY, score unchanged",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "ages_seconds": [
+     86400,
+     172800,
+     259200,
+     345600,
+     967680
+    ],
+    "independent_sources": 3
+   },
+   "expected": {
+    "reasons_include": [
+     "NEAR_EXPIRY"
+    ],
+    "score_unaffected_by_near_expiry": true
+   },
+   "notes": "remaining = 1-967680/1209600 = 0.20 -> <=0.20 fires. Informational only.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NEX-02",
+   "group": "confidence",
+   "description": "oldest age 967,679 s (just over 20% remains) -> no NEAR_EXPIRY",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 98000,
+      "amount_minor": 9800000
+     },
+     {
+      "price_pkr": 100000,
+      "amount_minor": 10000000
+     },
+     {
+      "price_pkr": 102000,
+      "amount_minor": 10200000
+     },
+     {
+      "price_pkr": 104000,
+      "amount_minor": 10400000
+     },
+     {
+      "price_pkr": 106000,
+      "amount_minor": 10600000
+     }
+    ],
+    "ages_seconds": [
+     86400,
+     172800,
+     259200,
+     345600,
+     967679
+    ],
+    "independent_sources": 3
+   },
+   "expected": {
+    "reasons_exclude": [
+     "NEAR_EXPIRY"
+    ]
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NEX-03",
+   "group": "confidence",
+   "description": "used window 30 d: age 24 d exactly -> NEAR_EXPIRY",
+   "input": {
+    "category_id": "phones",
+    "condition": "USED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 30,
+    "used_grade": "GOOD",
+    "observations": [
+     {
+      "price_pkr": 60000,
+      "age_days": 1
+     },
+     {
+      "price_pkr": 61000,
+      "age_days": 2
+     },
+     {
+      "price_pkr": 62000,
+      "age_days": 24
+     }
+    ]
+   },
+   "expected": {
+    "reasons_include": [
+     "NEAR_EXPIRY"
+    ]
+   },
+   "notes": "1-24/30=0.20.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "GEO-01",
+   "group": "confidence",
+   "description": "2 cities x2 comparables, city-median gap > 15% of overall median -> GEO_SPREAD",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 102000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 118000,
+      "city": "Lahore"
+     },
+     {
+      "price_pkr": 120000,
+      "city": "Lahore"
+     }
+    ]
+   },
+   "expected": {
+    "reasons_include": [
+     "GEO_SPREAD"
+    ],
+    "score_unaffected_by_geo_spread": true
+   },
+   "notes": "City medians 101000 / 119000; overall median (102000+118000)/2=110000; 18000/110000=0.1636>0.15. Interpreting \"(max-min)\" as max-min of CITY MEDIANS follows Engineer code: ASSUMPTION, CTO to confirm (Q21).",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "GEO-02",
+   "group": "confidence",
+   "description": "2 cities x2, gap 12.96% -> no GEO_SPREAD",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 102000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 114000,
+      "city": "Lahore"
+     },
+     {
+      "price_pkr": 116000,
+      "city": "Lahore"
+     }
+    ]
+   },
+   "expected": {
+    "reasons_exclude": [
+     "GEO_SPREAD"
+    ]
+   },
+   "notes": "101000 vs 115000; overall 108000; 14000/108000=0.1296<=0.15.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "GEO-03",
+   "group": "confidence",
+   "description": "only one city has >=2 comparables -> no GEO_SPREAD",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 102000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 140000,
+      "city": "Lahore"
+     }
+    ]
+   },
+   "expected": {
+    "reasons_exclude": [
+     "GEO_SPREAD"
+    ]
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "GEO-04",
+   "group": "confidence",
+   "description": "gap exactly 15% -> no GEO_SPREAD (strict >)",
+   "input": {
+    "category_id": "phones",
+    "condition": "NEW_SEALED",
+    "pta_status": "APPROVED",
+    "freshness_window_days": 14,
+    "observations": [
+     {
+      "price_pkr": 100000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 100000,
+      "city": "Karachi"
+     },
+     {
+      "price_pkr": 115000,
+      "city": "Lahore"
+     },
+     {
+      "price_pkr": 115000,
+      "city": "Lahore"
+     },
+     {
+      "price_pkr": 100000,
+      "city": null
+     }
+    ]
+   },
+   "expected": {
+    "reasons_exclude": [
+     "GEO_SPREAD"
+    ]
+   },
+   "notes": "Overall median of [100k,100k,100k,115k,115k]=100000; gap 15000/100000=0.15, not >0.15. Missing-city obs counts in overall median (Engineer code; ASSUMPTION).",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-40",
+   "group": "normaliser",
+   "description": "sub-paisa half-even tie rounds to even (down)",
+   "input": {
+    "raw_text": "0.000125k"
+   },
+   "expected": {
+    "ok": true,
+    "amount_minor": 12
+   },
+   "notes": "0.125 PKR = 12.5 paisa -> half-even -> 12.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-41",
+   "group": "normaliser",
+   "description": "sub-paisa half-even tie rounds to even (up)",
+   "input": {
+    "raw_text": "0.000135k"
+   },
+   "expected": {
+    "ok": true,
+    "amount_minor": 14
+   },
+   "notes": "0.135 PKR = 13.5 paisa -> 14.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-42",
+   "group": "normaliser",
+   "description": "sub-paisa non-tie",
+   "input": {
+    "raw_text": "1.23456789 lac"
+   },
+   "expected": {
+    "ok": true,
+    "amount_minor": 12345679
+   },
+   "notes": "123456.789 PKR = 12345678.9 paisa -> 12345679.",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-43",
+   "group": "normaliser",
+   "description": "non-finite rejected",
+   "input": {
+    "raw_text": "NaN"
+   },
+   "expected": {
+    "ok": false,
+    "reason": "NON_FINITE"
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-44",
+   "group": "normaliser",
+   "description": "non-finite rejected",
+   "input": {
+    "raw_text": "Infinity"
+   },
+   "expected": {
+    "ok": false,
+    "reason": "NON_FINITE"
+   },
+   "notes": "",
+   "basis": "cto-ruling-via-message (reported by Engineer, not in spec)"
+  },
+  {
+   "id": "NRM-45",
+   "group": "normaliser",
+   "description": "sub-paisa amount rounding to 0 is rejected",
+   "input": {
+    "raw_text": "0.004"
+   },
+   "expected": {
+    "ok": false,
+    "reason": "TOO_SMALL or ZERO: TBD"
+   },
+   "notes": "0.4 paisa -> half-even 0. Ruling rejects zero; reason code name TOO_SMALL is Engineer code (ASSUMPTION).",
+   "basis": "assumption"
+  }
+ ]
+}
